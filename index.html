@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>PickMovieTonight — Find Something to Watch Tonight</title>
+  <meta name="description" content="A simple movie picker that helps you choose what to watch tonight. Browse, compare, and pick a movie faster.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#111111">
+
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="canonical" href="https://pickmovietonight.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PickMovieTonight — Find Something to Watch Tonight">
+  <meta property="og:description" content="A simple movie picker that helps you choose what to watch tonight. Browse, compare, and pick a movie faster.">
+  <meta property="og:url" content="https://pickmovietonight.com/">
+  <meta property="og:site_name" content="PickMovieTonight">
+  <meta property="og:image" content="https://pickmovietonight.com/social-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PickMovieTonight — Find Something to Watch Tonight">
+  <meta name="twitter:description" content="A simple movie picker that helps you choose what to watch tonight. Browse, compare, and pick a movie faster.">
+  <meta name="twitter:image" content="https://pickmovietonight.com/social-card.jpg">
+
+  <style>
+    :root {
+      --bg-1: #020617;
+      --bg-2: #0f172a;
+      --panel: rgba(15, 23, 42, 0.82);
+      --panel-2: rgba(30, 41, 59, 0.72);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --line: rgba(255,255,255,0.08);
+      --accent: #8b5cf6;
+      --accent-2: #3b82f6;
+      --good: #22c55e;
+      --shadow: 0 24px 70px rgba(0,0,0,0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(139,92,246,0.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(59,130,246,0.16), transparent 24%),
+        linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 980px;
+      border-radius: 30px;
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      font-size: 20px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.1;
+    }
+
+    .brand p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .progress-wrap {
+      width: 320px;
+      max-width: 100%;
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .progress {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.07);
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transition: width 180ms ease;
+    }
+
+    .content {
+      padding: 28px 22px 24px;
+    }
+
+    .screen { display: none; }
+    .screen.active { display: block; }
+
+    .eyebrow {
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #c4b5fd;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.75rem, 3vw, 2.8rem);
+      line-height: 1.04;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 58ch;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 1rem;
+    }
+
+    .actions,
+    .question-actions,
+    .result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    button {
+      font: inherit;
+      border: 0;
+      border-radius: 16px;
+      padding: 14px 18px;
+      cursor: pointer;
+      transition: transform 0.14s ease, opacity 0.14s ease, background 0.14s ease;
+    }
+
+    button:hover { transform: translateY(-1px); }
+    button:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      font-weight: 800;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .question-shell,
+    .result-card,
+    .backup-panel,
+    .mini-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.025));
+      border: 1px solid var(--line);
+      border-radius: 26px;
+    }
+
+    .question-shell {
+      padding: 22px;
+    }
+
+    .question-meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+    }
+
+    .question-title {
+      margin: 0 0 18px;
+      font-size: clamp(1.55rem, 2.8vw, 2.2rem);
+      line-height: 1.12;
+      max-width: 16ch;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .choice-card {
+      min-height: 240px;
+      padding: 22px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+      color: var(--text);
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .choice-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 160ms ease;
+      background: linear-gradient(135deg, rgba(139,92,246,0.14), rgba(59,130,246,0.08));
+    }
+
+    .choice-card:hover::before {
+      opacity: 1;
+    }
+
+    .choice-card > * { position: relative; z-index: 1; }
+
+    .choice-label {
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #cbd5e1;
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+
+    .choice-title {
+      font-size: clamp(1.35rem, 2.4vw, 1.95rem);
+      line-height: 1.05;
+      margin: 0 0 12px;
+      max-width: 12ch;
+    }
+
+    .choice-text {
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+      max-width: 28ch;
+    }
+
+    .choice-hint {
+      margin-top: 18px;
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      color: #dbeafe;
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.86rem;
+    }
+
+    .result-layout {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .result-card {
+      padding: 22px;
+    }
+
+    .result-kicker {
+      color: #86efac;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .result-title {
+      margin: 0 0 10px;
+      font-size: clamp(1.8rem, 3.3vw, 2.7rem);
+      line-height: 1.04;
+    }
+
+    .pills,
+    .why-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.055);
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+
+    .result-description {
+      margin: 16px 0 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .section-title {
+      margin: 18px 0 10px;
+      font-size: 0.98rem;
+    }
+
+    .why-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 11px;
+      border-radius: 12px;
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.24);
+      color: #bbf7d0;
+      font-size: 0.9rem;
+    }
+
+    .backup-panel {
+      padding: 18px;
+    }
+
+    .backup-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .mini-card {
+      padding: 14px 14px 13px;
+    }
+
+    .mini-card h4 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.92rem;
+    }
+
+    .small-note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .reveal {
+      display: grid;
+      place-items: center;
+      min-height: 320px;
+      text-align: center;
+    }
+
+    .reveal-card {
+      width: 100%;
+      max-width: 540px;
+      padding: 34px 24px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025));
+    }
+
+    .spinner {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      border: 4px solid rgba(255,255,255,0.08);
+      border-top-color: #c4b5fd;
+      animation: spin 0.9s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 820px) {
+      .topbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .choice-grid,
+      .result-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .choice-card {
+        min-height: 200px;
+      }
+    }
+
+    .trailer-modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      z-index: 9999;
+    }
+
+    .trailer-modal.is-open {
+      display: block;
+    }
+
+    .trailer-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(3px);
+    }
+
+    .trailer-modal-dialog {
+      position: relative;
+      width: min(960px, calc(100vw - 32px));
+      margin: 5vh auto 0;
+      z-index: 2;
+    }
+
+    .trailer-modal-body {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    .trailer-modal-body iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .trailer-modal-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 0;
+      border-radius: 999px;
+      background: #fff;
+      color: #111;
+
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1;
+
+      cursor: pointer;
+      z-index: 3;
+
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .trailer-modal-close:hover {
+      transform: scale(1.05);
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    #watch-trailer-btn,
+    #listen-score-btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 16px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .media-modal-title {
+      color: white;
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .media-eq {
+      display: none;
+      align-items: end;
+      gap: 3px;
+      height: 16px;
+    }
+
+    .media-eq span {
+      display: block;
+      width: 4px;
+      border-radius: 999px;
+      background: #fff;
+      transform-origin: bottom;
+      animation: eqBounce 0.9s infinite ease-in-out;
+    }
+
+    .media-eq span:nth-child(1) {
+      height: 8px;
+      animation-delay: 0s;
+    }
+
+    .media-eq span:nth-child(2) {
+      height: 14px;
+      animation-delay: 0.15s;
+    }
+
+    .media-eq span:nth-child(3) {
+      height: 10px;
+      animation-delay: 0.3s;
+    }
+
+    .media-eq.is-active {
+      display: inline-flex;
+    }
+
+    @keyframes eqBounce {
+      0%, 100% {
+        transform: scaleY(0.45);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scaleY(1.1);
+        opacity: 1;
+      }
+    }
+
+    .trailer-modal-dialog.is-score {
+      width: min(1200px, calc(100vw - 32px));
+      margin-top: 4vh;
+    }
+
+    .trailer-modal-body.is-score {
+      aspect-ratio: auto;
+      height: min(78vh, 760px);
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo">🎞️</div>
+        <div>
+          <h1>Choose a Movie</h1>
+          <p>A/B prototype · random question deck</p>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-meta">
+          <span id="progressText">Ready to start</span>
+          <span id="progressCount">0 / 5</span>
+        </div>
+        <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+      </div>
+    </div>
+
+    <div class="content">
+      <section id="screenIntro" class="screen active">
+        <div class="eyebrow">Version 2</div>
+        <h2>Answer a few quick A/B questions and we’ll pick a movie for tonight.</h2>
+        <p class="lead">
+          This prototype builds a balanced mini-deck from a larger pool of A/B questions. Each run asks 5 questions from different categories, so it feels fresher.
+        </p>
+        <div class="actions">
+          <button class="btn-primary" id="startBtn">Start round</button>
+          <button class="btn-secondary" id="surpriseBtn">Random instant pick</button>
+        </div>
+      </section>
+
+      <section id="screenQuiz" class="screen">
+        <div class="question-shell">
+          <div class="question-meta" id="questionMeta">Round question 1 of 5</div>
+          <h3 class="question-title" id="questionTitle"></h3>
+          <div class="choice-grid">
+            <button class="choice-card" id="choiceA"></button>
+            <button class="choice-card" id="choiceB"></button>
+          </div>
+          <div class="question-actions">
+            <button class="btn-secondary" id="backBtn">Back</button>
+            <button class="btn-secondary" id="restartBtn1">Start over</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="screenReveal" class="screen">
+        <div class="reveal">
+          <div class="reveal-card">
+            <div class="spinner"></div>
+            <div class="eyebrow">Scanning tonight's vibe</div>
+            <h2 style="font-size: clamp(1.4rem, 2.7vw, 2.2rem); margin-bottom: 10px;">Cross-referencing your choices…</h2>
+            <p class="lead" style="margin: 0 auto;">Pulling from the top-matching part of the movie pool and building a reveal.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="screenResult" class="screen">
+        <div class="eyebrow">Recommendation ready</div>
+        <h2>Your movie pick for this round.</h2>
+        <p class="lead">Same dataset for now, but a more replayable game loop.</p>
+
+        <div class="result-layout">
+          <article class="result-card">
+            <div class="result-kicker">Top pick</div>
+            <h3 class="result-title" id="resultTitle"></h3>
+            <div id="trailer-container"></div>
+            <div class="pills" id="resultMeta"></div>
+            <div class="pills" id="resultTags" style="margin-top: 12px;"></div>
+            <p class="result-description" id="resultDescription"></p>
+
+            <h3 class="section-title">Why it matched</h3>
+            <div class="why-list" id="whyList"></div>
+
+            <div class="result-actions">
+              <button class="btn-primary" id="anotherRoundBtn">New round</button>
+              <button class="btn-secondary" id="shuffleBtn">Another top-tier pick</button>
+              <button class="btn-secondary" id="restartBtn2">Home</button>
+            </div>
+          </article>
+
+          <aside class="backup-panel">
+            <h3 style="margin-top: 0;">Backup choices</h3>
+            <div class="backup-list" id="backupList"></div>
+            <p class="small-note">Later we could add posters, trailers, streaming availability, or even a “play with friends” mode.</p>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="trailer-modal" class="trailer-modal" aria-hidden="true">
+    <div class="trailer-modal-backdrop"></div>
+
+    <div class="trailer-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="media-modal-title">
+      <button id="trailer-modal-close" class="trailer-modal-close" type="button" aria-label="Close media">
+        ✕
+      </button>
+
+      <h3 id="media-modal-title" class="media-modal-title">
+        <span id="media-modal-title-text">Media</span>
+        <span id="media-eq" class="media-eq" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </h3>
+
+      <div class="trailer-modal-body">
+        <iframe
+          id="trailer-modal-iframe"
+          src=""
+          title="Media player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const movies = [
+      {
+        title: "Inception",
+        year: 2010,
+        genres: ["Sci-Fi", "Thriller"],
+        mood: "serious",
+        energy: "high",
+        complexity: "high",
+        scale: "big",
+        pace: "fast",
+        freshness: "modern",
+        runtimeBucket: "long",
+        realism: "stylized",
+        familySafe: false,
+        trailer: "https://www.youtube.com/watch?v=FiM51gvvW_s",
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLbQkZ0-M4gS3vI9IkX8P5_jxLSoM7wrZ7",
+        description: "A dream-layered sci-fi thriller with scale, urgency, and big rewatch appeal when you want to lean in."
+      },
+      {
+        title: "The Dark Knight",
+        year: 2008,
+        genres: ["Action", "Crime"],
+        mood: "serious",
+        energy: "high",
+        complexity: "medium",
+        scale: "big",
+        pace: "fast",
+        freshness: "modern",
+        runtimeBucket: "long",
+        realism: "grounded",
+        familySafe: false,
+        trailer: "https://www.youtube.com/watch?v=LDG9bisJEaI",
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLim3m5NnkYFcopKx6tXrl8k5ELBO-kt4X",
+        description: "A massive crime-action pick with pressure, iconic performances, and a very reliable blockbuster feel."
+      },
+      {
+        title: "Interstellar",
+        year: 2014,
+        genres: ["Sci-Fi", "Drama"],
+        mood: "emotional",
+        energy: "medium",
+        complexity: "high",
+        scale: "big",
+        pace: "medium",
+        freshness: "modern",
+        runtimeBucket: "long",
+        realism: "stylized",
+        familySafe: true,
+        trailer: "https://www.youtube.com/watch?v=2LqzF5WauAw",
+        scorePlaylist: "https://www.youtube.com/playlist?list=OLAK5uy_mDWtgeNF9LzujhjNi5DFcX-Lld0_ZMr_s",
+        description: "Big-screen sci-fi with cosmic ideas and real emotional pull when you want something sweeping."
+      },
+      {
+        title: "Tenet",
+        year: 2020,
+        genres: ["Sci-Fi", "Action"],
+        mood: "serious",
+        energy: "high",
+        complexity: "high",
+        scale: "big",
+        pace: "fast",
+        freshness: "newer",
+        runtimeBucket: "long",
+        realism: "stylized",
+        familySafe: false,
+        trailer: "https://www.youtube.com/watch?v=LdOM0x0XDMo",
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLBKadB95sF45_hO-yB_W3yvgDepkKE0C1",
+        description: "A bold, high-speed puzzle-box movie for nights when you want to stay mentally engaged."
+      },
+      {
+        title: "The Social Network",
+        year: 2010,
+        genres: ["Drama"],
+        mood: "smart",
+        energy: "medium",
+        complexity: "medium",
+        scale: "small",
+        pace: "fast",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "grounded",
+        familySafe: false,
+        trailer: "https://www.youtube.com/watch?v=lB95KLmpLR4",
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLC772F42251C6522B",
+        description: "Sharp, fast, and highly rewatchable — more propulsive than its premise sounds."
+      },
+      {
+        title: "Knives Out",
+        year: 2019,
+        genres: ["Mystery", "Comedy"],
+        mood: "fun",
+        energy: "medium",
+        complexity: "medium",
+        scale: "small",
+        pace: "medium",
+        freshness: "newer",
+        runtimeBucket: "medium",
+        realism: "stylized",
+        familySafe: true,
+        trailer: "https://www.youtube.com/watch?v=qGqiHJTsRkQ",
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLohYzz4btpaRzB_Usv4A7m5P8aLfRQHNA",
+        description: "Clever, playful, and very watchable — a satisfying crowd-pleasing mystery."
+      },
+      {
+        title: "The Intern",
+        year: 2015,
+        genres: ["Comedy", "Drama"],
+        mood: "warm",
+        energy: "low",
+        complexity: "low",
+        scale: "small",
+        pace: "slow",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "grounded",
+        familySafe: true,
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLiKPbOu567dGDsh3x99E1zF2J77mAZGld",
+        description: "An easy, comforting watch with charm and almost zero friction."
+      },
+      {
+        title: "Palm Springs",
+        year: 2020,
+        genres: ["Comedy", "Romance", "Sci-Fi"],
+        mood: "fun",
+        energy: "medium",
+        complexity: "low",
+        scale: "small",
+        pace: "fast",
+        freshness: "newer",
+        runtimeBucket: "short",
+        realism: "stylized",
+        familySafe: false,
+        trailer: "https://www.youtube.com/watch?v=CpBLtXduh_k",
+        scorePlaylist: "https://www.youtube.com/playlist?list=PL6T5d_DwwK42KRe2SzOIM4YWDEc1YbKpv",
+        description: "Funny, quick, and inventive — great when you want clever without heaviness."
+      },
+      {
+        title: "Edge of Tomorrow",
+        year: 2014,
+        genres: ["Sci-Fi", "Action"],
+        mood: "fun",
+        energy: "high",
+        complexity: "medium",
+        scale: "big",
+        pace: "fast",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "stylized",
+        familySafe: false,
+        trailer: "https://www.youtube.com/watch?v=vw61gCe2oqI",
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLnpIGDCblPQW5n9-la5oW6YSA1BWYk32F",
+        description: "A highly entertaining action-sci-fi loop movie with great pace and replay value."
+      },
+      {
+        title: "Arrival",
+        year: 2016,
+        genres: ["Sci-Fi", "Drama"],
+        mood: "emotional",
+        energy: "low",
+        complexity: "high",
+        scale: "small",
+        pace: "slow",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "grounded",
+        familySafe: true,
+        trailer: "https://www.youtube.com/watch?v=tFMo3UJ4B4g",
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLff_8M2LCnlCP3deJhXdYJCxlqCIJjItL",
+        description: "Quiet, thoughtful sci-fi that lands emotionally and stays with you afterward."
+      },
+      {
+        title: "Mission: Impossible – Fallout",
+        year: 2018,
+        genres: ["Action", "Thriller"],
+        mood: "fun",
+        energy: "high",
+        complexity: "low",
+        scale: "big",
+        pace: "fast",
+        freshness: "newer",
+        runtimeBucket: "long",
+        realism: "stylized",
+        familySafe: false,
+        description: "A pure momentum blockbuster pick when you want spectacle and reliability."
+      },
+      {
+        title: "The Truman Show",
+        year: 1998,
+        genres: ["Drama", "Comedy"],
+        mood: "smart",
+        energy: "low",
+        complexity: "medium",
+        scale: "small",
+        pace: "medium",
+        freshness: "older",
+        runtimeBucket: "medium",
+        realism: "grounded",
+        familySafe: true,
+        description: "Accessible, thoughtful, and full of big ideas without feeling hard to watch."
+      },
+      {
+        title: "Mad Max: Fury Road",
+        year: 2015,
+        genres: ["Action"],
+        mood: "fun",
+        energy: "high",
+        complexity: "low",
+        scale: "big",
+        pace: "fast",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "stylized",
+        familySafe: false,
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLpdRrmiqbfWPV6OwkPtaX4cMWgszSIlnX",
+        description: "A visually electric, ultra-kinetic ride when you want pure motion and style."
+      },
+      {
+        title: "Moneyball",
+        year: 2011,
+        genres: ["Drama"],
+        mood: "smart",
+        energy: "medium",
+        complexity: "medium",
+        scale: "small",
+        pace: "medium",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "grounded",
+        familySafe: true,
+        description: "A grounded, smart, quietly satisfying movie with strong momentum and heart."
+      },
+      {
+        title: "About Time",
+        year: 2013,
+        genres: ["Romance", "Drama", "Comedy"],
+        mood: "warm",
+        energy: "low",
+        complexity: "low",
+        scale: "small",
+        pace: "slow",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "stylized",
+        familySafe: true,
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLp-ZAI3S7Nw0IMM92hrekE5AhNOlGBGz6",
+        description: "Warm, heartfelt, and easy to settle into when you want something gentle."
+      },
+      {
+        title: "Oppenheimer",
+        year: 2023,
+        genres: ["Drama", "Thriller"],
+        mood: "serious",
+        energy: "medium",
+        complexity: "high",
+        scale: "big",
+        pace: "fast",
+        freshness: "newer",
+        runtimeBucket: "long",
+        realism: "grounded",
+        familySafe: false,
+        description: "Large-scale, serious, and intellectually dense with major cinematic weight."
+      },
+      {
+        title: "In Time",
+        year: 2011,
+        genres: ["Sci-Fi", "Thriller"],
+        mood: "serious",
+        energy: "medium",
+        complexity: "medium",
+        scale: "medium",
+        pace: "fast",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "stylized",
+        familySafe: false,
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLgfoqdLGAnLFG-WmI7ioMfjIUzz-jvO_x",
+        description: "A high-concept sci-fi world where time is currency — fast, stylish, and thought-provoking."
+      },
+      {
+        title: "The Matrix",
+        year: 1999,
+        genres: ["Sci-Fi", "Action"],
+        mood: "serious",
+        energy: "high",
+        complexity: "high",
+        scale: "big",
+        pace: "medium",
+        freshness: "older",
+        runtimeBucket: "long",
+        realism: "stylized",
+        familySafe: false,
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLqnnuEVGcRQyQhvsd5Tl47q9JllRqcnGY",
+        description: "A genre-defining sci-fi action film that blends philosophy, action, and world-building."
+      },
+      {
+        title: "Ex Machina",
+        year: 2014,
+        genres: ["Sci-Fi", "Drama"],
+        mood: "serious",
+        energy: "low",
+        complexity: "high",
+        scale: "small",
+        pace: "slow",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "grounded",
+        familySafe: false,
+        scorePlaylist: "https://www.youtube.com/playlist?list=PLsjTwB9AUURELhLyJmCa_wVV58XMGImJu",
+        description: "A tense, intimate AI story with strong dialogue and unsettling implications."
+      },
+      {
+        title: "The Martian",
+        year: 2015,
+        genres: ["Sci-Fi", "Drama"],
+        mood: "fun",
+        energy: "medium",
+        complexity: "medium",
+        scale: "big",
+        pace: "medium",
+        freshness: "modern",
+        runtimeBucket: "long",
+        realism: "grounded",
+        familySafe: true,
+        description: "Problem-solving, optimism, and survival — a very rewatchable science-driven adventure."
+      },
+      {
+        title: "Minority Report",
+        year: 2002,
+        genres: ["Sci-Fi", "Action"],
+        mood: "serious",
+        energy: "high",
+        complexity: "medium",
+        scale: "big",
+        pace: "fast",
+        freshness: "older",
+        runtimeBucket: "long",
+        realism: "stylized",
+        familySafe: false,
+        description: "A fast-paced futuristic thriller about prediction, control, and free will."
+      },
+      {
+        title: "Blade Runner 2049",
+        year: 2017,
+        genres: ["Sci-Fi", "Drama"],
+        mood: "serious",
+        energy: "low",
+        complexity: "high",
+        scale: "big",
+        pace: "slow",
+        freshness: "modern",
+        runtimeBucket: "long",
+        realism: "stylized",
+        familySafe: false,
+        description: "Slow, immersive sci-fi with stunning visuals and deep philosophical themes."
+      },
+      {
+        title: "Her",
+        year: 2013,
+        genres: ["Drama", "Romance", "Sci-Fi"],
+        mood: "emotional",
+        energy: "low",
+        complexity: "medium",
+        scale: "small",
+        pace: "slow",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "grounded",
+        familySafe: true,
+        description: "A soft, emotional look at human connection and technology."
+      },
+      {
+        title: "Ready Player One",
+        year: 2018,
+        genres: ["Sci-Fi", "Adventure"],
+        mood: "fun",
+        energy: "high",
+        complexity: "low",
+        scale: "big",
+        pace: "fast",
+        freshness: "newer",
+        runtimeBucket: "long",
+        realism: "stylized",
+        familySafe: true,
+        description: "A high-energy virtual world adventure packed with nostalgia and spectacle."
+      },
+      {
+        title: "Ford v Ferrari",
+        year: 2019,
+        genres: ["Drama"],
+        mood: "serious",
+        energy: "high",
+        complexity: "low",
+        scale: "medium",
+        pace: "fast",
+        freshness: "newer",
+        runtimeBucket: "long",
+        realism: "grounded",
+        familySafe: true,
+        description: "A high-speed, character-driven story about ambition and competition."
+      },
+      {
+        title: "The Big Short",
+        year: 2015,
+        genres: ["Drama", "Comedy"],
+        mood: "smart",
+        energy: "medium",
+        complexity: "high",
+        scale: "medium",
+        pace: "fast",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "grounded",
+        familySafe: false,
+        description: "Fast, sharp, and informative — makes complex topics surprisingly engaging."
+      },
+      {
+        title: "Nightcrawler",
+        year: 2014,
+        genres: ["Thriller", "Drama"],
+        mood: "serious",
+        energy: "medium",
+        complexity: "medium",
+        scale: "small",
+        pace: "medium",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "grounded",
+        familySafe: false,
+        description: "Dark, intense, and character-driven with a unique perspective on ambition."
+      },
+      {
+        title: "Shutter Island",
+        year: 2010,
+        genres: ["Thriller"],
+        mood: "serious",
+        energy: "medium",
+        complexity: "high",
+        scale: "medium",
+        pace: "slow",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "stylized",
+        familySafe: false,
+        description: "A psychological mystery that builds tension and rewards attention."
+      },
+      {
+        title: "Source Code",
+        year: 2011,
+        genres: ["Sci-Fi", "Thriller"],
+        mood: "fun",
+        energy: "high",
+        complexity: "medium",
+        scale: "medium",
+        pace: "fast",
+        freshness: "modern",
+        runtimeBucket: "short",
+        realism: "stylized",
+        familySafe: false,
+        description: "A tight, engaging time-loop thriller with strong pacing."
+      },
+      {
+        title: "Looper",
+        year: 2012,
+        genres: ["Sci-Fi", "Action"],
+        mood: "serious",
+        energy: "medium",
+        complexity: "medium",
+        scale: "medium",
+        pace: "fast",
+        freshness: "modern",
+        runtimeBucket: "medium",
+        realism: "stylized",
+        familySafe: false,
+        description: "A creative time-travel story with action and emotional stakes."
+      },
+      {
+        title: "A Quiet Place",
+        year: 2018,
+        genres: ["Thriller", "Horror"],
+        mood: "tense",
+        energy: "medium",
+        complexity: "low",
+        scale: "small",
+        pace: "medium",
+        freshness: "newer",
+        runtimeBucket: "short",
+        realism: "stylized",
+        familySafe: false,
+        description: "A tense, minimalist survival story driven by silence and stakes."
+      },
+      {
+        title: "The Prestige",
+        year: 2006,
+        genres: ["Drama", "Mystery"],
+        mood: "serious",
+        energy: "medium",
+        complexity: "high",
+        scale: "medium",
+        pace: "medium",
+        freshness: "older",
+        runtimeBucket: "long",
+        realism: "stylized",
+        familySafe: false,
+        description: "A layered, twist-driven story about obsession and rivalry."
+      }
+    ];
+
+    const questionPool = [
+      {
+        id: "energy_1",
+        category: "energy",
+        prompt: "What sounds better right now?",
+        a: { title: "High energy", text: "I want something intense, fast, and gripping.", hint: "Louder night", prefs: { energy: ["high"] } },
+        b: { title: "Low-key", text: "I want something calmer and easier to settle into.", hint: "Softer night", prefs: { energy: ["low"] } }
+      },
+      {
+        id: "energy_2",
+        category: "energy",
+        prompt: "Pick your watch energy.",
+        a: { title: "Adrenaline", text: "Momentum, urgency, and strong forward motion.", hint: "Push it", prefs: { energy: ["high"], pace: ["fast"] } },
+        b: { title: "Ease", text: "I don't want the movie pushing too hard tonight.", hint: "Take it easy", prefs: { energy: ["low"], pace: ["slow", "medium"] } }
+      },
+      {
+        id: "complexity_1",
+        category: "complexity",
+        prompt: "Which challenge level do you want?",
+        a: { title: "Mind-bending", text: "Give me layers, ideas, and something to decode.", hint: "Lean in", prefs: { complexity: ["high"] } },
+        b: { title: "Easy watch", text: "I want something clean and instantly watchable.", hint: "No homework", prefs: { complexity: ["low"] } }
+      },
+      {
+        id: "complexity_2",
+        category: "complexity",
+        prompt: "How much thinking do you want to do?",
+        a: { title: "Quite a bit", text: "I want a movie that asks something of me.", hint: "Challenge me", prefs: { complexity: ["high"], mood: ["smart", "serious", "emotional"] } },
+        b: { title: "Not much", text: "Tonight is more about comfort than analysis.", hint: "Coast mode", prefs: { complexity: ["low"], mood: ["fun", "warm"] } }
+      },
+      {
+        id: "mood_1",
+        category: "mood",
+        prompt: "What's the better vibe?",
+        a: { title: "Serious", text: "Focused, tense, dramatic, or weighty.", hint: "Dialed in", prefs: { mood: ["serious"] } },
+        b: { title: "Fun", text: "Playful, entertaining, stylish, and lighter.", hint: "Have fun", prefs: { mood: ["fun"] } }
+      },
+      {
+        id: "mood_2",
+        category: "mood",
+        prompt: "Which tone fits tonight better?",
+        a: { title: "Warm", text: "Heart, comfort, and a softer landing.", hint: "Comfort watch", prefs: { mood: ["warm"] } },
+        b: { title: "Smart", text: "Sharp, thoughtful, and conceptually interesting.", hint: "Sharp watch", prefs: { mood: ["smart"] } }
+      },
+      {
+        id: "mood_3",
+        category: "mood",
+        prompt: "What do you want more of?",
+        a: { title: "Emotion", text: "I want the movie to actually land a little emotionally.", hint: "Feel it", prefs: { mood: ["emotional", "warm"] } },
+        b: { title: "Cool factor", text: "I mostly want style, momentum, or wit.", hint: "Style first", prefs: { mood: ["fun", "smart", "serious"] } }
+      },
+      {
+        id: "scale_1",
+        category: "scale",
+        prompt: "Pick the movie size.",
+        a: { title: "Big spectacle", text: "Scale, cinematic size, maybe action or major stakes.", hint: "Big screen", prefs: { scale: ["big"] } },
+        b: { title: "Smaller story", text: "Tighter, more intimate, more concept- or character-driven.", hint: "Closer in", prefs: { scale: ["small"] } }
+      },
+      {
+        id: "scale_2",
+        category: "scale",
+        prompt: "What kind of night is this?",
+        a: { title: "Event movie", text: "Give me something that feels like an event.", hint: "Go large", prefs: { scale: ["big"], runtimeBucket: ["long", "medium"] } },
+        b: { title: "Quietly great", text: "I want something smaller that really works.", hint: "Subtle win", prefs: { scale: ["small"] } }
+      },
+      {
+        id: "pace_1",
+        category: "pace",
+        prompt: "How should it move?",
+        a: { title: "Fast-moving", text: "Keep it active. I don't want dead air.", hint: "Momentum", prefs: { pace: ["fast"] } },
+        b: { title: "Slow burn", text: "I'm okay with patience and atmosphere.", hint: "Let it build", prefs: { pace: ["slow"] } }
+      },
+      {
+        id: "pace_2",
+        category: "pace",
+        prompt: "What's more important right now?",
+        a: { title: "Immediate pull", text: "Hook me early and keep me engaged.", hint: "Grab me", prefs: { pace: ["fast"], energy: ["high", "medium"] } },
+        b: { title: "A gradual payoff", text: "Let the movie unfold a little more patiently.", hint: "Give it room", prefs: { pace: ["slow", "medium"], energy: ["low", "medium"] } }
+      },
+      {
+        id: "freshness_1",
+        category: "freshness",
+        prompt: "What era sounds more fun?",
+        a: { title: "Newer", text: "Something modern or pretty recent feels right.", hint: "Recent-ish", prefs: { freshness: ["newer", "modern"] } },
+        b: { title: "Older", text: "I'd be happy with something a bit older or classic-feeling.", hint: "Reach back", prefs: { freshness: ["older", "modern"] } }
+      },
+      {
+        id: "freshness_2",
+        category: "freshness",
+        prompt: "Do you want a current-feeling movie or a time-tested one?",
+        a: { title: "Current-feeling", text: "Modern filmmaking and newer release energy.", hint: "Fresh", prefs: { freshness: ["newer"] } },
+        b: { title: "Time-tested", text: "Something proven and established is appealing.", hint: "Proven", prefs: { freshness: ["older", "modern"] } }
+      },
+      {
+        id: "runtime_1",
+        category: "runtime",
+        prompt: "How much movie do you want?",
+        a: { title: "Compact", text: "A tighter watch sounds better tonight.", hint: "Keep it moving", prefs: { runtimeBucket: ["short", "medium"] } },
+        b: { title: "Epic", text: "I'm open to a longer, more immersive ride.", hint: "Settle in", prefs: { runtimeBucket: ["long"] } }
+      },
+      {
+        id: "runtime_2",
+        category: "runtime",
+        prompt: "What feels more right?",
+        a: { title: "Quick commitment", text: "I'd like something easier to fit into the night.", hint: "Less time", prefs: { runtimeBucket: ["short", "medium"] } },
+        b: { title: "Full experience", text: "I'm fine giving the movie real time to breathe.", hint: "More time", prefs: { runtimeBucket: ["long"] } }
+      },
+      {
+        id: "realism_1",
+        category: "realism",
+        prompt: "Which kind of world do you want?",
+        a: { title: "Grounded", text: "Something more realistic or believable.", hint: "More real", prefs: { realism: ["grounded"] } },
+        b: { title: "Stylized", text: "I'm good with heightened concepts or movie logic.", hint: "More cinematic", prefs: { realism: ["stylized"] } }
+      },
+      {
+        id: "realism_2",
+        category: "realism",
+        prompt: "Which flavor sounds better?",
+        a: { title: "Real-world texture", text: "I want it to feel rooted and human.", hint: "Rooted", prefs: { realism: ["grounded"], scale: ["small", "big"] } },
+        b: { title: "Movie magic", text: "I want style, concept, or heightened spectacle.", hint: "Heightened", prefs: { realism: ["stylized"] } }
+      },
+      {
+        id: "wildcard_1",
+        category: "wildcard",
+        prompt: "What's the bigger priority?",
+        a: { title: "Rewatchable fun", text: "I want something easy to click with and enjoy.", hint: "Reliable", prefs: { mood: ["fun", "warm"], complexity: ["low", "medium"] } },
+        b: { title: "A stronger impression", text: "I'd like something that leaves a bigger mark.", hint: "Memorable", prefs: { mood: ["serious", "emotional", "smart"], complexity: ["medium", "high"] } }
+      },
+      {
+        id: "wildcard_2",
+        category: "wildcard",
+        prompt: "What sounds better tonight?",
+        a: { title: "Comfort zone", text: "Give me something accessible and easy to trust.", hint: "Safe pick", prefs: { familySafe: [true], mood: ["warm", "smart", "fun"] } },
+        b: { title: "Take a swing", text: "I'm open to something sharper or more demanding.", hint: "Bolder pick", prefs: { familySafe: [false], mood: ["serious", "smart", "emotional"] } }
+      }
+    ];
+
+    const REQUIRED_CATEGORIES = ["energy", "complexity", "mood", "scale"];
+    const OPTIONAL_CATEGORIES = ["pace", "freshness", "runtime", "realism", "wildcard"];
+    const QUESTIONS_PER_ROUND = 5;
+
+    const state = {
+      roundQuestions: [],
+      currentIndex: 0,
+      answers: [],
+      latestRanked: []
+    };
+
+    const els = {
+      screenIntro: document.getElementById("screenIntro"),
+      screenQuiz: document.getElementById("screenQuiz"),
+      screenReveal: document.getElementById("screenReveal"),
+      screenResult: document.getElementById("screenResult"),
+      progressText: document.getElementById("progressText"),
+      progressCount: document.getElementById("progressCount"),
+      progressBar: document.getElementById("progressBar"),
+      startBtn: document.getElementById("startBtn"),
+      surpriseBtn: document.getElementById("surpriseBtn"),
+      backBtn: document.getElementById("backBtn"),
+      restartBtn1: document.getElementById("restartBtn1"),
+      restartBtn2: document.getElementById("restartBtn2"),
+      anotherRoundBtn: document.getElementById("anotherRoundBtn"),
+      shuffleBtn: document.getElementById("shuffleBtn"),
+      questionMeta: document.getElementById("questionMeta"),
+      questionTitle: document.getElementById("questionTitle"),
+      choiceA: document.getElementById("choiceA"),
+      choiceB: document.getElementById("choiceB"),
+      resultTitle: document.getElementById("resultTitle"),
+      resultMeta: document.getElementById("resultMeta"),
+      resultTags: document.getElementById("resultTags"),
+      resultDescription: document.getElementById("resultDescription"),
+      whyList: document.getElementById("whyList"),
+      backupList: document.getElementById("backupList")
+    };
+
+    function shuffle(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function pickOneQuestion(category) {
+      const options = questionPool.filter(q => q.category === category);
+      return shuffle(options)[0];
+    }
+
+    function buildRoundQuestions() {
+      const selected = REQUIRED_CATEGORIES.map(pickOneQuestion);
+      const leftoverPool = shuffle(
+        OPTIONAL_CATEGORIES
+          .map(pickOneQuestion)
+          .filter(Boolean)
+      );
+
+      while (selected.length < QUESTIONS_PER_ROUND && leftoverPool.length) {
+        selected.push(leftoverPool.shift());
+      }
+
+      return shuffle(selected).slice(0, QUESTIONS_PER_ROUND);
+    }
+
+    function showScreen(screenEl) {
+      [els.screenIntro, els.screenQuiz, els.screenReveal, els.screenResult].forEach(el => el.classList.remove("active"));
+      screenEl.classList.add("active");
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const total = state.roundQuestions.length || QUESTIONS_PER_ROUND;
+      const current = Math.min(state.answers.filter(v => v !== undefined).length, total);
+      els.progressCount.textContent = `${current} / ${total}`;
+      els.progressBar.style.width = `${(current / total) * 100}%`;
+
+      if (els.screenIntro.classList.contains("active")) {
+        els.progressText.textContent = "Ready to start";
+      } else if (els.screenQuiz.classList.contains("active")) {
+        els.progressText.textContent = `Question ${state.currentIndex + 1}`;
+      } else if (els.screenReveal.classList.contains("active")) {
+        els.progressText.textContent = "Calculating pick";
+      } else {
+        els.progressText.textContent = "Recommendation ready";
+      }
+    }
+
+    function renderChoice(button, label, choice) {
+      button.innerHTML = `
+        <div class="choice-label">${label}</div>
+        <h4 class="choice-title">${choice.title}</h4>
+        <p class="choice-text">${choice.text}</p>
+        <div class="choice-hint">${choice.hint}</div>
+      `;
+    }
+
+    function renderQuestion() {
+      const q = state.roundQuestions[state.currentIndex];
+      els.questionMeta.textContent = `Round question ${state.currentIndex + 1} of ${state.roundQuestions.length}`;
+      els.questionTitle.textContent = q.prompt;
+      renderChoice(els.choiceA, "Option A", q.a);
+      renderChoice(els.choiceB, "Option B", q.b);
+      els.backBtn.style.visibility = state.currentIndex === 0 ? "hidden" : "visible";
+      updateProgress();
+    }
+
+    function startRound() {
+      state.roundQuestions = buildRoundQuestions();
+      state.currentIndex = 0;
+      state.answers = [];
+      state.latestRanked = [];
+      renderQuestion();
+      showScreen(els.screenQuiz);
+    }
+
+    function goHome() {
+      state.roundQuestions = [];
+      state.currentIndex = 0;
+      state.answers = [];
+      state.latestRanked = [];
+      showScreen(els.screenIntro);
+    }
+
+    function choose(optionKey) {
+      state.answers[state.currentIndex] = optionKey;
+
+      if (state.currentIndex < state.roundQuestions.length - 1) {
+        state.currentIndex += 1;
+        renderQuestion();
+      } else {
+        showScreen(els.screenReveal);
+        setTimeout(() => {
+          state.latestRanked = scoreMovies();
+          renderResults(state.latestRanked);
+          showScreen(els.screenResult);
+        }, 850);
+      }
+    }
+
+    function goBack() {
+      if (state.currentIndex > 0) {
+        state.currentIndex -= 1;
+        renderQuestion();
+      }
+    }
+
+    function labelForKey(key) {
+      const map = {
+        mood: "vibe",
+        energy: "energy",
+        complexity: "complexity",
+        scale: "scale",
+        pace: "pace",
+        freshness: "era",
+        runtimeBucket: "runtime",
+        realism: "style",
+        familySafe: "comfort level"
+      };
+      return map[key] || key;
+    }
+
+    function labelForValue(value) {
+      const map = {
+        high: "high",
+        medium: "medium",
+        low: "low",
+        serious: "serious",
+        fun: "fun",
+        warm: "warm",
+        smart: "smart",
+        emotional: "emotional",
+        big: "big",
+        small: "smaller-scale",
+        fast: "fast",
+        slow: "slow-burn",
+        modern: "modern",
+        newer: "newer",
+        older: "older",
+        short: "compact",
+        long: "longer",
+        grounded: "grounded",
+        stylized: "stylized",
+        true: "comfortable",
+        false: "edgier"
+      };
+      return map[String(value)] || value;
+    }
+
+    function scoreMovies() {
+      return movies
+        .map(movie => {
+          let score = 0;
+          const reasons = [];
+
+          state.roundQuestions.forEach((question, idx) => {
+            const pickedKey = state.answers[idx];
+            const pickedChoice = question[pickedKey];
+            const prefs = pickedChoice?.prefs || {};
+
+            Object.entries(prefs).forEach(([key, desiredValues]) => {
+              const actual = movie[key];
+              if (desiredValues.includes(actual)) {
+                score += 3;
+                reasons.push(`${labelForKey(key)} matched ${labelForValue(actual)}`);
+              }
+            });
+          });
+
+          if (movie.runtimeBucket === "medium") score += 0.35;
+          if (movie.freshness === "modern") score += 0.15;
+          score += Math.random() * 0.25;
+
+          return { ...movie, score, reasons };
+        })
+        .sort((a, b) => b.score - a.score);
+    }
+
+    function renderResults(ranked) {
+      const winnerPool = ranked.slice(0, Math.min(4, ranked.length));
+      const winner = winnerPool[Math.floor(Math.random() * winnerPool.length)];
+      const backups = ranked.filter(m => m.title !== winner.title).slice(0, 3);
+
+      els.resultTitle.textContent = `${winner.title} (${winner.year})`;
+      els.resultDescription.textContent = winner.description;
+
+      els.resultMeta.innerHTML = "";
+      [`${winner.energy} energy`, `${winner.complexity} complexity`, `${winner.runtimeBucket} runtime`].forEach(text => {
+        const span = document.createElement("span");
+        span.className = "pill";
+        span.textContent = text;
+        els.resultMeta.appendChild(span);
+      });
+
+      els.resultTags.innerHTML = "";
+      [...winner.genres, winner.mood, winner.scale, winner.pace].forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "pill";
+        span.textContent = tag;
+        els.resultTags.appendChild(span);
+      });
+
+      els.whyList.innerHTML = "";
+      const uniqueReasons = [...new Set(winner.reasons)].slice(0, 5);
+      (uniqueReasons.length ? uniqueReasons : ["Strong overall score across this round's choices"]).forEach(reason => {
+        const item = document.createElement("div");
+        item.className = "why-item";
+        item.textContent = reason;
+        els.whyList.appendChild(item);
+      });
+
+      els.backupList.innerHTML = "";
+      backups.forEach(movie => {
+        const card = document.createElement("div");
+        card.className = "mini-card";
+        card.innerHTML = `
+          <h4>${movie.title} (${movie.year})</h4>
+          <p>${movie.genres.join(" · ")} · ${movie.description}</p>
+        `;
+        els.backupList.appendChild(card);
+      });
+
+      const trailerContainer = document.getElementById("trailer-container");
+
+      const buttons = [];
+
+      if (winner.trailer) {
+        buttons.push(`<button id="watch-trailer-btn" type="button">🎬 Watch Trailer</button>`);
+      }
+
+      if (winner.scorePlaylist) {
+        buttons.push(`<button id="listen-score-btn" type="button">🎼 Listen to Score</button>`);
+      }
+
+      if (buttons.length) {
+        trailerContainer.innerHTML = `
+          <div style="margin-top: 16px; margin-bottom: 16px; display:flex; gap:10px; flex-wrap:wrap;">
+            ${buttons.join("")}
+          </div>
+        `;
+
+        const trailerBtn = document.getElementById("watch-trailer-btn");
+        const scoreBtn = document.getElementById("listen-score-btn");
+
+        if (trailerBtn) {
+          trailerBtn.onclick = () => openTrailerModal(winner.trailer);
+        }
+
+        if (scoreBtn) {
+          scoreBtn.onclick = () => openScoreModal(winner.scorePlaylist);
+        }
+      } else {
+        trailerContainer.innerHTML = "";
+      }
+    }
+
+    function randomInstantPick() {
+      state.roundQuestions = buildRoundQuestions();
+      state.currentIndex = 0;
+      state.answers = state.roundQuestions.map(() => (Math.random() < 0.5 ? "a" : "b"));
+      state.latestRanked = scoreMovies();
+      renderResults(state.latestRanked);
+      showScreen(els.screenResult);
+    }
+
+    function shuffleWinner() {
+      if (!state.latestRanked.length) return;
+      renderResults(state.latestRanked);
+    }
+
+    function getYouTubeEmbed(url) {
+      const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/);
+      return match ? `https://www.youtube.com/embed/${match[1]}` : null;
+    }
+
+    function getYouTubePlaylistEmbed(url) {
+      const listMatch = url.match(/[?&]list=([^&]+)/);
+      const videoMatch = url.match(/[?&]v=([^&]+)/);
+
+      if (!listMatch) return null;
+
+      const listId = listMatch[1];
+      const videoId = videoMatch ? videoMatch[1] : null;
+
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}?list=${listId}`;
+      }
+
+      return `https://www.youtube.com/embed/videoseries?list=${listId}`;
+    }
+
+    function openMediaModal(embedUrl, title = "Media", mediaType = "media") {
+      const modal = document.getElementById("trailer-modal");
+      const dialog = modal.querySelector(".trailer-modal-dialog");
+      const body = modal.querySelector(".trailer-modal-body");
+      const iframe = document.getElementById("trailer-modal-iframe");
+      const titleText = document.getElementById("media-modal-title-text");
+      const eq = document.getElementById("media-eq");
+
+      if (!embedUrl) return;
+
+      iframe.src = embedUrl;
+      titleText.textContent = title;
+
+      dialog.classList.remove("is-score");
+      body.classList.remove("is-score");
+
+      if (mediaType === "score") {
+        eq.classList.add("is-active");
+        dialog.classList.add("is-score");
+        body.classList.add("is-score");
+      } else {
+        eq.classList.remove("is-active");
+      }
+
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    }
+
+    function openTrailerModal(trailerUrl) {
+      const embedUrl = getYouTubeEmbed(trailerUrl);
+      if (!embedUrl) return;
+      openMediaModal(`${embedUrl}?autoplay=1&rel=0`, "Trailer", "trailer");
+    }
+
+    function openScoreModal(scorePlaylistUrl) {
+      const embedUrl = getYouTubePlaylistEmbed(scorePlaylistUrl);
+      if (!embedUrl) return;
+      openMediaModal(`${embedUrl}${embedUrl.includes('?') ? '&' : '?'}rel=0`, "Film Score", "score");
+    }
+
+    function closeTrailerModal() {
+      const modal = document.getElementById("trailer-modal");
+      const iframe = document.getElementById("trailer-modal-iframe");
+      const eq = document.getElementById("media-eq");
+
+      iframe.src = "";
+      eq.classList.remove("is-active");
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    }
+
+    els.startBtn.addEventListener("click", startRound);
+    els.surpriseBtn.addEventListener("click", randomInstantPick);
+    els.choiceA.addEventListener("click", () => choose("a"));
+    els.choiceB.addEventListener("click", () => choose("b"));
+    els.backBtn.addEventListener("click", goBack);
+    els.restartBtn1.addEventListener("click", goHome);
+    els.restartBtn2.addEventListener("click", goHome);
+    els.anotherRoundBtn.addEventListener("click", startRound);
+    els.shuffleBtn.addEventListener("click", shuffleWinner);
+
+    document.getElementById("trailer-modal-close").addEventListener("click", closeTrailerModal);
+
+    document.querySelector(".trailer-modal-backdrop").addEventListener("click", closeTrailerModal);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeTrailerModal();
+      }
+    });
+
+    updateProgress();
+
+  </script>
+</body>
+</html>

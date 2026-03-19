@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose a Movie</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --panel-2: #1f2937;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #8b5cf6;
+      --accent-2: #22c55e;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(139,92,246,0.18), transparent 28%),
+        linear-gradient(180deg, #020617 0%, #0f172a 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 860px;
+      background: rgba(17,24,39,0.88);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+    }
+
+    .topbar {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), #3b82f6);
+      font-size: 20px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.1;
+    }
+
+    .brand p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .progress-wrap {
+      min-width: 200px;
+      flex: 1;
+      max-width: 280px;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+
+    .progress {
+      height: 10px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), #60a5fa);
+      transition: width 220ms ease;
+    }
+
+    .content {
+      padding: 30px 24px 28px;
+    }
+
+    .eyebrow {
+      color: #c4b5fd;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.65rem, 3vw, 2.5rem);
+      line-height: 1.05;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.6;
+      max-width: 58ch;
+    }
+
+    .screen { display: none; }
+    .screen.active { display: block; }
+
+    .hero-actions,
+    .result-actions,
+    .secondary-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 16px;
+      padding: 14px 18px;
+      font: inherit;
+      cursor: pointer;
+      transition: transform 140ms ease, opacity 140ms ease, background 140ms ease;
+    }
+
+    button:hover { transform: translateY(-1px); }
+    button:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #3b82f6);
+      color: white;
+      font-weight: 700;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.07);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .question-card,
+    .result-card,
+    .backup-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 22px;
+    }
+
+    .question-card { margin-top: 18px; }
+
+    .question-meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+    }
+
+    .question-title {
+      font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+      line-height: 1.15;
+      margin: 0 0 20px;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .option {
+      text-align: left;
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      border: 1px solid transparent;
+      min-height: 96px;
+      padding: 16px;
+      border-radius: 20px;
+    }
+
+    .option strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .option span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .option:hover {
+      border-color: rgba(139,92,246,0.45);
+      background: rgba(139,92,246,0.12);
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .movie-kicker {
+      color: #86efac;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .movie-title {
+      font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+      margin: 0 0 10px;
+      line-height: 1.05;
+    }
+
+    .movie-meta,
+    .movie-tags,
+    .why-list,
+    .backup-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      color: var(--text);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+    }
+
+    .why-box {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .why-box h3,
+    .backups h3 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+    }
+
+    .why-list {
+      gap: 8px;
+    }
+
+    .why-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 10px;
+      border-radius: 12px;
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.25);
+      color: #bbf7d0;
+      font-size: 0.9rem;
+    }
+
+    .result-description {
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 16px 0 0;
+    }
+
+    .backup-list {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .backup-card h4 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+    }
+
+    .backup-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 0.92rem;
+    }
+
+    .empty-note {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 760px) {
+      .topbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .progress-wrap {
+        max-width: none;
+      }
+
+      .options,
+      .result-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .content {
+        padding: 22px 18px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <div class="topbar">
+      <div class="brand">
+        <div class="badge">🎬</div>
+        <div>
+          <h1>Choose a Movie</h1>
+          <p>Prototype v1 · client-side only</p>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span id="progressText">Ready to start</span>
+          <span id="progressCount">0 / 5</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <section id="screenIntro" class="screen active">
+        <div class="eyebrow">Tonight's mission</div>
+        <h2>Let’s find a movie without scrolling forever.</h2>
+        <p class="lead">
+          Answer five quick questions. This prototype scores a small hand-picked movie list and gives you one main pick plus a couple backups.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" id="startBtn">Start the game</button>
+          <button class="btn-secondary" id="surpriseBtn">Surprise me</button>
+        </div>
+      </section>
+
+      <section id="screenQuiz" class="screen">
+        <div class="question-card">
+          <div class="question-meta" id="questionMeta">Question 1 of 5</div>
+          <h3 class="question-title" id="questionTitle"></h3>
+          <div class="options" id="options"></div>
+          <div class="secondary-actions">
+            <button class="btn-secondary" id="backBtn">Back</button>
+            <button class="btn-secondary" id="restartBtn1">Start over</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="screenResult" class="screen">
+        <div class="eyebrow">Recommendation locked</div>
+        <h2>Your movie pick is ready.</h2>
+        <p class="lead">Not perfect yet — but good enough to prove the concept.</p>
+
+        <div class="result-grid">
+          <article class="result-card">
+            <div class="movie-kicker">Top pick</div>
+            <h3 class="movie-title" id="resultTitle"></h3>
+            <div class="movie-meta" id="resultMeta"></div>
+            <div class="movie-tags" id="resultTags" style="margin-top: 12px;"></div>
+            <p class="result-description" id="resultDescription"></p>
+
+            <div class="why-box">
+              <h3>Why this matched</h3>
+              <div class="why-list" id="whyList"></div>
+            </div>
+
+            <div class="result-actions">
+              <button class="btn-primary" id="shuffleBtn">Give me another pick</button>
+              <button class="btn-secondary" id="restartBtn2">Play again</button>
+            </div>
+          </article>
+
+          <aside class="backups">
+            <div class="result-card">
+              <h3>Backup choices</h3>
+              <div class="backup-list" id="backupList"></div>
+              <p class="empty-note">This area can later become posters, trailers, or streaming links.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const movies = [
+      {
+        title: "Inception",
+        year: 2010,
+        genres: ["Sci-Fi", "Thriller"],
+        mood: "serious",
+        energy: "high",
+        complexity: "high",
+        scale: "big",
+        pace: "fast",
+        runtime: 148,
+        familySafe: false,
+        description: "A slick, dream-layered sci-fi thriller that rewards attention and hits with real scale.",
+      },
+      {
+        title: "The Dark Knight",
+        year: 2008,
+        genres: ["Action", "Crime"],
+        mood: "serious",
+        energy: "high",
+        complexity: "medium",
+        scale: "big",
+        pace: "fast",
+        runtime: 152,
+        familySafe: false,
+        description: "A huge, intense crime blockbuster with momentum, pressure, and iconic set pieces.",
+      },
+      {
+        title: "Interstellar",
+        year: 2014,
+        genres: ["Sci-Fi", "Drama"],
+        mood: "emotional",
+        energy: "medium",
+        complexity: "high",
+        scale: "big",
+        pace: "medium",
+        runtime: 169,
+        familySafe: true,
+        description: "Big-screen sci-fi with cosmic ideas, emotional stakes, and a sweeping feel.",
+      },
+      {
+        title: "Tenet",
+        year: 2020,
+        genres: ["Sci-Fi", "Action"],
+        mood: "serious",
+        energy: "high",
+        complexity: "high",
+        scale: "big",
+        pace: "fast",
+        runtime: 150,
+        familySafe: false,
+        description: "A bold, high-speed puzzle-box movie built for nights when you want to lean in.",
+      },
+      {
+        title: "The Social Network",
+        year: 2010,
+        genres: ["Drama"],
+        mood: "smart",
+        energy: "medium",
+        complexity: "medium",
+        scale: "small",
+        pace: "fast",
+        runtime: 120,
+        familySafe: false,
+        description: "Sharp, fast, and highly rewatchable — more electric than its premise sounds.",
+      },
+      {
+        title: "Knives Out",
+        year: 2019,
+        genres: ["Mystery", "Comedy"],
+        mood: "fun",
+        energy: "medium",
+        complexity: "medium",
+        scale: "small",
+        pace: "medium",
+        runtime: 130,
+        familySafe: true,
+        description: "Clever, playful, and super watchable — a crowd-pleasing mystery with personality.",
+      },
+      {
+        title: "The Intern",
+        year: 2015,
+        genres: ["Comedy", "Drama"],
+        mood: "warm",
+        energy: "low",
+        complexity: "low",
+        scale: "small",
+        pace: "slow",
+        runtime: 121,
+        familySafe: true,
+        description: "An easy, comforting watch with heart, charm, and very low friction.",
+      },
+      {
+        title: "Palm Springs",
+        year: 2020,
+        genres: ["Comedy", "Romance", "Sci-Fi"],
+        mood: "fun",
+        energy: "medium",
+        complexity: "low",
+        scale: "small",
+        pace: "fast",
+        runtime: 90,
+        familySafe: false,
+        description: "Funny, light, and quick — ideal when you want something clever without heaviness.",
+      },
+      {
+        title: "Edge of Tomorrow",
+        year: 2014,
+        genres: ["Sci-Fi", "Action"],
+        mood: "fun",
+        energy: "high",
+        complexity: "medium",
+        scale: "big",
+        pace: "fast",
+        runtime: 113,
+        familySafe: false,
+        description: "A highly entertaining action-sci-fi loop movie with strong pace and replay value.",
+      },
+      {
+        title: "Arrival",
+        year: 2016,
+        genres: ["Sci-Fi", "Drama"],
+        mood: "emotional",
+        energy: "low",
+        complexity: "high",
+        scale: "small",
+        pace: "slow",
+        runtime: 116,
+        familySafe: true,
+        description: "Quiet, thoughtful sci-fi that lands emotionally and leaves you thinking after it ends.",
+      },
+      {
+        title: "Mission: Impossible – Fallout",
+        year: 2018,
+        genres: ["Action", "Thriller"],
+        mood: "fun",
+        energy: "high",
+        complexity: "low",
+        scale: "big",
+        pace: "fast",
+        runtime: 147,
+        familySafe: false,
+        description: "An ultra-reliable blockbuster pick when you want pure momentum and spectacle.",
+      },
+      {
+        title: "The Truman Show",
+        year: 1998,
+        genres: ["Drama", "Comedy"],
+        mood: "smart",
+        energy: "low",
+        complexity: "medium",
+        scale: "small",
+        pace: "medium",
+        runtime: 103,
+        familySafe: true,
+        description: "Accessible, thoughtful, and full of big ideas without feeling hard to watch.",
+      }
+    ];
+
+    const questions = [
+      {
+        id: "energy",
+        text: "What kind of energy do you want tonight?",
+        options: [
+          { label: "High energy", hint: "Intense, fast, and gripping.", weights: { energy: "high" } },
+          { label: "Middle lane", hint: "Balanced and easy to settle into.", weights: { energy: "medium" } },
+          { label: "Low-key", hint: "Gentle, calmer, less demanding.", weights: { energy: "low" } },
+          { label: "No preference", hint: "Keep this category flexible.", weights: {} }
+        ]
+      },
+      {
+        id: "complexity",
+        text: "Do you want something straightforward or something to think about?",
+        options: [
+          { label: "Puzzle-box me", hint: "I want something layered or mind-bending.", weights: { complexity: "high" } },
+          { label: "Some depth", hint: "Smart, but still easy enough to follow.", weights: { complexity: "medium" } },
+          { label: "Keep it simple", hint: "I don't want homework tonight.", weights: { complexity: "low" } },
+          { label: "Open to anything", hint: "Don't weigh this too heavily.", weights: {} }
+        ]
+      },
+      {
+        id: "mood",
+        text: "What overall vibe sounds best?",
+        options: [
+          { label: "Serious / intense", hint: "Dark, tense, focused.", weights: { mood: "serious" } },
+          { label: "Fun / playful", hint: "Entertaining, stylish, lighter.", weights: { mood: "fun" } },
+          { label: "Warm / comforting", hint: "Soft landing kind of movie.", weights: { mood: "warm" } },
+          { label: "Smart / emotional", hint: "Thoughtful or moving.", weights: { mood: ["smart", "emotional"] } }
+        ]
+      },
+      {
+        id: "scale",
+        text: "Do you want a big spectacle or a smaller story?",
+        options: [
+          { label: "Go big", hint: "Cinematic scale, action, size.", weights: { scale: "big" } },
+          { label: "Smaller and tighter", hint: "Character-driven or concept-driven.", weights: { scale: "small" } },
+          { label: "Either works", hint: "Don't filter much here.", weights: {} },
+          { label: "Surprise me", hint: "Give the algorithm room.", weights: {} }
+        ]
+      },
+      {
+        id: "pace",
+        text: "How quickly do you want it to move?",
+        options: [
+          { label: "Fast", hint: "Keep things moving.", weights: { pace: "fast" } },
+          { label: "Medium", hint: "Steady and balanced.", weights: { pace: "medium" } },
+          { label: "Slow burn", hint: "Patient and atmospheric.", weights: { pace: "slow" } },
+          { label: "Any pace", hint: "No strong preference.", weights: {} }
+        ]
+      }
+    ];
+
+    const state = {
+      currentQuestion: 0,
+      answers: []
+    };
+
+    const els = {
+      screenIntro: document.getElementById("screenIntro"),
+      screenQuiz: document.getElementById("screenQuiz"),
+      screenResult: document.getElementById("screenResult"),
+      startBtn: document.getElementById("startBtn"),
+      surpriseBtn: document.getElementById("surpriseBtn"),
+      backBtn: document.getElementById("backBtn"),
+      restartBtn1: document.getElementById("restartBtn1"),
+      restartBtn2: document.getElementById("restartBtn2"),
+      shuffleBtn: document.getElementById("shuffleBtn"),
+      questionMeta: document.getElementById("questionMeta"),
+      questionTitle: document.getElementById("questionTitle"),
+      options: document.getElementById("options"),
+      progressText: document.getElementById("progressText"),
+      progressCount: document.getElementById("progressCount"),
+      progressBar: document.getElementById("progressBar"),
+      resultTitle: document.getElementById("resultTitle"),
+      resultMeta: document.getElementById("resultMeta"),
+      resultTags: document.getElementById("resultTags"),
+      resultDescription: document.getElementById("resultDescription"),
+      whyList: document.getElementById("whyList"),
+      backupList: document.getElementById("backupList")
+    };
+
+    function showScreen(name) {
+      [els.screenIntro, els.screenQuiz, els.screenResult].forEach(el => el.classList.remove("active"));
+      name.classList.add("active");
+    }
+
+    function updateProgress() {
+      const total = questions.length;
+      const current = Math.min(state.answers.length, total);
+      els.progressCount.textContent = `${current} / ${total}`;
+      els.progressBar.style.width = `${(current / total) * 100}%`;
+
+      if (els.screenIntro.classList.contains("active")) {
+        els.progressText.textContent = "Ready to start";
+      } else if (els.screenQuiz.classList.contains("active")) {
+        els.progressText.textContent = `Question ${state.currentQuestion + 1}`;
+      } else {
+        els.progressText.textContent = "Recommendation ready";
+      }
+    }
+
+    function startQuiz() {
+      state.currentQuestion = 0;
+      state.answers = [];
+      renderQuestion();
+      showScreen(els.screenQuiz);
+      updateProgress();
+    }
+
+    function restartQuiz() {
+      state.currentQuestion = 0;
+      state.answers = [];
+      showScreen(els.screenIntro);
+      updateProgress();
+    }
+
+    function renderQuestion() {
+      const q = questions[state.currentQuestion];
+      els.questionMeta.textContent = `Question ${state.currentQuestion + 1} of ${questions.length}`;
+      els.questionTitle.textContent = q.text;
+      els.options.innerHTML = "";
+
+      q.options.forEach((option, index) => {
+        const btn = document.createElement("button");
+        btn.className = "option";
+        btn.innerHTML = `<strong>${option.label}</strong><span>${option.hint}</span>`;
+        btn.addEventListener("click", () => chooseOption(index));
+        els.options.appendChild(btn);
+      });
+
+      els.backBtn.style.visibility = state.currentQuestion === 0 ? "hidden" : "visible";
+    }
+
+    function chooseOption(optionIndex) {
+      state.answers[state.currentQuestion] = optionIndex;
+
+      if (state.currentQuestion < questions.length - 1) {
+        state.currentQuestion += 1;
+        renderQuestion();
+        updateProgress();
+      } else {
+        renderResults();
+      }
+    }
+
+    function goBack() {
+      if (state.currentQuestion > 0) {
+        state.currentQuestion -= 1;
+        renderQuestion();
+        updateProgress();
+      }
+    }
+
+    function scoreMovies() {
+      const chosenOptions = state.answers.map((answerIndex, questionIndex) => {
+        return questions[questionIndex].options[answerIndex];
+      });
+
+      const scored = movies.map(movie => {
+        let score = 0;
+        const reasons = [];
+
+        chosenOptions.forEach((option, i) => {
+          const weights = option?.weights || {};
+
+          Object.entries(weights).forEach(([key, desired]) => {
+            if (!desired) return;
+
+            const actual = movie[key];
+            const matches = Array.isArray(desired)
+              ? desired.includes(actual)
+              : actual === desired;
+
+            if (matches) {
+              score += 3;
+              reasons.push(`${labelForKey(key)} matched ${labelForValue(actual)}`);
+            }
+          });
+        });
+
+        if (movie.runtime <= 110) {
+          score += 0.4;
+        }
+
+        score += Math.random() * 0.35;
+
+        return { ...movie, score, reasons };
+      });
+
+      scored.sort((a, b) => b.score - a.score);
+      return scored;
+    }
+
+    function labelForKey(key) {
+      const labels = {
+        mood: "vibe",
+        energy: "energy",
+        complexity: "complexity",
+        scale: "scale",
+        pace: "pace"
+      };
+      return labels[key] || key;
+    }
+
+    function labelForValue(value) {
+      const labels = {
+        high: "high",
+        medium: "medium",
+        low: "low",
+        serious: "serious",
+        fun: "fun",
+        warm: "warm",
+        smart: "smart",
+        emotional: "emotional",
+        big: "big",
+        small: "small",
+        fast: "fast",
+        slow: "slow"
+      };
+      return labels[value] || value;
+    }
+
+    function renderResults() {
+      const ranked = scoreMovies();
+      const winner = ranked[0];
+      const backups = ranked.slice(1, 3);
+
+      els.resultTitle.textContent = `${winner.title} (${winner.year})`;
+      els.resultDescription.textContent = winner.description;
+
+      els.resultMeta.innerHTML = "";
+      [
+        `${winner.runtime} min`,
+        winner.energy + " energy",
+        winner.complexity + " complexity"
+      ].forEach(text => {
+        const el = document.createElement("span");
+        el.className = "pill";
+        el.textContent = text;
+        els.resultMeta.appendChild(el);
+      });
+
+      els.resultTags.innerHTML = "";
+      winner.genres.concat([winner.mood, winner.scale]).forEach(tag => {
+        const el = document.createElement("span");
+        el.className = "pill";
+        el.textContent = tag;
+        els.resultTags.appendChild(el);
+      });
+
+      els.whyList.innerHTML = "";
+      const uniqueReasons = [...new Set(winner.reasons)].slice(0, 5);
+      (uniqueReasons.length ? uniqueReasons : ["Strong overall score across your answers"]).forEach(reason => {
+        const el = document.createElement("div");
+        el.className = "why-item";
+        el.textContent = reason;
+        els.whyList.appendChild(el);
+      });
+
+      els.backupList.innerHTML = "";
+      backups.forEach(movie => {
+        const card = document.createElement("div");
+        card.className = "backup-card";
+        card.innerHTML = `
+          <h4>${movie.title} (${movie.year})</h4>
+          <p>${movie.genres.join(" · ")} · ${movie.description}</p>
+        `;
+        els.backupList.appendChild(card);
+      });
+
+      showScreen(els.screenResult);
+      updateProgress();
+    }
+
+    function surpriseMe() {
+      state.answers = questions.map(q => {
+        const randomIndex = Math.floor(Math.random() * q.options.length);
+        return randomIndex;
+      });
+      renderResults();
+    }
+
+    function reshuffleTopPick() {
+      const ranked = scoreMovies();
+      const pool = ranked.slice(0, 4);
+      const altWinner = pool[Math.floor(Math.random() * pool.length)];
+      const backups = ranked.filter(movie => movie.title !== altWinner.title).slice(0, 2);
+
+      els.resultTitle.textContent = `${altWinner.title} (${altWinner.year})`;
+      els.resultDescription.textContent = altWinner.description;
+
+      els.resultMeta.innerHTML = "";
+      [`${altWinner.runtime} min`, altWinner.energy + " energy", altWinner.complexity + " complexity"].forEach(text => {
+        const el = document.createElement("span");
+        el.className = "pill";
+        el.textContent = text;
+        els.resultMeta.appendChild(el);
+      });
+
+      els.resultTags.innerHTML = "";
+      altWinner.genres.concat([altWinner.mood, altWinner.scale]).forEach(tag => {
+        const el = document.createElement("span");
+        el.className = "pill";
+        el.textContent = tag;
+        els.resultTags.appendChild(el);
+      });
+
+      els.whyList.innerHTML = "";
+      const uniqueReasons = [...new Set(altWinner.reasons)].slice(0, 5);
+      (uniqueReasons.length ? uniqueReasons : ["Strong overall score across your answers"]).forEach(reason => {
+        const el = document.createElement("div");
+        el.className = "why-item";
+        el.textContent = reason;
+        els.whyList.appendChild(el);
+      });
+
+      els.backupList.innerHTML = "";
+      backups.forEach(movie => {
+        const card = document.createElement("div");
+        card.className = "backup-card";
+        card.innerHTML = `
+          <h4>${movie.title} (${movie.year})</h4>
+          <p>${movie.genres.join(" · ")} · ${movie.description}</p>
+        `;
+        els.backupList.appendChild(card);
+      });
+    }
+
+    els.startBtn.addEventListener("click", startQuiz);
+    els.surpriseBtn.addEventListener("click", surpriseMe);
+    els.backBtn.addEventListener("click", goBack);
+    els.restartBtn1.addEventListener("click", restartQuiz);
+    els.restartBtn2.addEventListener("click", restartQuiz);
+    els.shuffleBtn.addEventListener("click", reshuffleTopPick);
+
+    updateProgress();
+  </script>
+</body>
+</html>
