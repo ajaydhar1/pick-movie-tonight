@@ -800,6 +800,7 @@
         <div class="actions">
           <button class="btn-primary" id="startBtn">Start round</button>
           <button class="btn-secondary instant-pick-btn" id="surpriseBtn">Random instant pick</button>
+          <button id="randomTrailerBtn" class="instant-pick-btn">🎲 Random Trailer</button>
         </div>
       </section>
 
@@ -3599,6 +3600,53 @@
       modal.setAttribute("aria-hidden", "true");
       document.body.classList.remove("modal-open");
     }
+
+    async function getRandomMovie() {
+      const res = await fetch("/movies.json");
+      const movies = await res.json();
+
+      return movies[Math.floor(Math.random() * movies.length)];
+    }
+
+    async function launchRandomTrailer() {
+      const button = document.getElementById("randomTrailerBtn");
+
+      try {
+        button.disabled = true;
+        button.textContent = "Finding trailer...";
+
+        const movie = await getRandomMovie();
+
+        const res = await fetch("/.netlify/functions/get-trailer", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(movie)
+        });
+
+        const data = await res.json();
+
+        if (!data.youtubeKey) {
+          alert(`No trailer found for ${movie.title}. Try again!`);
+          return;
+        }
+
+        // Use your existing theater mode function here
+        openTrailerModal(`https://www.youtube.com/watch?v=${data.youtubeKey}`);
+
+      } catch (error) {
+        console.error(error);
+        alert("Could not load a trailer right now.");
+      } finally {
+        button.disabled = false;
+        button.textContent = "🎲 Random Trailer";
+      }
+    }
+
+    document
+      .getElementById("randomTrailerBtn")
+      .addEventListener("click", launchRandomTrailer);
 
     els.startBtn.addEventListener("click", startRound);
     els.surpriseBtn.addEventListener("click", randomInstantPick);

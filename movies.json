@@ -1,0 +1,284 @@
+[
+  {
+    "title": "Blade Runner 2049",
+    "year": 2017,
+    "categories": ["Sci-Fi", "Drama"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Interstellar",
+    "year": 2014,
+    "categories": ["Sci-Fi", "Adventure"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Arrival",
+    "year": 2016,
+    "categories": ["Sci-Fi", "Drama"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "The Matrix",
+    "year": 1999,
+    "categories": ["Sci-Fi", "Action"],
+    "source": ["curated"]
+  },
+  {
+    "title": "Ex Machina",
+    "year": 2014,
+    "categories": ["Sci-Fi", "Thriller"],
+    "source": ["curated"]
+  },
+  {
+    "title": "Inception",
+    "year": 2010,
+    "categories": ["Sci-Fi", "Thriller", "Action"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Edge of Tomorrow",
+    "year": 2014,
+    "categories": ["Sci-Fi", "Action"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Minority Report",
+    "year": 2002,
+    "categories": ["Sci-Fi", "Thriller"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Dune",
+    "year": 2021,
+    "categories": ["Sci-Fi", "Adventure"],
+    "source": ["curated"]
+  },
+  {
+    "title": "District 9",
+    "year": 2009,
+    "categories": ["Sci-Fi", "Thriller"],
+    "source": ["curated"]
+  },
+  {
+    "title": "Mad Max: Fury Road",
+    "year": 2015,
+    "categories": ["Action", "Adventure"],
+    "source": ["curated"]
+  },
+  {
+    "title": "John Wick",
+    "year": 2014,
+    "categories": ["Action", "Thriller"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Top Gun: Maverick",
+    "year": 2022,
+    "categories": ["Action", "Adventure"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "The Dark Knight",
+    "year": 2008,
+    "categories": ["Action", "Drama", "Thriller"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Gone Girl",
+    "year": 2014,
+    "categories": ["Thriller", "Drama"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Prisoners",
+    "year": 2013,
+    "categories": ["Thriller", "Drama"],
+    "source": ["curated"]
+  },
+  {
+    "title": "Zodiac",
+    "year": 2007,
+    "categories": ["Thriller", "Drama"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Nightcrawler",
+    "year": 2014,
+    "categories": ["Thriller", "Drama"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Superbad",
+    "year": 2007,
+    "categories": ["Comedy"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Step Brothers",
+    "year": 2008,
+    "categories": ["Comedy"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Game Night",
+    "year": 2018,
+    "categories": ["Comedy", "Thriller"],
+    "source": ["curated"]
+  },
+  {
+    "title": "Mean Girls",
+    "year": 2004,
+    "categories": ["Comedy"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Booksmart",
+    "year": 2019,
+    "categories": ["Comedy"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Crazy, Stupid, Love.",
+    "year": 2011,
+    "categories": ["Romance", "Comedy"],
+    "source": ["curated"]
+  },
+  {
+    "title": "About Time",
+    "year": 2013,
+    "categories": ["Romance", "Drama"],
+    "source": ["curated"]
+  },
+  {
+    "title": "La La Land",
+    "year": 2016,
+    "categories": ["Romance", "Drama"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Silver Linings Playbook",
+    "year": 2012,
+    "categories": ["Romance", "Drama", "Comedy"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "The Social Network",
+    "year": 2010,
+    "categories": ["Drama"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Whiplash",
+    "year": 2014,
+    "categories": ["Drama"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Parasite",
+    "year": 2019,
+    "categories": ["Drama", "Thriller"],
+    "source": ["curated"]
+  },
+  {
+    "title": "The Truman Show",
+    "year": 1998,
+    "categories": ["Drama", "Sci-Fi"],
+    "source": ["curated"]
+  },
+  {
+    "title": "Hereditary",
+    "year": 2018,
+    "categories": ["Horror"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Get Out",
+    "year": 2017,
+    "categories": ["Horror", "Thriller"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "It Follows",
+    "year": 2014,
+    "categories": ["Horror"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Spider-Man: Into the Spider-Verse",
+    "year": 2018,
+    "categories": ["Animation", "Action", "Adventure"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Toy Story",
+    "year": 1995,
+    "categories": ["Animation", "Family"],
+    "source": ["curated"]
+  },
+  {
+    "title": "Finding Nemo",
+    "year": 2003,
+    "categories": ["Animation", "Family"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Shrek",
+    "year": 2001,
+    "categories": ["Animation", "Comedy", "Family"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Ratatouille",
+    "year": 2007,
+    "categories": ["Animation", "Family"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Jurassic Park",
+    "year": 1993,
+    "categories": ["Adventure", "Sci-Fi"],
+    "source": ["curated"]
+  },
+  {
+    "title": "Avatar",
+    "year": 2009,
+    "categories": ["Adventure", "Sci-Fi"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "The Martian",
+    "year": 2015,
+    "categories": ["Adventure", "Sci-Fi"],
+    "source": ["curated"]
+  },
+  {
+    "title": "Knives Out",
+    "year": 2019,
+    "categories": ["Modern Crowd-Pleasers", "Comedy", "Mystery"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Everything Everywhere All at Once",
+    "year": 2022,
+    "categories": ["Modern Crowd-Pleasers", "Sci-Fi", "Comedy"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Oppenheimer",
+    "year": 2023,
+    "categories": ["Modern Crowd-Pleasers", "Drama"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "Barbie",
+    "year": 2023,
+    "categories": ["Modern Crowd-Pleasers", "Comedy"],
+    "source": ["curated", "acclaimed"]
+  },
+  {
+    "title": "The Holdovers",
+    "year": 2023,
+    "categories": ["Drama", "Comedy"],
+    "source": ["acclaimed"]
+  }
+]
