@@ -713,6 +713,61 @@
         }
     }
 
+    /* Instant Pick button */
+    .instant-pick-btn {
+        position: relative;
+        overflow: hidden;
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease;
+
+        box-shadow:
+            0 0 12px rgba(255,255,255,0.04);
+    }
+
+    /* Very subtle shimmer */
+    .instant-pick-btn::after {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: -140%;
+
+        width: 50%;
+        height: 100%;
+
+        background: linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,0.12),
+            transparent
+        );
+
+        transform: skewX(-20deg);
+
+        animation: instantPickShimmer 7s linear infinite;
+    }
+
+    /* Soft hover lift */
+    .instant-pick-btn:hover {
+        transform: translateY(-1px);
+
+        box-shadow:
+            0 0 18px rgba(255,255,255,0.08);
+    }
+
+    @keyframes instantPickShimmer {
+        0% {
+            left: -140%;
+        }
+
+        100% {
+            left: 180%;
+        }
+    }
+
   </style>
 </head>
 <body>
@@ -744,7 +799,7 @@
         </p>
         <div class="actions">
           <button class="btn-primary" id="startBtn">Start round</button>
-          <button class="btn-secondary" id="surpriseBtn">Random instant pick</button>
+          <button class="btn-secondary instant-pick-btn" id="surpriseBtn">Random instant pick</button>
         </div>
       </section>
 
