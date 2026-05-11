@@ -2705,4 +2705,83 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+const homePicksRow = document.getElementById("homePicksRow");
+
+async function renderHomePicks() {
+  if (!homePicksRow) return;
+
+  const response = await fetch("/data/movies-expanded-3.json");
+  const expandedMovies = await response.json();
+
+  const picks = shuffle(expandedMovies).slice(0, 6);
+
+  homePicksRow.innerHTML = picks.map(movie => {
+    const title = escapeHTML(movie.title || "Untitled");
+    const year = escapeHTML(String(movie.year || ""));
+    const poster = movie.poster || movie.posterUrl || movie.poster_path || movie.posterUrlFull || "";
+
+    return `
+      <article class="movie-card">
+        <button
+          class="movie-card-button"
+          type="button"
+          data-home-pick-title="${title}"
+          data-home-pick-year="${year}"
+          aria-label="Watch trailer for ${title}"
+        >
+          ${poster ? `<img src="${escapeHTML(poster)}" alt="${title} poster" loading="lazy">` : ""}
+          <div class="movie-card-body">
+            <h3>${title}</h3>
+            <p>${year}</p>
+          </div>
+        </button>
+      </article>
+    `;
+  }).join("");
+}
+
+document.addEventListener("click", async event => {
+  const button = event.target.closest("[data-home-pick-title]");
+  if (!button) return;
+
+  const title = button.dataset.homePickTitle;
+  const year = button.dataset.homePickYear;
+
+  try {
+    const response = await fetch("/.netlify/functions/get-trailer", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ title, year })
+    });
+
+    if (!response.ok) throw new Error("Trailer lookup failed");
+
+    const data = await response.json();
+
+    if (!data.youtubeKey) {
+      alert("No trailer available for this movie yet.");
+      return;
+    }
+
+    openTrailerModal(`https://www.youtube.com/watch?v=${data.youtubeKey}`);
+  } catch (error) {
+    console.error(error);
+    alert("Could not load a trailer right now.");
+  }
+});
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;",
+  }[char]));
+}
+
+renderHomePicks();
+
 updateProgress();
