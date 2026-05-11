@@ -800,7 +800,7 @@
         <div class="actions">
           <button class="btn-primary" id="startBtn">Start round</button>
           <button class="btn-secondary instant-pick-btn" id="surpriseBtn">Random instant pick</button>
-          <button id="randomTrailerBtn" class="instant-pick-btn">🎲 Random Trailer</button>
+          <button id="randomTrailerBtn" class="trailer-btn">🎲 Random vibe</button>
         </div>
       </section>
 
@@ -3602,7 +3602,7 @@
     }
 
     async function getRandomMovie() {
-      const res = await fetch("/movies.json");
+      const res = await fetch("/movies-expanded-2.json");
       const movies = await res.json();
 
       return movies[Math.floor(Math.random() * movies.length)];
@@ -3640,7 +3640,7 @@
         alert("Could not load a trailer right now.");
       } finally {
         button.disabled = false;
-        button.textContent = "🎲 Random Trailer";
+        button.textContent = "🎲 Random vibe";
       }
     }
 

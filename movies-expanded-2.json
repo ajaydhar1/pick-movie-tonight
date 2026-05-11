@@ -1,0 +1,4127 @@
+[
+    {
+        "title": "Blade Runner 2049",
+        "year": 2017,
+        "categories": [
+            "Sci-Fi",
+            "Drama"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Interstellar",
+        "year": 2014,
+        "categories": [
+            "Sci-Fi",
+            "Adventure"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Arrival",
+        "year": 2016,
+        "categories": [
+            "Sci-Fi",
+            "Drama"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Matrix",
+        "year": 1999,
+        "categories": [
+            "Sci-Fi",
+            "Action"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "Ex Machina",
+        "year": 2014,
+        "categories": [
+            "Sci-Fi",
+            "Thriller"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "Inception",
+        "year": 2010,
+        "categories": [
+            "Sci-Fi",
+            "Thriller",
+            "Action"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Edge of Tomorrow",
+        "year": 2014,
+        "categories": [
+            "Sci-Fi",
+            "Action"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Minority Report",
+        "year": 2002,
+        "categories": [
+            "Sci-Fi",
+            "Thriller"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Dune",
+        "year": 2021,
+        "categories": [
+            "Sci-Fi",
+            "Adventure"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "District 9",
+        "year": 2009,
+        "categories": [
+            "Sci-Fi",
+            "Thriller"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "Mad Max: Fury Road",
+        "year": 2015,
+        "categories": [
+            "Action",
+            "Adventure"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "John Wick",
+        "year": 2014,
+        "categories": [
+            "Action",
+            "Thriller"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Top Gun: Maverick",
+        "year": 2022,
+        "categories": [
+            "Action",
+            "Adventure"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Dark Knight",
+        "year": 2008,
+        "categories": [
+            "Action",
+            "Drama",
+            "Thriller"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Gone Girl",
+        "year": 2014,
+        "categories": [
+            "Thriller",
+            "Drama"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Prisoners",
+        "year": 2013,
+        "categories": [
+            "Thriller",
+            "Drama"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "Zodiac",
+        "year": 2007,
+        "categories": [
+            "Thriller",
+            "Drama"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Nightcrawler",
+        "year": 2014,
+        "categories": [
+            "Thriller",
+            "Drama"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Superbad",
+        "year": 2007,
+        "categories": [
+            "Comedy"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Step Brothers",
+        "year": 2008,
+        "categories": [
+            "Comedy"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Game Night",
+        "year": 2018,
+        "categories": [
+            "Comedy",
+            "Thriller"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "Mean Girls",
+        "year": 2004,
+        "categories": [
+            "Comedy"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Booksmart",
+        "year": 2019,
+        "categories": [
+            "Comedy"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Crazy, Stupid, Love.",
+        "year": 2011,
+        "categories": [
+            "Romance",
+            "Comedy"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "About Time",
+        "year": 2013,
+        "categories": [
+            "Romance",
+            "Drama"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "La La Land",
+        "year": 2016,
+        "categories": [
+            "Romance",
+            "Drama"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Silver Linings Playbook",
+        "year": 2012,
+        "categories": [
+            "Romance",
+            "Drama",
+            "Comedy"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Social Network",
+        "year": 2010,
+        "categories": [
+            "Drama"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Whiplash",
+        "year": 2014,
+        "categories": [
+            "Drama"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Parasite",
+        "year": 2019,
+        "categories": [
+            "Drama",
+            "Thriller"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "The Truman Show",
+        "year": 1998,
+        "categories": [
+            "Drama",
+            "Sci-Fi"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "Hereditary",
+        "year": 2018,
+        "categories": [
+            "Horror"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Get Out",
+        "year": 2017,
+        "categories": [
+            "Horror",
+            "Thriller"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "It Follows",
+        "year": 2014,
+        "categories": [
+            "Horror"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Spider-Man: Into the Spider-Verse",
+        "year": 2018,
+        "categories": [
+            "Animation",
+            "Action",
+            "Adventure"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Toy Story",
+        "year": 1995,
+        "categories": [
+            "Animation",
+            "Family"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "Finding Nemo",
+        "year": 2003,
+        "categories": [
+            "Animation",
+            "Family"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Shrek",
+        "year": 2001,
+        "categories": [
+            "Animation",
+            "Comedy",
+            "Family"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Ratatouille",
+        "year": 2007,
+        "categories": [
+            "Animation",
+            "Family"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Jurassic Park",
+        "year": 1993,
+        "categories": [
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "Avatar",
+        "year": 2009,
+        "categories": [
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Martian",
+        "year": 2015,
+        "categories": [
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "source": [
+            "curated"
+        ]
+    },
+    {
+        "title": "Knives Out",
+        "year": 2019,
+        "categories": [
+            "Modern Crowd-Pleasers",
+            "Comedy",
+            "Mystery"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Everything Everywhere All at Once",
+        "year": 2022,
+        "categories": [
+            "Modern Crowd-Pleasers",
+            "Sci-Fi",
+            "Comedy"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Oppenheimer",
+        "year": 2023,
+        "categories": [
+            "Modern Crowd-Pleasers",
+            "Drama"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Barbie",
+        "year": 2023,
+        "categories": [
+            "Modern Crowd-Pleasers",
+            "Comedy"
+        ],
+        "source": [
+            "curated",
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Holdovers",
+        "year": 2023,
+        "categories": [
+            "Drama",
+            "Comedy"
+        ],
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Mulholland Dr.",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "There Will Be Blood",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Tree of Life",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Moonlight",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Lost in Translation",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "No Country for Old Men",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Phantom Thread",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "A.I. Artificial Intelligence",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Boyhood",
+        "year": 2014,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Elephant",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Children of Men",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Punch-Drunk Love",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Inland Empire",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Master",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Twin Peaks: The Return [TV]",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Brokeback Mountain",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "WALL-E",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "As I Was Moving Ahead Occasionally I Saw Brief Glimpses of Beauty",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Royal Tenenbaums",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Synecdoche, New York",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Before Sunset",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Once Upon a Time... in Hollywood",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Memento",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The New World",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Inglourious Basterds",
+        "year": 2009,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Grizzly Man",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Sideways",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Requiem for a Dream",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Margaret",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "First Cow",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Hurt Locker",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "A History of Violence",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Wendy and Lucy",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "One Battle After Another",
+        "year": 2025,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Grand Budapest Hotel",
+        "year": 2014,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Nomadland",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Meek's Cutoff",
+        "year": 2010,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Lady Bird",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Far from Heaven",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "12 Years a Slave",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Inside Llewyn Davis",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "A Serious Man",
+        "year": 2009,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Million Dollar Baby",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Adaptation.",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Gravity",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Kill Bill Vol. 1",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Miami Vice",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Departed",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Donnie Darko",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Toy Story 3",
+        "year": 2010,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Certain Women",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Gladiator",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Marie Antoinette",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Wolf of Wall Street",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Old Joy",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Incredibles",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Mastermind",
+        "year": 2025,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Almost Famous",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Assassination of Jesse James by the Coward Robert Ford",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "It's Such a Beautiful Day",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Drive",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Up",
+        "year": 2009,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "25th Hour",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Fantastic Mr. Fox",
+        "year": 2009,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Cameraperson",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Inside Out",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Ghost World",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Mystic River",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Sinners",
+        "year": 2025,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Black Swan",
+        "year": 2010,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Two Lovers",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Her",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Los Angeles Plays Itself",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Rider",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Black Panther",
+        "year": 2018,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "American Psycho",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Moonrise Kingdom",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Lust, Caution",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Irishman",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Winter's Bone",
+        "year": 2010,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "A Ghost Story",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Inherent Vice",
+        "year": 2014,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Zone of Interest",
+        "year": 2023,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Hugo",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Squid and the Whale",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Manchester by the Sea",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Time",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "O Brother, Where Art Thou?",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Waking Life",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Bridesmaids",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Gerry",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Never Rarely Sometimes Always",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Dawson City: Frozen Time",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Kill Bill Vol. 2",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Hours",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Death Proof",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Paterson",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Us",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Zero Dark Thirty",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Little Miss Sunshine",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Shape of Water",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "First Reformed",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "School of Rock",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Killers of the Flower Moon",
+        "year": 2023,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Speed Racer",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Star Spangled to Death",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Birdman",
+        "year": 2014,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Capturing the Friedmans",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Master and Commander: The Far Side of the World",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Frances Ha",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Michael Clayton",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Last Days",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Unbreakable",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Bowling for Columbine",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Sorry to Bother You",
+        "year": 2018,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "I'm Not There",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Anora",
+        "year": 2024,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Fog of War",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Tangerine",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Brown Bunny",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "You Can Count on Me",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Letters from Iwo Jima",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Anchorman: The Legend of Ron Burgundy",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "O.J.: Made in America [TV]",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "13 Lakes",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "American Splendor",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "George Washington",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Uncut Gems",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "About Schmidt",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "TÁR",
+        "year": 2022,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Django Unchained",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Nope",
+        "year": 2022,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Southland Tales",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Kids Are All Right",
+        "year": 2010,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Love is the Message Message is Death",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Midsommar",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Idiocracy",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Life Aquatic with Steve Zissou",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Me and You and Everyone We Know",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Beasts of the Southern Wild",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Spring Breakers",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Prestige",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Big Fish",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Fruitvale Station",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Village",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Wrestler",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Before Midnight",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Mysterious Skin",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "In the Bedroom",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Gangs of New York",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Showing Up",
+        "year": 2022,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Pariah",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Computer Chess",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Erin Brockovich",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Gran Torino",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "May December",
+        "year": 2023,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "If Beale Street Could Talk",
+        "year": 2018,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Station Agent",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Traffic",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Blue Valentine",
+        "year": 2010,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Love & Basketball",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Decasia",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Wonder Boys",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Munich",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Anomalisa",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Licorice Pizza",
+        "year": 2021,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Upstream Color",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Silence",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Napoleon Dynamite",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Primer",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Revenant",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Fountain",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Team America: World Police",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The 40-Year-Old Virgin",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Tarnation",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "At Sea",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Dune: Part One",
+        "year": 2021,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Best in Show",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Scott Pilgrim vs. the World",
+        "year": 2010,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Nickel Boys",
+        "year": 2024,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Aviator",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Spotlight",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Hell or High Water",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Witch",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "BlacKkKlansman",
+        "year": 2018,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Bamboozled",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Hedwig and the Angry Inch",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Promising Young Woman",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Florida Project",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Marriage Story",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Anvil!: The Story of Anvil",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Spellbound",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "If I Had Legs I'd Kick You",
+        "year": 2025,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Zoolander",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Immigrant",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Man on Fire",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "True Grit",
+        "year": 2010,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "A Girl Walks Home Alone at Night",
+        "year": 2014,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "RR",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Juno",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Blue Moon",
+        "year": 2025,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Fabelmans",
+        "year": 2022,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Leave No Trace",
+        "year": 2018,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Shortbus",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Last Black Man in San Francisco",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "War of the Worlds",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Past Lives",
+        "year": 2023,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Bourne Ultimatum",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Sin City",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "(500) Days of Summer",
+        "year": 2009,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Weapons",
+        "year": 2025,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Little Women",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Citizenfour",
+        "year": 2014,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Black Hawk Down",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Collateral",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Solaris",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Magic Mike XXL",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Life of Pi",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Elf",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Good Night, and Good Luck",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Apocalypto",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Sorry, Baby",
+        "year": 2025,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "A Prairie Home Companion",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Bridget Jones's Diary",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Minari",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Somewhere",
+        "year": 2010,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Take Shelter",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "I'm Thinking of Ending Things",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Madeline's Madeline",
+        "year": 2018,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Milk",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Lincoln",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Trash Humpers",
+        "year": 2009,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Monster",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Looper",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Brutalist",
+        "year": 2024,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Sweeney Todd: The Demon Barber of Fleet Street",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Eddington",
+        "year": 2025,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Woman King",
+        "year": 2022,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Sicario",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "13th",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Fahrenheit 9/11",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Farewell",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Double Tide",
+        "year": 2009,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Monsters, Inc.",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Diary of a Teenage Girl",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "A Hidden Life",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Crip Camp",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Precious",
+        "year": 2009,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Passion of the Christ",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "I Saw the TV Glow",
+        "year": 2024,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Coraline",
+        "year": 2009,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "King Kong",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Star Wars: Episode III - Revenge of the Sith",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Heaven Knows What",
+        "year": 2014,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Martha Marcy May Marlene",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "What Goes Up",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Man Who Wasn't There",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "City Hall",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Hateful Eight",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Joker",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Knocked Up",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Nebraska",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Snatch",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Annihilation",
+        "year": 2018,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Capote",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Wet Hot American Summer",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Profit Motive and the Whispering Wind",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Assistant",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Signs",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "At Berkeley",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Cabin in the Woods",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "All the Beauty and the Bloodshed",
+        "year": 2022,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Eephus",
+        "year": 2024,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Frozen River",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Foxcatcher",
+        "year": 2014,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "High Fidelity",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Creed",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Love Witch",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Road to Nowhere",
+        "year": 2010,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Frownland",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Burn After Reading",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Crash",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Peter Hujar’s Day",
+        "year": 2025,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Da 5 Bloods",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Darjeeling Limited",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "DiG!",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Catch Me if You Can",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Metallica: Some Kind of Monster",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Vicky Cristina Barcelona",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "My Undesirable Friends: Part I - Last Air in Moscow",
+        "year": 2024,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "America",
+        "year": 2019,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Curious Case of Benjamin Button",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "A Beautiful Mind",
+        "year": 2001,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Ex Libris: The New York Public Library",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "An Inconvenient Truth",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Loneliest Planet",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Mist",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Frozen",
+        "year": 2013,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Notebook",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Interrupters",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Lost City of Z",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "In Jackson Heights",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Road to Perdition",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Good Time",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Spider-Man 2",
+        "year": 2004,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Flags of Our Fathers",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Inheritance",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Brick",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Moneyball",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Stevie",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Dick Johnson is Dead",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "A Single Man",
+        "year": 2009,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Secretary",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Before Night Falls",
+        "year": 2000,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Juror #2",
+        "year": 2024,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "When the Levees Broke: A Requiem in Four Acts [TV]",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Pig",
+        "year": 2021,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Descendants",
+        "year": 2011,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Green Room",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Kiss Kiss, Bang Bang",
+        "year": 2005,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Wonder Woman",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Half Nelson",
+        "year": 2006,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Elvis",
+        "year": 2022,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Strong Island",
+        "year": 2017,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "David Byrne's American Utopia",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Shirkers",
+        "year": 2018,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Rachel Getting Married",
+        "year": 2008,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Cloud Atlas",
+        "year": 2012,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Ring",
+        "year": 2002,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Encounters at the End of the World",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Shirley",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Megalopolis",
+        "year": 2024,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Lego Movie",
+        "year": 2014,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "20th Century Women",
+        "year": 2016,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Into the Wild",
+        "year": 2007,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Asteroid City",
+        "year": 2023,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "The Big Short",
+        "year": 2015,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Bloody Nose, Empty Pockets",
+        "year": 2020,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Eighth Grade",
+        "year": 2018,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Stuck on You",
+        "year": 2003,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Greenberg",
+        "year": 2010,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "Marty Supreme",
+        "year": 2025,
+        "source": [
+            "acclaimed"
+        ]
+    },
+    {
+        "title": "X-Men",
+        "year": 2000,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Pitch Black",
+        "year": 2000,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Frequency",
+        "year": 2000,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Crouching Tiger, Hidden Dragon",
+        "year": 2000,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Cell",
+        "year": 2000,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "year": 2001,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "year": 2001,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Vanilla Sky",
+        "year": 2001,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Lara Croft: Tomb Raider",
+        "year": 2001,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Lord of the Rings: The Two Towers",
+        "year": 2002,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Harry Potter and the Chamber of Secrets",
+        "year": 2002,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Resident Evil",
+        "year": 2002,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Spider-Man",
+        "year": 2002,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Makdee",
+        "year": 2002,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Equilibrium",
+        "year": 2002,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "X2: X-Men United",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Matrix Reloaded",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Matrix Revolutions",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Koi... Mil Gaya",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Underworld",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Bruce Almighty",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Daredevil",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Terminator 3: Rise of the Machines",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Freaky Friday",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The League of Extraordinary Gentlemen",
+        "year": 2003,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Harry Potter and the Prisoner of Azkaban",
+        "year": 2004,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "I, Robot",
+        "year": 2004,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Finding Neverland",
+        "year": 2004,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "A Series of Unfortunate Events",
+        "year": 2004,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Hellboy",
+        "year": 2004,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Butterfly Effect",
+        "year": 2004,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Chronicles of Riddick",
+        "year": 2004,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "District B13",
+        "year": 2004,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Van Helsing",
+        "year": 2004,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Ella Enchanted",
+        "year": 2004,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Harry Potter and the Goblet of Fire",
+        "year": 2005,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Batman Begins",
+        "year": 2005,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Serenity",
+        "year": 2005,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Constantine",
+        "year": 2005,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+        "year": 2005,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "V for Vendetta",
+        "year": 2005,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Charlie and the Chocolate Factory",
+        "year": 2005,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Island",
+        "year": 2005,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Jacket",
+        "year": 2005,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "300",
+        "year": 2006,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Pan's Labyrinth",
+        "year": 2006,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Pirates of the Caribbean: Dead Man's Chest",
+        "year": 2006,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Illusionist",
+        "year": 2006,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Girl Who Leapt Through Time",
+        "year": 2006,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Underworld: Evolution",
+        "year": 2006,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Deja Vu",
+        "year": 2006,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "X-Men: The Last Stand",
+        "year": 2006,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Harry Potter and the Order of the Phoenix",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Pirates of the Caribbean: At World's End",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Stardust",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "I Am Legend",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Transformers",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Bridge to Terabithia",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Golden Compass",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Water Horse",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Next",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Beowulf",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Enchanted",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Fantastic Four: Rise of the Silver Surfer",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Sunshine",
+        "year": 2007,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Twilight",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Hancock",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Iron Man",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Wanted",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Hellboy II: The Golden Army",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Chronicles of Narnia: Prince Caspian",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "City of Ember",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Doomsday",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Eagle Eye",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Death Race",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Incredible Hulk",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Outlander",
+        "year": 2008,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Harry Potter and the Half-Blood Prince",
+        "year": 2009,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Time Traveler's Wife",
+        "year": 2009,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Star Trek",
+        "year": 2009,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Watchmen",
+        "year": 2009,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Daybreakers",
+        "year": 2009,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Splice",
+        "year": 2009,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Knowing",
+        "year": 2009,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Transformers: Revenge of the Fallen",
+        "year": 2009,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "X-Men Origins: Wolverine",
+        "year": 2009,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Harry Potter and the Deathly Hallows: Part 1",
+        "year": 2010,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Prince of Persia: The Sands of Time",
+        "year": 2010,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Chronicles of Narnia: The Voyage of the Dawn Treader",
+        "year": 2010,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Alice in Wonderland",
+        "year": 2010,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Clash of the Titans",
+        "year": 2010,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Repo Men",
+        "year": 2010,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Harry Potter and the Deathly Hallows: Part 2",
+        "year": 2011,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Super 8",
+        "year": 2011,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Thor",
+        "year": 2011,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "X-Men: First Class",
+        "year": 2011,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Source Code",
+        "year": 2011,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Adjustment Bureau",
+        "year": 2011,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Captain America: The First Avenger",
+        "year": 2011,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Ra.One",
+        "year": 2011,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Rise of the Planet of the Apes",
+        "year": 2011,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Cowboys & Aliens",
+        "year": 2011,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Snow White and the Huntsman",
+        "year": 2012,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Dark Knight Rises",
+        "year": 2012,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Avengers",
+        "year": 2012,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Hobbit: An Unexpected Journey",
+        "year": 2012,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "John Carter",
+        "year": 2012,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Battlestar Galactica: Blood & Chrome",
+        "year": 2012,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "47 Ronin",
+        "year": 2013,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "After Earth",
+        "year": 2013,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Beautiful Creatures",
+        "year": 2013,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Iron Man 3",
+        "year": 2013,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Lucia",
+        "year": 2013,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Oblivion",
+        "year": 2013,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Man of Steel",
+        "year": 2013,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Snowpiercer",
+        "year": 2013,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Star Trek Into Darkness",
+        "year": 2013,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "World War Z",
+        "year": 2013,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Thor: The Dark World",
+        "year": 2013,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Captain America: The Winter Soldier",
+        "year": 2014,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Dawn of the Planet of the Apes",
+        "year": 2014,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Godzilla",
+        "year": 2014,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Guardians of the Galaxy",
+        "year": 2014,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Lucy",
+        "year": 2014,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Predestination",
+        "year": 2014,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Maze Runner",
+        "year": 2014,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "X-Men: Days of Future Past",
+        "year": 2014,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Maleficent",
+        "year": 2014,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Jurassic World",
+        "year": 2015,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Dredd",
+        "year": 2012,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Captain America: Civil War",
+        "year": 2016,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Morgan",
+        "year": 2016,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Star Trek Beyond",
+        "year": 2016,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Fantastic Beasts and Where to Find Them",
+        "year": 2016,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Passengers",
+        "year": 2016,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Thor: Ragnarok",
+        "year": 2017,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Valerian and the City of a Thousand Planets",
+        "year": 2017,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Avengers: Infinity War",
+        "year": 2018,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Venom",
+        "year": 2018,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Mortal Engines",
+        "year": 2018,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Aquaman",
+        "year": 2018,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Avengers: Endgame",
+        "year": 2019,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Alita: Battle Angel",
+        "year": 2019,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Upgrade",
+        "year": 2018,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The House with a Clock in Its Walls",
+        "year": 2018,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Jumanji: Welcome to the Jungle",
+        "year": 2017,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Jumanji: The Next Level",
+        "year": 2019,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Zack Snyder's Justice League",
+        "year": 2021,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Palm Springs",
+        "year": 2020,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Boss Level",
+        "year": 2020,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Love and Monsters",
+        "year": 2020,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Godzilla vs. Kong",
+        "year": 2021,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Prey",
+        "year": 2022,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Pandorum",
+        "year": 2009,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Dungeons & Dragons: Honor Among Thieves",
+        "year": 2023,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Black Widow",
+        "year": 2021,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Space Sweepers",
+        "year": 2021,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "The Flash",
+        "year": 2023,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Blink",
+        "year": 2024,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Hanu Man",
+        "year": 2024,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Logan",
+        "year": 2017,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Godzilla Minus One",
+        "year": 2023,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Kantara: A Legend - Chapter 1",
+        "year": 2025,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Mahavatar Narsimha",
+        "year": 2024,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    },
+    {
+        "title": "Dracula",
+        "year": 2025,
+        "source": [
+            "sci-fantasy-hero"
+        ]
+    }
+]
