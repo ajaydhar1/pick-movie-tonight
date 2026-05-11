@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <title>PickMovieTonight — Curated Movie Recommendations for Tonight</title>
 
-  <meta name="description" content="Answer a few quick questions and get a curated movie recommendation based on mood, energy, pacing, and vibe. Explore trailers, soundtracks, and top-tier films across sci-fi, thrillers, action, comfort movies, and more.">
+  <meta name="description"
+    content="Answer a few quick questions and get a curated movie recommendation based on mood, energy, pacing, and vibe. Explore trailers, soundtracks, and top-tier films across sci-fi, thrillers, action, comfort movies, and more.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#111111">
 
@@ -20,7 +22,8 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="PickMovieTonight — Find Something to Watch Tonight">
-  <meta property="og:description" content="A simple movie picker that helps you choose what to watch tonight. Browse, compare, and pick a movie faster.">
+  <meta property="og:description"
+    content="A simple movie picker that helps you choose what to watch tonight. Browse, compare, and pick a movie faster.">
   <meta property="og:url" content="https://pickmovietonight.com/">
   <meta property="og:site_name" content="PickMovieTonight">
   <meta property="og:image" content="https://pickmovietonight.com/social-card.jpg">
@@ -29,12 +32,40 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="PickMovieTonight — Find Something to Watch Tonight">
-  <meta name="twitter:description" content="A simple movie picker that helps you choose what to watch tonight. Browse, compare, and pick a movie faster.">
+  <meta name="twitter:description"
+    content="A simple movie picker that helps you choose what to watch tonight. Browse, compare, and pick a movie faster.">
   <meta name="twitter:image" content="https://pickmovietonight.com/social-card.jpg">
 
   <link rel="stylesheet" href="styles/main.css">
+
+  <style>
+    body.home-page {
+      display: block;
+    }
+
+    body.home-page main {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    body.home-page main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: clamp(2rem, 6vh, 5rem);
+    }
+  </style>
+
 </head>
-<body>
+
+<body class="home-page">
+  <header class="site-header">
+    <a class="site-logo" href="/">PickMovieTonight</a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/browse.html" aria-current="page">Browse</a>
+    </nav>
+  </header>
   <main class="app">
     <div class="topbar">
       <div class="brand">
@@ -50,7 +81,9 @@
           <span id="progressText">Ready to start</span>
           <span id="progressCount">0 / 5</span>
         </div>
-        <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+        <div class="progress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
       </div>
     </div>
 
@@ -59,7 +92,8 @@
         <div class="eyebrow">Version 2</div>
         <h2>Answer a few quick A/B questions and we’ll pick a movie for tonight.</h2>
         <p class="lead">
-          This prototype builds a balanced mini-deck from a larger pool of A/B questions. Each run asks 5 questions from different categories, so it feels fresher.
+          This prototype builds a balanced mini-deck from a larger pool of A/B questions. Each run asks 5 questions from
+          different categories, so it feels fresher.
         </p>
         <div class="actions">
           <button class="btn-primary" id="startBtn">Start round</button>
@@ -88,8 +122,10 @@
           <div class="reveal-card">
             <div class="spinner"></div>
             <div class="eyebrow">Scanning tonight's vibe</div>
-            <h2 style="font-size: clamp(1.4rem, 2.7vw, 2.2rem); margin-bottom: 10px;">Cross-referencing your choices…</h2>
-            <p class="lead" style="margin: 0 auto;">Pulling from the top-matching part of the movie pool and building a reveal.</p>
+            <h2 style="font-size: clamp(1.4rem, 2.7vw, 2.2rem); margin-bottom: 10px;">Cross-referencing your choices…
+            </h2>
+            <p class="lead" style="margin: 0 auto;">Pulling from the top-matching part of the movie pool and building a
+              reveal.</p>
           </div>
         </div>
       </section>
@@ -121,12 +157,17 @@
           <aside class="backup-panel">
             <h3 style="margin-top: 0;">Backup choices</h3>
             <div class="backup-list" id="backupList"></div>
-            <p class="small-note">Later we could add posters, trailers, streaming availability, or even a “play with friends” mode.</p>
+            <p class="small-note">Later we could add posters, trailers, streaming availability, or even a “play with
+              friends” mode.</p>
           </aside>
         </div>
       </section>
     </div>
   </main>
+
+  <footer class="site-footer">
+        <p>&copy; 2026 PickMovieTonight. Find something good to watch.</p>
+    </footer>
 
   <div id="trailer-modal" class="trailer-modal" aria-hidden="true">
     <div class="trailer-modal-backdrop"></div>
@@ -146,11 +187,7 @@
       </h3>
 
       <div class="trailer-modal-body">
-        <iframe
-          id="trailer-modal-iframe"
-          src=""
-          title="Media player"
-          frameborder="0"
+        <iframe id="trailer-modal-iframe" src="" title="Media player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
@@ -161,4 +198,5 @@
   <script src="js/app.js" defer></script>
   <script src="js/home.js" defer></script>
 </body>
+
 </html>

@@ -1,129 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>PickMovieTonight — Curated Movie Recommendations for Tonight</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="Answer a few quick questions and get a curated movie recommendation based on mood, energy, pacing, and vibe. Explore trailers, soundtracks, and top-tier films across sci-fi, thrillers, action, comfort movies, and more.">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#111111">
+    <title>PickMovieTonight — Curated Movie Recommendations for Tonight</title>
 
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+    <meta name="description"
+        content="Answer a few quick questions and get a curated movie recommendation based on mood, energy, pacing, and vibe. Explore trailers, soundtracks, and top-tier films across sci-fi, thrillers, action, comfort movies, and more.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#111111">
 
-  <link rel="canonical" href="https://pickmovietonight.com/">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="PickMovieTonight — Find Something to Watch Tonight">
-  <meta property="og:description" content="A simple movie picker that helps you choose what to watch tonight. Browse, compare, and pick a movie faster.">
-  <meta property="og:url" content="https://pickmovietonight.com/">
-  <meta property="og:site_name" content="PickMovieTonight">
-  <meta property="og:image" content="https://pickmovietonight.com/social-card.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+    <link rel="canonical" href="https://pickmovietonight.com/">
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="PickMovieTonight — Find Something to Watch Tonight">
-  <meta name="twitter:description" content="A simple movie picker that helps you choose what to watch tonight. Browse, compare, and pick a movie faster.">
-  <meta name="twitter:image" content="https://pickmovietonight.com/social-card.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PickMovieTonight — Find Something to Watch Tonight">
+    <meta property="og:description"
+        content="A simple movie picker that helps you choose what to watch tonight. Browse, compare, and pick a movie faster.">
+    <meta property="og:url" content="https://pickmovietonight.com/">
+    <meta property="og:site_name" content="PickMovieTonight">
+    <meta property="og:image" content="https://pickmovietonight.com/social-card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/browse.css">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PickMovieTonight — Find Something to Watch Tonight">
+    <meta name="twitter:description"
+        content="A simple movie picker that helps you choose what to watch tonight. Browse, compare, and pick a movie faster.">
+    <meta name="twitter:image" content="https://pickmovietonight.com/social-card.jpg">
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/browse.css">
 </head>
-<body class="browse-page">
-  <header class="site-header">
-    <a class="site-logo" href="/">PickMovieTonight</a>
 
-    <nav class="site-nav" aria-label="Main navigation">
-        <a href="/">Home</a>
-        <a href="/browse.html" aria-current="page">Browse</a>
-    </nav>
+<body class="browse-page">
+    <header class="site-header">
+        <a class="site-logo" href="/">PickMovieTonight</a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="/">Home</a>
+            <a href="/browse.html" aria-current="page">Browse</a>
+        </nav>
     </header>
 
     <main>
-    <section class="browse-hero">
-        <p class="eyebrow">Movie Catalog</p>
-        <h1>Browse movies by mood, year, and vibe.</h1>
-        <p class="hero-copy">
-        Explore the full PickMovieTonight library, from recent favorites to older classics.
-        </p>
-    </section>
+        <section class="browse-hero">
+            <p class="eyebrow">Movie Catalog</p>
+            <h1>Browse movies by mood, year, and vibe.</h1>
+            <p class="hero-copy">
+                Explore the full PickMovieTonight library, from recent favorites to older classics.
+            </p>
+        </section>
 
-    <section class="browse-search" aria-label="Search movies">
-        <input id="movieSearch" type="search" placeholder="Search movies..." autocomplete="off">
-    </section>
+        <section class="browse-search" aria-label="Search movies">
+            <input id="movieSearch" type="search" placeholder="Search movies..." autocomplete="off">
+        </section>
 
-    <section class="movie-section">
-        <h2>Tonight’s Picks</h2>
-        <div id="tonightsPicks" class="movie-row"></div>
-    </section>
+        <section class="movie-section">
+            <h2>Tonight’s Picks</h2>
+            <div id="tonightsPicks" class="movie-row"></div>
+        </section>
 
-    <section class="movie-section">
-        <h2>2020–2026</h2>
-        <div id="movies2020s" class="movie-row"></div>
-    </section>
+        <section class="movie-section">
+            <h2>2020–2026</h2>
+            <div id="movies2020s" class="movie-row"></div>
+        </section>
 
-    <section class="movie-section">
-        <h2>2010–2019</h2>
-        <div id="movies2010s" class="movie-row"></div>
-    </section>
+        <section class="movie-section">
+            <h2>2010–2019</h2>
+            <div id="movies2010s" class="movie-row"></div>
+        </section>
 
-    <section class="movie-section">
-        <h2>2000–2009</h2>
-        <div id="movies2000s" class="movie-row"></div>
-    </section>
+        <section class="movie-section">
+            <h2>2000–2009</h2>
+            <div id="movies2000s" class="movie-row"></div>
+        </section>
 
-    <section class="movie-section">
-        <h2>1990–1999</h2>
-        <div id="movies1990s" class="movie-row"></div>
-    </section>
+        <section class="movie-section">
+            <h2>1990–1999</h2>
+            <div id="movies1990s" class="movie-row"></div>
+        </section>
 
-    <section class="movie-section">
-        <h2>Before 1990</h2>
-        <div id="moviesBefore1990" class="movie-row"></div>
-    </section>
+        <section class="movie-section">
+            <h2>Before 1990</h2>
+            <div id="moviesBefore1990" class="movie-row"></div>
+        </section>
     </main>
 
     <footer class="site-footer">
-    <p>&copy; 2026 PickMovieTonight. Find something good to watch.</p>
+        <p>&copy; 2026 PickMovieTonight. Find something good to watch.</p>
     </footer>
 
     <div id="trailer-modal" class="trailer-modal" aria-hidden="true">
         <div class="trailer-modal-backdrop"></div>
 
         <div class="trailer-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="media-modal-title">
-        <button id="trailer-modal-close" class="trailer-modal-close" type="button" aria-label="Close media">
-            ✕
-        </button>
+            <button id="trailer-modal-close" class="trailer-modal-close" type="button" aria-label="Close media">
+                ✕
+            </button>
 
-        <h3 id="media-modal-title" class="media-modal-title">
-            <span id="media-modal-title-text">Media</span>
-            <span id="media-eq" class="media-eq" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-            </span>
-        </h3>
+            <h3 id="media-modal-title" class="media-modal-title">
+                <span id="media-modal-title-text">Media</span>
+                <span id="media-eq" class="media-eq" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </h3>
 
-        <div class="trailer-modal-body">
-            <iframe
-            id="trailer-modal-iframe"
-            src=""
-            title="Media player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-            </iframe>
-        </div>
+            <div class="trailer-modal-body">
+                <iframe id="trailer-modal-iframe" src="" title="Media player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </div>
 
-  <script src="js/app.js" defer></script>
-  <script src="js/browse.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/browse.js" defer></script>
 </body>
+
 </html>
