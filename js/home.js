@@ -2810,7 +2810,7 @@ const clearTrailerHistoryBtn = document.getElementById("clearTrailerHistoryBtn")
 function renderTrailerHistory() {
     if (!trailerHistoryRow) return;
 
-    const history = getTrailerHistory();
+    const history = getTrailerHistory().slice(0, 12);
 
     if (!history.length) {
         trailerHistoryRow.innerHTML = `
