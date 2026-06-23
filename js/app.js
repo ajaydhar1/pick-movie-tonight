@@ -83,6 +83,7 @@ function saveTrailerHistoryItem(movie) {
     year: movie.year || "",
     poster: movie.poster || movie.posterUrl || movie.poster_path || movie.posterUrlFull || "",
     youtubeKey: movie.youtubeKey || "",
+    source: movie.source || "Trailer",
     watchedAt: new Date().toISOString()
   };
 
