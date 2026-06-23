@@ -73,7 +73,7 @@ function closeTrailerModal() {
 }
 
 const TRAILER_HISTORY_KEY = "pickMovieTonightTrailerHistory";
-const TRAILER_HISTORY_LIMIT = 50;
+const TRAILER_HISTORY_LIMIT = 250;
 
 function saveTrailerHistoryItem(movie) {
   if (!movie?.title) return;
