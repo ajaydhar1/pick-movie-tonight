@@ -154,14 +154,33 @@ function setupSearch() {
     const matches = allMovies.filter(movie => {
       const title = String(movie.title || "").toLowerCase();
       const year = String(movie.year || "");
-      const genres = Array.isArray(movie.genres) ? movie.genres.join(" ").toLowerCase() : "";
+      const genres = Array.isArray(movie.genres)
+        ? movie.genres.join(" ").toLowerCase()
+        : "";
 
-      return title.includes(query) || year.includes(query) || genres.includes(query);
+      return (
+        title.includes(query) ||
+        year.includes(query) ||
+        genres.includes(query)
+      );
     });
 
-    clearRows();
-    renderRow(rows.tonightsPicks, matches.slice(0, 30));
+    renderBrowseSearchRows(matches);
   });
+}
+
+function renderBrowseSearchRows(movies) {
+  clearRows();
+
+  renderRow(rows.tonightsPicks, movies.slice(0, 12));
+  renderRow(rows.movies2020s, filterByYearRange(movies, 2020, 2026));
+  renderRow(rows.movies2010s, filterByYearRange(movies, 2010, 2019));
+  renderRow(rows.movies2000s, filterByYearRange(movies, 2000, 2009));
+  renderRow(rows.movies1990s, filterByYearRange(movies, 1990, 1999));
+  renderRow(
+    rows.moviesBefore1990,
+    movies.filter(movie => Number(movie.year) < 1990)
+  );
 }
 
 function clearRows() {
