@@ -897,7 +897,8 @@ body.home-page main {
     /* padding-top: clamp(2rem, 6vh, 5rem); */
 }
 
-.home-picks {
+.home-picks,
+.trailer-history-section {
     width: min(100%, 1100px);
     margin: 2rem auto 0;
     padding: 0 1rem 3rem;
@@ -967,11 +968,35 @@ body.home-page main {
     }
 }
 
-.home-picks-row .movie-card-button {
+/* =========================
+   Movie Posters
+========================= */
+
+.movie-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(150px, 190px);
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.75rem;
+    scroll-snap-type: x mandatory;
+    max-width: 100%;
+}
+
+small.movie-card-source {
+    color: black;
+}
+
+.section-heading {
+    margin-bottom: 1rem;
+}
+
+.movie-card-button {
     width: 100%;
 }
 
-.home-picks-row .movie-card img {
+.movie-card img {
     width: 100%;
     height: auto;
     display: block;
@@ -1273,3 +1298,4 @@ body.about-page {
 .legal-card p {
     line-height: 1.7;
 }
+

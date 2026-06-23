@@ -72,6 +72,45 @@ function closeTrailerModal() {
   document.body.classList.remove("modal-open");
 }
 
+const TRAILER_HISTORY_KEY = "pickMovieTonightTrailerHistory";
+const TRAILER_HISTORY_LIMIT = 20;
+
+function saveTrailerHistoryItem(movie) {
+  if (!movie?.title) return;
+
+  const item = {
+    title: movie.title,
+    year: movie.year || "",
+    poster: movie.poster || movie.posterUrl || movie.poster_path || movie.posterUrlFull || "",
+    youtubeKey: movie.youtubeKey || "",
+    watchedAt: new Date().toISOString()
+  };
+
+  const existing = JSON.parse(localStorage.getItem(TRAILER_HISTORY_KEY) || "[]");
+
+  const withoutDuplicate = existing.filter(saved =>
+    !(saved.title === item.title && String(saved.year) === String(item.year))
+  );
+
+  const updated = [item, ...withoutDuplicate].slice(0, TRAILER_HISTORY_LIMIT);
+
+  localStorage.setItem(TRAILER_HISTORY_KEY, JSON.stringify(updated));
+}
+
+function getTrailerHistory() {
+  return JSON.parse(localStorage.getItem(TRAILER_HISTORY_KEY) || "[]");
+}
+
+function clearTrailerHistory() {
+  localStorage.removeItem(TRAILER_HISTORY_KEY);
+}
+
+function openTrailerFromHistory(youtubeKey) {
+  if (!youtubeKey) return;
+
+  openTrailerModal(`https://www.youtube.com/watch?v=${youtubeKey}`);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("trailer-modal-close")?.addEventListener("click", closeTrailerModal);
   document.querySelector(".trailer-modal-backdrop")?.addEventListener("click", closeTrailerModal);

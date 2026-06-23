@@ -25,41 +25,48 @@ async function initBrowse() {
     setupSearch();
 
     document.addEventListener("click", async event => {
-        const button = event.target.closest(".movie-card-button");
-        if (!button) return;
+      const button = event.target.closest(".movie-card-button");
+      if (!button) return;
 
-        const title = button.dataset.title;
-        const year = button.dataset.year;
+      const title = button.dataset.title;
+      const year = button.dataset.year;
 
-        try {
-            const response = await fetch("/.netlify/functions/get-trailer", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                title,
-                year
-            })
-            });
+      try {
+        const response = await fetch("/.netlify/functions/get-trailer", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            title,
+            year
+          })
+        });
 
-            if (!response.ok) {
-            throw new Error("Trailer lookup failed");
-            }
-
-            const data = await response.json();
-
-            if (!data.youtubeKey) {
-            alert("No trailer available for this movie yet.");
-            return;
-            }
-
-            openTrailerModal(`https://www.youtube.com/watch?v=${data.youtubeKey}`);
-
-        } catch (error) {
-            console.error(error);
-            alert("Could not load a trailer right now.");
+        if (!response.ok) {
+          throw new Error("Trailer lookup failed");
         }
+
+        const data = await response.json();
+
+        if (!data.youtubeKey) {
+          alert("No trailer available for this movie yet.");
+          return;
+        }
+
+        saveTrailerHistoryItem({
+          title,
+          year,
+          youtubeKey: data.youtubeKey,
+          source: "Browse"
+        });
+
+        openTrailerModal(`https://www.youtube.com/watch?v=${data.youtubeKey}`);
+
+      } catch (error) {
+        console.error(error);
+        alert("Could not load a trailer right now.");
+      }
     });
 
   } catch (error) {

@@ -66,18 +66,6 @@ main {
     margin-bottom: 1rem;
 }
 
-.movie-row {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(150px, 190px);
-    gap: 1rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 0.75rem;
-    scroll-snap-type: x mandatory;
-    max-width: 100%;
-}
-
 .movie-card {
     scroll-snap-align: start;
     border-radius: 1rem;
