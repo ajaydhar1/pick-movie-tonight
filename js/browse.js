@@ -30,6 +30,7 @@ async function initBrowse() {
 
       const title = button.dataset.title;
       const year = button.dataset.year;
+      const poster = button.dataset.poster;
 
       try {
         const response = await fetch("/.netlify/functions/get-trailer", {
@@ -57,8 +58,9 @@ async function initBrowse() {
         saveTrailerHistoryItem({
           title,
           year,
+          poster,
           youtubeKey: data.youtubeKey,
-          source: "Browse"
+          source: "🔎 Browse"
         });
 
         openTrailerModal(`https://www.youtube.com/watch?v=${data.youtubeKey}`);
@@ -118,6 +120,7 @@ function createMovieCard(movie) {
         type="button"
         data-title="${title}"
         data-year="${year}"
+        data-poster="${escapeHTML(poster)}"
         aria-label="Watch trailer for ${title}"
         >
         ${poster ? `<img src="${escapeHTML(poster)}" alt="${title} poster" loading="lazy">` : ""}

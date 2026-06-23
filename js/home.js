@@ -2664,7 +2664,7 @@ async function launchRandomTrailer() {
         saveTrailerHistoryItem({
             ...movie,
             youtubeKey: data.youtubeKey,
-            source: "Vibe right now"
+            source: "🎲 Vibe right now"
         });
 
         renderTrailerHistory();
@@ -2735,6 +2735,7 @@ async function renderHomePicks() {
           type="button"
           data-home-pick-title="${title}"
           data-home-pick-year="${year}"
+          data-home-pick-poster="${escapeHTML(poster)}"
           aria-label="Watch trailer for ${title}"
         >
           ${poster ? `<img src="${escapeHTML(poster)}" alt="${title} poster" loading="lazy">` : ""}
@@ -2754,6 +2755,7 @@ document.addEventListener("click", async event => {
 
     const title = button.dataset.homePickTitle;
     const year = button.dataset.homePickYear;
+    const poster = button.dataset.homePickPoster;
 
     try {
         const response = await fetch("/.netlify/functions/get-trailer", {
@@ -2776,8 +2778,9 @@ document.addEventListener("click", async event => {
         saveTrailerHistoryItem({
             title,
             year,
+            poster,
             youtubeKey: data.youtubeKey,
-            source: "Tonight's picks"
+            source: "🍿 Tonight's picks"
         });
 
         renderTrailerHistory();
