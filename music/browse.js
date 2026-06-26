@@ -219,38 +219,6 @@ function setupMediaModal() {
   });
 }
 
-function saveMusicHistoryItem(song) {
-  const history = getMusicHistory();
-  const youtubeId = song.youtubeId || song.videoId || song.id;
-
-  const item = {
-    title: song.title || "Untitled song",
-    youtubeId,
-    thumbnail: song.thumbnail || "",
-    playlistName: song.playlistName || "",
-    playlistPosition: song.playlistPosition || null,
-    source: song.source || "🔎 Browse",
-    playedAt: new Date().toISOString(),
-  };
-
-  const deduped = history.filter(historyItem => historyItem.youtubeId !== youtubeId);
-
-  localStorage.setItem(
-    HISTORY_KEY,
-    JSON.stringify([item, ...deduped].slice(0, 24))
-  );
-
-  renderMusicHistory();
-}
-
-function getMusicHistory() {
-  try {
-    return JSON.parse(localStorage.getItem(HISTORY_KEY)) || [];
-  } catch {
-    return [];
-  }
-}
-
 function shuffleArray(array) {
   return [...array].sort(() => Math.random() - 0.5);
 }
