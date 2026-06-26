@@ -47,19 +47,7 @@ a:focus-visible,
         0 0 0 6px rgba(59, 130, 246, 0.18);
 }
 
-.site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem clamp(1rem, 4vw, 3rem);
-}
 
-.site-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 .site-logo {
     font-weight: 800;
@@ -73,26 +61,6 @@ a:focus-visible,
 
 .site-nav a {
     text-decoration: none;
-}
-
-@media (max-width: 640px) {
-
-    .site-nav a[href="/"],
-    .site-nav a[href="index.html"] {
-        display: none;
-    }
-
-    .site-header {
-        gap: 1rem;
-    }
-
-    .site-logo {
-        font-size: 1rem;
-    }
-
-    .site-nav {
-        gap: 0.75rem;
-    }
 }
 
 .site-footer {
@@ -1007,41 +975,34 @@ small.item-card-source {
    Top nav
 ========================= */
 
-.site-header a {
-    white-space: nowrap;
-}
-
 .site-header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-.site-logo,
-.site-nav a {
-    white-space: nowrap;
+.site-nav {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .site-header {
-        gap: 0.5rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        justify-content: center;
+        text-align: center;
     }
 
     .site-logo {
-        font-size: 0.95rem;
+        width: 100%;
     }
 
     .site-nav {
-        gap: 0.5rem;
-    }
-
-    .site-nav a {
-        font-size: 0.9rem;
-        padding-left: 0.5rem;
-        padding-right: 0.825rem;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
