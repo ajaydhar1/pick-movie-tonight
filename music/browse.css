@@ -47,7 +47,7 @@ main {
 .browse-actions,
 .song-history-section,
 .browse-search {
-    padding: 0 clamp(1rem, 4vw, 3rem) 2rem;
+    padding: 0 clamp(1rem, 4vw, 3rem) 1rem;
 }
 
 .browse-search input {
