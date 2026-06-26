@@ -492,32 +492,32 @@ button:active {
     }
 }
 
-.trailer-modal {
+.media-modal {
     position: fixed;
     inset: 0;
     display: none;
     z-index: 9999;
 }
 
-.trailer-modal.is-open {
+.media-modal.is-open {
     display: block;
 }
 
-.trailer-modal-backdrop {
+.media-modal-backdrop {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.78);
     backdrop-filter: blur(3px);
 }
 
-.trailer-modal-dialog {
+.media-modal-dialog {
     position: relative;
     width: min(960px, calc(100vw - 32px));
     margin: 5vh auto 0;
     z-index: 2;
 }
 
-.trailer-modal-body {
+.media-modal-body {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -527,13 +527,13 @@ button:active {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 }
 
-.trailer-modal-body iframe {
+.media-modal-body iframe {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.trailer-modal-close {
+.media-modal-close {
     position: absolute;
     top: -14px;
     right: -14px;
@@ -559,7 +559,7 @@ button:active {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
-.trailer-modal-close:hover {
+.media-modal-close:hover {
     transform: scale(1.05);
 }
 
@@ -633,12 +633,12 @@ body.modal-open {
     }
 }
 
-.trailer-modal-dialog.is-score {
+.media-modal-dialog.is-score {
     width: min(1200px, calc(100vw - 32px));
     margin-top: 4vh;
 }
 
-.trailer-modal-body.is-score {
+.media-modal-body.is-score {
     aspect-ratio: auto;
     height: min(78vh, 760px);
 }
@@ -898,8 +898,7 @@ body.home-page main {
 }
 
 .home-picks,
-.trailer-history-section,
-.song-history-section {
+.media-history-section {
     width: min(100%, 1100px);
     margin: 2rem auto 0;
     padding: 0 1rem 3rem;
@@ -941,11 +940,11 @@ body.home-page main {
     width: 100%;
 }
 
-.home-picks-row .movie-card {
+.home-picks-row .item-card {
     max-width: 180px;
 }
 
-.home-picks-row .movie-card img {
+.home-picks-row .item-card img {
     aspect-ratio: 2 / 3;
     object-fit: cover;
 }
@@ -973,7 +972,7 @@ body.home-page main {
    Movie Posters
 ========================= */
 
-.movie-row,
+.item-row,
 .song-row {
     display: grid;
     grid-auto-flow: column;
@@ -986,7 +985,7 @@ body.home-page main {
     max-width: 100%;
 }
 
-small.movie-card-source {
+small.item-card-source {
     color: black;
 }
 
@@ -994,11 +993,11 @@ small.movie-card-source {
     margin-bottom: 1rem;
 }
 
-.movie-card-button {
+.item-card-button {
     width: 100%;
 }
 
-.movie-card img {
+.item-card img {
     width: 100%;
     height: auto;
     display: block;
