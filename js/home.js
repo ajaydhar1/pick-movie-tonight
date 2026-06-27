@@ -2,6 +2,9 @@ const coreIntelligentThrillers = [
     {
         title: "Inception",
         year: 2010,
+        tmdbId: 27205,
+        posterPath: "/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/xlaY2zyzMfkhk0HSC5VUwzoZPU1.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Thriller"],
         mood: "serious",
@@ -21,6 +24,9 @@ const coreIntelligentThrillers = [
     {
         title: "Interstellar",
         year: 2014,
+        tmdbId: 157336,
+        posterPath: "/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Drama"],
         mood: "emotional",
@@ -40,6 +46,9 @@ const coreIntelligentThrillers = [
     {
         title: "Tenet",
         year: 2020,
+        tmdbId: 577922,
+        posterPath: "/aCIFMriQh8rvhxpN1IWGgvH0Tlg.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/aCIFMriQh8rvhxpN1IWGgvH0Tlg.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Action"],
         mood: "serious",
@@ -59,6 +68,9 @@ const coreIntelligentThrillers = [
     {
         title: "Arrival",
         year: 2016,
+        tmdbId: 329865,
+        posterPath: "/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Drama"],
         mood: "emotional",
@@ -78,6 +90,9 @@ const coreIntelligentThrillers = [
     {
         title: "Oppenheimer",
         year: 2023,
+        tmdbId: 872585,
+        posterPath: "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Drama", "Thriller"],
         mood: "serious",
@@ -97,6 +112,9 @@ const coreIntelligentThrillers = [
     {
         title: "In Time",
         year: 2011,
+        tmdbId: 49530,
+        posterPath: "/3Mwj2sIONQckOZP3YwsUXF7U5I4.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/3Mwj2sIONQckOZP3YwsUXF7U5I4.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Thriller"],
         mood: "serious",
@@ -116,6 +134,9 @@ const coreIntelligentThrillers = [
     {
         title: "The Matrix",
         year: 1999,
+        tmdbId: 603,
+        posterPath: "/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Action"],
         mood: "serious",
@@ -135,6 +156,9 @@ const coreIntelligentThrillers = [
     {
         title: "Ex Machina",
         year: 2014,
+        tmdbId: 264660,
+        posterPath: "/dmJW8IAKHKxFNiUnoDR7JfsK7Rp.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/dmJW8IAKHKxFNiUnoDR7JfsK7Rp.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Drama"],
         mood: "serious",
@@ -154,6 +178,9 @@ const coreIntelligentThrillers = [
     {
         title: "Minority Report",
         year: 2002,
+        tmdbId: 180,
+        posterPath: "/ccqpHq5tk5W4ymbSbuoy4uYOxFI.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/ccqpHq5tk5W4ymbSbuoy4uYOxFI.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Action"],
         mood: "serious",
@@ -172,6 +199,9 @@ const coreIntelligentThrillers = [
     {
         title: "Blade Runner 2049",
         year: 2017,
+        tmdbId: 335984,
+        posterPath: "/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Drama"],
         mood: "serious",
@@ -191,6 +221,9 @@ const coreIntelligentThrillers = [
     {
         title: "Nightcrawler",
         year: 2014,
+        tmdbId: 242582,
+        posterPath: "/j9HrX8f7GbZQm1BrBiR40uFQZSb.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/j9HrX8f7GbZQm1BrBiR40uFQZSb.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Thriller", "Drama"],
         mood: "serious",
@@ -209,6 +242,9 @@ const coreIntelligentThrillers = [
     {
         title: "Shutter Island",
         year: 2010,
+        tmdbId: 11324,
+        posterPath: "/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Thriller"],
         mood: "serious",
@@ -227,6 +263,9 @@ const coreIntelligentThrillers = [
     {
         title: "Source Code",
         year: 2011,
+        tmdbId: 45612,
+        posterPath: "/nTr0lvAzeQmUjgSgDEHTJpnrxTz.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/nTr0lvAzeQmUjgSgDEHTJpnrxTz.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Thriller"],
         mood: "fun",
@@ -246,6 +285,9 @@ const coreIntelligentThrillers = [
     {
         title: "Looper",
         year: 2012,
+        tmdbId: 59967,
+        posterPath: "/sNjL6SqErDBE8OUZlrDLkexfsCj.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/sNjL6SqErDBE8OUZlrDLkexfsCj.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Action"],
         mood: "serious",
@@ -265,6 +307,9 @@ const coreIntelligentThrillers = [
     {
         title: "The Prestige",
         year: 2006,
+        tmdbId: 1124,
+        posterPath: "/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Drama", "Mystery"],
         mood: "serious",
@@ -284,6 +329,9 @@ const coreIntelligentThrillers = [
     {
         title: "Children of Men",
         year: 2006,
+        tmdbId: 9693,
+        posterPath: "/k9IAS4TehZFcKi4HVByxZNPfqex.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/k9IAS4TehZFcKi4HVByxZNPfqex.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Drama", "Thriller"],
         mood: "serious",
@@ -302,6 +350,9 @@ const coreIntelligentThrillers = [
     {
         title: "Gattaca",
         year: 1997,
+        tmdbId: 782,
+        posterPath: "/eSKr5Fl1MEC7zpAXaLWBWSBjgJq.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/eSKr5Fl1MEC7zpAXaLWBWSBjgJq.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Drama"],
         mood: "thoughtful",
@@ -321,6 +372,9 @@ const coreIntelligentThrillers = [
     {
         title: "Annihilation",
         year: 2018,
+        tmdbId: 300668,
+        posterPath: "/4YRplSk6BhH6PRuE9gfyw9byUJ6.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/4YRplSk6BhH6PRuE9gfyw9byUJ6.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Horror", "Drama"],
         mood: "unsettling",
@@ -339,6 +393,9 @@ const coreIntelligentThrillers = [
     {
         title: "Prisoners",
         year: 2013,
+        tmdbId: 146233,
+        posterPath: "/jsS3a3ep2KyBVmmiwaz3LvK49b1.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/jsS3a3ep2KyBVmmiwaz3LvK49b1.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Thriller", "Drama", "Crime"],
         mood: "tense",
@@ -357,6 +414,9 @@ const coreIntelligentThrillers = [
     {
         title: "Collateral",
         year: 2004,
+        tmdbId: 1538,
+        posterPath: "/nV5316WUsVij8sVXLCF1g7TFitg.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/nV5316WUsVij8sVXLCF1g7TFitg.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Thriller", "Crime", "Drama"],
         mood: "serious",
@@ -375,6 +435,9 @@ const coreIntelligentThrillers = [
     {
         title: "Moon",
         year: 2009,
+        tmdbId: 17431,
+        posterPath: "/35IU0Mq0zFsN1mYwDGts5mKc77n.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/35IU0Mq0zFsN1mYwDGts5mKc77n.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Drama"],
         mood: "thoughtful",
@@ -393,6 +456,9 @@ const coreIntelligentThrillers = [
     {
         title: "Upgrade",
         year: 2018,
+        tmdbId: 500664,
+        posterPath: "/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/woLGROUdPWdBnLVFKYdGD3kFkPY.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Action", "Thriller"],
         mood: "dark",
@@ -411,6 +477,9 @@ const coreIntelligentThrillers = [
     {
         title: "Oblivion",
         year: 2013,
+        tmdbId: 75612,
+        posterPath: "/bYLM3GpNUZnoFElPXp1zlhDPdtv.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/bYLM3GpNUZnoFElPXp1zlhDPdtv.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Action"],
         mood: "serious",
@@ -429,6 +498,9 @@ const coreIntelligentThrillers = [
     {
         title: "Snowpiercer",
         year: 2013,
+        tmdbId: 110415,
+        posterPath: "/kw6YQudA0TMcNmGUGy5XIw7zbnV.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/kw6YQudA0TMcNmGUGy5XIw7zbnV.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Action", "Drama"],
         mood: "intense",
@@ -447,6 +519,9 @@ const coreIntelligentThrillers = [
     {
         title: "Enemy",
         year: 2013,
+        tmdbId: 181886,
+        posterPath: "/vf40tyDRKZsBmaLsYeopzfFLzLx.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/vf40tyDRKZsBmaLsYeopzfFLzLx.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Thriller", "Drama", "Mystery"],
         mood: "unsettling",
@@ -465,6 +540,9 @@ const coreIntelligentThrillers = [
     {
         title: "Sicario",
         year: 2015,
+        tmdbId: 273481,
+        posterPath: "/lz8vNyXeidqqOdJW9ZjnDAMb5Vr.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/lz8vNyXeidqqOdJW9ZjnDAMb5Vr.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Thriller", "Crime", "Drama"],
         mood: "tense",
@@ -484,6 +562,9 @@ const coreIntelligentThrillers = [
     {
         title: "Memento",
         year: 2000,
+        tmdbId: 77,
+        posterPath: "/fKTPH2WvH8nHTXeBYBVhawtRqtR.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/fKTPH2WvH8nHTXeBYBVhawtRqtR.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Thriller", "Mystery"],
         mood: "serious",
@@ -502,6 +583,9 @@ const coreIntelligentThrillers = [
     {
         title: "Predestination",
         year: 2014,
+        tmdbId: 206487,
+        posterPath: "/38Xr1JnV1ZcLQ55zmdSp6n475cZ.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/38Xr1JnV1ZcLQ55zmdSp6n475cZ.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Thriller"],
         mood: "serious",
@@ -520,6 +604,9 @@ const coreIntelligentThrillers = [
     {
         title: "Coherence",
         year: 2013,
+        tmdbId: 220289,
+        posterPath: "/ezUtb9m5DeLwL2gxi4gktzNCvQv.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/ezUtb9m5DeLwL2gxi4gktzNCvQv.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Sci-Fi", "Thriller", "Mystery"],
         mood: "tense",
@@ -538,6 +625,9 @@ const coreIntelligentThrillers = [
     {
         title: "The Girl with the Dragon Tattoo",
         year: 2011,
+        tmdbId: 65754,
+        posterPath: "/8bokS83zGdhaXgN9tjidUKmAftW.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/8bokS83zGdhaXgN9tjidUKmAftW.jpg",
         category: "core_intelligent_thrillers",
         genres: ["Thriller", "Mystery", "Drama"],
         mood: "dark",
@@ -559,6 +649,9 @@ const crowdPleasingMainstream = [
     {
         title: "The Dark Knight",
         year: 2008,
+        tmdbId: 155,
+        posterPath: "/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Action", "Crime"],
         mood: "serious",
@@ -578,6 +671,9 @@ const crowdPleasingMainstream = [
     {
         title: "Spider-Man: Into the Spider-Verse",
         year: 2018,
+        tmdbId: 324857,
+        posterPath: "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Animation", "Action", "Adventure"],
         mood: "fun",
@@ -596,6 +692,9 @@ const crowdPleasingMainstream = [
     {
         title: "Iron Man",
         year: 2008,
+        tmdbId: 1726,
+        posterPath: "/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Action", "Sci-Fi"],
         mood: "fun",
@@ -615,6 +714,9 @@ const crowdPleasingMainstream = [
     {
         title: "Logan",
         year: 2017,
+        tmdbId: 263115,
+        posterPath: "/fnbjcRDYn6YviCcePDnGdyAkYsB.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/fnbjcRDYn6YviCcePDnGdyAkYsB.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Action", "Drama", "Sci-Fi"],
         mood: "emotional",
@@ -633,6 +735,9 @@ const crowdPleasingMainstream = [
     {
         title: "Guardians of the Galaxy",
         year: 2014,
+        tmdbId: 118340,
+        posterPath: "/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Action", "Adventure", "Sci-Fi"],
         mood: "fun",
@@ -651,6 +756,9 @@ const crowdPleasingMainstream = [
     {
         title: "Batman Begins",
         year: 2005,
+        tmdbId: 272,
+        posterPath: "/sPX89Td70IDDjVr85jdSBb4rWGr.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/sPX89Td70IDDjVr85jdSBb4rWGr.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Action", "Crime", "Drama"],
         mood: "serious",
@@ -670,6 +778,9 @@ const crowdPleasingMainstream = [
     {
         title: "Captain America: The Winter Soldier",
         year: 2014,
+        tmdbId: 100402,
+        posterPath: "/tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Action", "Thriller", "Sci-Fi"],
         mood: "serious",
@@ -689,6 +800,9 @@ const crowdPleasingMainstream = [
     {
         title: "Avengers: Infinity War",
         year: 2018,
+        tmdbId: 299536,
+        posterPath: "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Action", "Adventure", "Sci-Fi"],
         mood: "epic",
@@ -708,6 +822,9 @@ const crowdPleasingMainstream = [
     {
         title: "X-Men: Days of Future Past",
         year: 2014,
+        tmdbId: 127585,
+        posterPath: "/tYfijzolzgoMOtegh1Y7j2Enorg.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/tYfijzolzgoMOtegh1Y7j2Enorg.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Action", "Sci-Fi"],
         mood: "serious",
@@ -726,6 +843,9 @@ const crowdPleasingMainstream = [
     {
         title: "Top Gun: Maverick",
         year: 2022,
+        tmdbId: 361743,
+        posterPath: "/n0YuM4f5lvGAP6MAW2kBIzugXnc.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/n0YuM4f5lvGAP6MAW2kBIzugXnc.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Action", "Drama"],
         mood: "fun",
@@ -744,6 +864,9 @@ const crowdPleasingMainstream = [
     {
         title: "Ocean's Eleven",
         year: 2001,
+        tmdbId: 161,
+        posterPath: "/hQQCdZrsHtZyR6NbKH2YyCqd2fR.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/hQQCdZrsHtZyR6NbKH2YyCqd2fR.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Crime", "Comedy"],
         mood: "cool",
@@ -762,6 +885,9 @@ const crowdPleasingMainstream = [
     {
         title: "The Nice Guys",
         year: 2016,
+        tmdbId: 290250,
+        posterPath: "/clq4So9spa9cXk3MZy2iMdqkxP2.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/clq4So9spa9cXk3MZy2iMdqkxP2.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Comedy", "Crime"],
         mood: "fun",
@@ -780,6 +906,9 @@ const crowdPleasingMainstream = [
     {
         title: "Baby Driver",
         year: 2017,
+        tmdbId: 339403,
+        posterPath: "/tYzFuYXmT8LOYASlFCkaPiAFAl0.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/tYzFuYXmT8LOYASlFCkaPiAFAl0.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Action", "Crime"],
         mood: "cool",
@@ -798,6 +927,9 @@ const crowdPleasingMainstream = [
     {
         title: "National Treasure",
         year: 2004,
+        tmdbId: 2059,
+        posterPath: "/hVnCnOsyTRCe6Y27pCJ855FMcAK.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/hVnCnOsyTRCe6Y27pCJ855FMcAK.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Adventure", "Mystery"],
         mood: "fun",
@@ -816,6 +948,9 @@ const crowdPleasingMainstream = [
     {
         title: "Catch Me If You Can",
         year: 2002,
+        tmdbId: 640,
+        posterPath: "/ctjEj2xM32OvBXCq8zAdK3ZrsAj.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/ctjEj2xM32OvBXCq8zAdK3ZrsAj.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Drama", "Crime"],
         mood: "fun",
@@ -834,6 +969,9 @@ const crowdPleasingMainstream = [
     {
         title: "School of Rock",
         year: 2003,
+        tmdbId: 1584,
+        posterPath: "/zXLXaepIBvFVLU25DH3wv4IPSbe.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/zXLXaepIBvFVLU25DH3wv4IPSbe.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Comedy"],
         mood: "warm",
@@ -852,6 +990,9 @@ const crowdPleasingMainstream = [
     {
         title: "Pirates of the Caribbean: The Curse of the Black Pearl",
         year: 2003,
+        tmdbId: 22,
+        posterPath: "/poHwCZeWzJCShH7tOjg8RIoyjcw.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/poHwCZeWzJCShH7tOjg8RIoyjcw.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Adventure", "Fantasy"],
         mood: "fun",
@@ -871,6 +1012,9 @@ const crowdPleasingMainstream = [
     {
         title: "The Hunger Games",
         year: 2012,
+        tmdbId: 70160,
+        posterPath: "/yXCbOiVDCxO71zI7cuwBRXdftq8.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/yXCbOiVDCxO71zI7cuwBRXdftq8.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Action", "Sci-Fi", "Drama"],
         mood: "serious",
@@ -889,6 +1033,9 @@ const crowdPleasingMainstream = [
     {
         title: "The Social Network",
         year: 2010,
+        tmdbId: 37799,
+        posterPath: "/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Drama"],
         mood: "smart",
@@ -908,6 +1055,9 @@ const crowdPleasingMainstream = [
     {
         title: "Knives Out",
         year: 2019,
+        tmdbId: 546554,
+        posterPath: "/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Mystery", "Comedy"],
         mood: "fun",
@@ -927,6 +1077,9 @@ const crowdPleasingMainstream = [
     {
         title: "Edge of Tomorrow",
         year: 2014,
+        tmdbId: 137113,
+        posterPath: "/nBM9MMa2WCwvMG4IJ3eiGUdbPe6.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/nBM9MMa2WCwvMG4IJ3eiGUdbPe6.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Sci-Fi", "Action"],
         mood: "fun",
@@ -946,6 +1099,9 @@ const crowdPleasingMainstream = [
     {
         title: "The Martian",
         year: 2015,
+        tmdbId: 286217,
+        posterPath: "/fASz8A0yFE3QB6LgGoOfwvFSseV.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/fASz8A0yFE3QB6LgGoOfwvFSseV.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Sci-Fi", "Drama"],
         mood: "fun",
@@ -964,6 +1120,9 @@ const crowdPleasingMainstream = [
     {
         title: "Ready Player One",
         year: 2018,
+        tmdbId: 333339,
+        posterPath: "/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Sci-Fi", "Adventure"],
         mood: "fun",
@@ -982,6 +1141,9 @@ const crowdPleasingMainstream = [
     {
         title: "Ford v Ferrari",
         year: 2019,
+        tmdbId: 359724,
+        posterPath: "/dR1Ju50iudrOh3YgfwkAU1g2HZe.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/dR1Ju50iudrOh3YgfwkAU1g2HZe.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Drama"],
         mood: "serious",
@@ -1000,6 +1162,9 @@ const crowdPleasingMainstream = [
     {
         title: "Moneyball",
         year: 2011,
+        tmdbId: 60308,
+        posterPath: "/4yIQq1e6iOcaZ5rLDG3lZBP3j7a.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/4yIQq1e6iOcaZ5rLDG3lZBP3j7a.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Drama"],
         mood: "smart",
@@ -1018,6 +1183,9 @@ const crowdPleasingMainstream = [
     {
         title: "The Big Short",
         year: 2015,
+        tmdbId: 318846,
+        posterPath: "/scVEaJEwP8zUix8vgmMoJJ9Nq0w.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/scVEaJEwP8zUix8vgmMoJJ9Nq0w.jpg",
         category: "crowd_pleasing_mainstream",
         genres: ["Drama", "Comedy"],
         mood: "smart",
@@ -1039,6 +1207,9 @@ const comfortFeelGood = [
     {
         title: "The Intern",
         year: 2015,
+        tmdbId: 257211,
+        posterPath: "/bTQ46fupPbjBfFBHuzfD3hxxL0Q.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/bTQ46fupPbjBfFBHuzfD3hxxL0Q.jpg",
         category: "comfort_feel_good",
         genres: ["Comedy", "Drama"],
         mood: "warm",
@@ -1058,6 +1229,9 @@ const comfortFeelGood = [
     {
         title: "About Time",
         year: 2013,
+        tmdbId: 122906,
+        posterPath: "/ls6zswrOZVhCXQBh96DlbnLBajM.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/ls6zswrOZVhCXQBh96DlbnLBajM.jpg",
         category: "comfort_feel_good",
         genres: ["Romance", "Drama", "Comedy"],
         mood: "warm",
@@ -1077,6 +1251,9 @@ const comfortFeelGood = [
     {
         title: "Palm Springs",
         year: 2020,
+        tmdbId: 587792,
+        posterPath: "/gnAfqiV7yO3Jq9IntTmwkcaICqc.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/gnAfqiV7yO3Jq9IntTmwkcaICqc.jpg",
         category: "comfort_feel_good",
         genres: ["Comedy", "Romance", "Sci-Fi"],
         mood: "fun",
@@ -1096,6 +1273,9 @@ const comfortFeelGood = [
     {
         title: "Chef",
         year: 2014,
+        tmdbId: 212778,
+        posterPath: "/hyp8EXDmO4dSC8V6Q5jU7gD1kcg.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/hyp8EXDmO4dSC8V6Q5jU7gD1kcg.jpg",
         category: "comfort_feel_good",
         genres: ["Comedy", "Drama"],
         mood: "warm",
@@ -1114,6 +1294,9 @@ const comfortFeelGood = [
     {
         title: "The Secret Life of Walter Mitty",
         year: 2013,
+        tmdbId: 116745,
+        posterPath: "/iAo1hlzsPV9XpYcLQp6Ud065tGO.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/iAo1hlzsPV9XpYcLQp6Ud065tGO.jpg",
         category: "comfort_feel_good",
         genres: ["Adventure", "Drama", "Comedy"],
         mood: "inspiring",
@@ -1132,6 +1315,9 @@ const comfortFeelGood = [
     {
         title: "Little Miss Sunshine",
         year: 2006,
+        tmdbId: 773,
+        posterPath: "/niNdhTpPHSgw22tK0PLjQMV640v.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/niNdhTpPHSgw22tK0PLjQMV640v.jpg",
         category: "comfort_feel_good",
         genres: ["Comedy", "Drama"],
         mood: "warm",
@@ -1150,6 +1336,9 @@ const comfortFeelGood = [
     {
         title: "Crazy, Stupid, Love.",
         year: 2011,
+        tmdbId: 50646,
+        posterPath: "/p4RafgAPk558muOjnBMHhMArjS2.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/p4RafgAPk558muOjnBMHhMArjS2.jpg",
         category: "comfort_feel_good",
         genres: ["Comedy", "Romance"],
         mood: "fun",
@@ -1168,6 +1357,9 @@ const comfortFeelGood = [
     {
         title: "Julie & Julia",
         year: 2009,
+        tmdbId: 24803,
+        posterPath: "/1QZNWOOwfRi86ZApGvr2TtJZPBK.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/1QZNWOOwfRi86ZApGvr2TtJZPBK.jpg",
         category: "comfort_feel_good",
         genres: ["Drama", "Comedy"],
         mood: "warm",
@@ -1186,6 +1378,9 @@ const comfortFeelGood = [
     {
         title: "Paddington 2",
         year: 2017,
+        tmdbId: 346648,
+        posterPath: "/1OJ9vkD5xPt3skC6KguyXAgagRZ.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/1OJ9vkD5xPt3skC6KguyXAgagRZ.jpg",
         category: "comfort_feel_good",
         genres: ["Comedy", "Adventure", "Family"],
         mood: "warm",
@@ -1204,6 +1399,9 @@ const comfortFeelGood = [
     {
         title: "Hunt for the Wilderpeople",
         year: 2016,
+        tmdbId: 371645,
+        posterPath: "/hkmz9rxgcweizXNElozGeKwmAJE.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/hkmz9rxgcweizXNElozGeKwmAJE.jpg",
         category: "comfort_feel_good",
         genres: ["Adventure", "Comedy", "Drama"],
         mood: "warm",
@@ -1222,6 +1420,9 @@ const comfortFeelGood = [
     {
         title: "La La Land",
         year: 2016,
+        tmdbId: 313369,
+        posterPath: "/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
         category: "comfort_feel_good",
         genres: ["Drama", "Romance", "Music"],
         mood: "emotional",
@@ -1240,6 +1441,9 @@ const comfortFeelGood = [
     {
         title: "Soul",
         year: 2020,
+        tmdbId: 508442,
+        posterPath: "/6jmppcaubzLF8wkXM36ganVISCo.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/6jmppcaubzLF8wkXM36ganVISCo.jpg",
         category: "comfort_feel_good",
         genres: ["Animation", "Drama", "Comedy"],
         mood: "thoughtful",
@@ -1258,6 +1462,9 @@ const comfortFeelGood = [
     {
         title: "Ferris Bueller's Day Off",
         year: 1986,
+        tmdbId: 9377,
+        posterPath: "/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/9LTQNCvoLsKXP0LtaKAaYVtRaQL.jpg",
         category: "comfort_feel_good",
         genres: ["Comedy"],
         mood: "fun",
@@ -1276,6 +1483,9 @@ const comfortFeelGood = [
     {
         title: "The Truman Show",
         year: 1998,
+        tmdbId: 37165,
+        posterPath: "/vuza0WqY239yBXOadKlGwJsZJFE.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/vuza0WqY239yBXOadKlGwJsZJFE.jpg",
         category: "comfort_feel_good",
         genres: ["Drama", "Comedy"],
         mood: "smart",
@@ -1297,6 +1507,9 @@ const actionAdrenaline = [
     {
         title: "Mad Max: Fury Road",
         year: 2015,
+        tmdbId: 76341,
+        posterPath: "/hA2ple9q4qnwxp3hKVNhroipsir.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/hA2ple9q4qnwxp3hKVNhroipsir.jpg",
         category: "action_adrenaline",
         genres: ["Action"],
         mood: "intense",
@@ -1316,6 +1529,9 @@ const actionAdrenaline = [
     {
         title: "Mission: Impossible – Fallout",
         year: 2018,
+        tmdbId: 353081,
+        posterPath: "/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "fun",
@@ -1334,6 +1550,9 @@ const actionAdrenaline = [
     {
         title: "John Wick",
         year: 2014,
+        tmdbId: 245891,
+        posterPath: "/wXqWR7dHncNRbxoEGybEy7QTe9h.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/wXqWR7dHncNRbxoEGybEy7QTe9h.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "dark",
@@ -1352,6 +1571,9 @@ const actionAdrenaline = [
     {
         title: "John Wick: Chapter 4",
         year: 2023,
+        tmdbId: 603692,
+        posterPath: "/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "intense",
@@ -1370,6 +1592,9 @@ const actionAdrenaline = [
     {
         title: "Casino Royale",
         year: 2006,
+        tmdbId: 36557,
+        posterPath: "/lMrxYKKhd4lqRzwUHAy5gcx9PSO.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/lMrxYKKhd4lqRzwUHAy5gcx9PSO.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "serious",
@@ -1388,6 +1613,9 @@ const actionAdrenaline = [
     {
         title: "Skyfall",
         year: 2012,
+        tmdbId: 37724,
+        posterPath: "/d0IVecFQvsGdSbnMAHqiYsNYaJT.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/d0IVecFQvsGdSbnMAHqiYsNYaJT.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "serious",
@@ -1406,6 +1634,9 @@ const actionAdrenaline = [
     {
         title: "The Raid",
         year: 2011,
+        tmdbId: 94329,
+        posterPath: "/Abnm1Ws3JH0ReCfEhLMPwPcMcGO.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/Abnm1Ws3JH0ReCfEhLMPwPcMcGO.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "intense",
@@ -1424,6 +1655,9 @@ const actionAdrenaline = [
     {
         title: "The Raid 2",
         year: 2014,
+        tmdbId: 180299,
+        posterPath: "/mlGuKlIDLdPhYjz1QBXi0FmyYik.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/mlGuKlIDLdPhYjz1QBXi0FmyYik.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Crime", "Thriller"],
         mood: "intense",
@@ -1442,6 +1676,9 @@ const actionAdrenaline = [
     {
         title: "Heat",
         year: 1995,
+        tmdbId: 949,
+        posterPath: "/e09dLw1Ljtccd2P4NsuUvVtS5du.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/e09dLw1Ljtccd2P4NsuUvVtS5du.jpg",
         category: "action_adrenaline",
         genres: ["Crime", "Drama", "Thriller"],
         mood: "serious",
@@ -1460,6 +1697,9 @@ const actionAdrenaline = [
     {
         title: "Die Hard",
         year: 1988,
+        tmdbId: 562,
+        posterPath: "/7Bjd8kfmDSOzpmhySpEhkUyK2oH.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/7Bjd8kfmDSOzpmhySpEhkUyK2oH.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "fun",
@@ -1478,6 +1718,9 @@ const actionAdrenaline = [
     {
         title: "Bullet Train",
         year: 2022,
+        tmdbId: 718930,
+        posterPath: "/j8szC8OgrejDQjjMKSVXyaAjw3V.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/j8szC8OgrejDQjjMKSVXyaAjw3V.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Comedy", "Thriller"],
         mood: "fun",
@@ -1496,6 +1739,9 @@ const actionAdrenaline = [
     {
         title: "Atomic Blonde",
         year: 2017,
+        tmdbId: 341013,
+        posterPath: "/kV9R5h0Yct1kR8Hf8sJ1nX0Vz4x.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/kV9R5h0Yct1kR8Hf8sJ1nX0Vz4x.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "cool",
@@ -1514,6 +1760,9 @@ const actionAdrenaline = [
     {
         title: "Nobody",
         year: 2021,
+        tmdbId: 615457,
+        posterPath: "/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "fun",
@@ -1532,6 +1781,9 @@ const actionAdrenaline = [
     {
         title: "Free Guy",
         year: 2021,
+        tmdbId: 550988,
+        posterPath: "/dxraF0qPr1OEgJk17ltQTO84kQF.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/dxraF0qPr1OEgJk17ltQTO84kQF.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Comedy", "Sci-Fi"],
         mood: "fun",
@@ -1550,6 +1802,9 @@ const actionAdrenaline = [
     {
         title: "Kingsman: The Secret Service",
         year: 2014,
+        tmdbId: 207703,
+        posterPath: "/r6q9wZK5a2K51KFj4LWVID6Ja1r.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/r6q9wZK5a2K51KFj4LWVID6Ja1r.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Comedy"],
         mood: "fun",
@@ -1568,6 +1823,9 @@ const actionAdrenaline = [
     {
         title: "The Man from U.N.C.L.E.",
         year: 2015,
+        tmdbId: 203801,
+        posterPath: "/y5yZaForGSJbPD66Cvq9AT5WMAD.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/y5yZaForGSJbPD66Cvq9AT5WMAD.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Comedy", "Adventure"],
         mood: "cool",
@@ -1586,6 +1844,9 @@ const actionAdrenaline = [
     {
         title: "Speed",
         year: 1994,
+        tmdbId: 1637,
+        posterPath: "/82PkCE4R95KhHICUDF7G4Ly2z3l.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/82PkCE4R95KhHICUDF7G4Ly2z3l.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "tense",
@@ -1604,6 +1865,9 @@ const actionAdrenaline = [
     {
         title: "Terminator 2: Judgment Day",
         year: 1991,
+        tmdbId: 280,
+        posterPath: "/jFTVD4XoWQTcg7wdyJKa8PEds5q.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/jFTVD4XoWQTcg7wdyJKa8PEds5q.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Sci-Fi"],
         mood: "intense",
@@ -1622,6 +1886,9 @@ const actionAdrenaline = [
     {
         title: "The Rock",
         year: 1996,
+        tmdbId: 9802,
+        posterPath: "/eBcoxveWzzXQrCrwWMGAROcqgpP.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/eBcoxveWzzXQrCrwWMGAROcqgpP.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "fun",
@@ -1641,6 +1908,9 @@ const actionAdrenaline = [
     {
         title: "True Lies",
         year: 1994,
+        tmdbId: 36955,
+        posterPath: "/pweFTnzzTfGK68woSVkiTgjLzWm.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/pweFTnzzTfGK68woSVkiTgjLzWm.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Comedy", "Thriller"],
         mood: "fun",
@@ -1660,6 +1930,9 @@ const actionAdrenaline = [
     {
         title: "Aliens",
         year: 1986,
+        tmdbId: 679,
+        posterPath: "/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Sci-Fi", "Horror"],
         mood: "tense",
@@ -1678,6 +1951,9 @@ const actionAdrenaline = [
     {
         title: "Point Break",
         year: 1991,
+        tmdbId: 1089,
+        posterPath: "/tlbERIghrQ4oofqlbF7H0K0EYnx.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/tlbERIghrQ4oofqlbF7H0K0EYnx.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Crime", "Thriller"],
         mood: "cool",
@@ -1696,6 +1972,9 @@ const actionAdrenaline = [
     {
         title: "Face/Off",
         year: 1997,
+        tmdbId: 754,
+        posterPath: "/69Xzn8UdPbVnmqSChKz2RTpoNfB.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/69Xzn8UdPbVnmqSChKz2RTpoNfB.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Crime", "Sci-Fi"],
         mood: "wild",
@@ -1715,6 +1994,9 @@ const actionAdrenaline = [
     {
         title: "The Fugitive",
         year: 1993,
+        tmdbId: 5503,
+        posterPath: "/b3rEtLKyOnF89mcK75GXDXdmOEf.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/b3rEtLKyOnF89mcK75GXDXdmOEf.jpg",
         category: "action_adrenaline",
         genres: ["Thriller", "Drama", "Crime"],
         mood: "tense",
@@ -1733,6 +2015,9 @@ const actionAdrenaline = [
     {
         title: "Lethal Weapon",
         year: 1987,
+        tmdbId: 941,
+        posterPath: "/fTq4ThIP3pQTYR9eDepsbDHqdcs.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/fTq4ThIP3pQTYR9eDepsbDHqdcs.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Comedy", "Crime"],
         mood: "fun",
@@ -1751,6 +2036,9 @@ const actionAdrenaline = [
     {
         title: "Con Air",
         year: 1997,
+        tmdbId: 1701,
+        posterPath: "/kOKjgrEzGOP92rVQ6srA9jtp60l.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/kOKjgrEzGOP92rVQ6srA9jtp60l.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Thriller"],
         mood: "wild",
@@ -1769,6 +2057,9 @@ const actionAdrenaline = [
     {
         title: "Predator",
         year: 1987,
+        tmdbId: 106,
+        posterPath: "/aN3cdjIK70KGmD84et8MMblU87Q.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/aN3cdjIK70KGmD84et8MMblU87Q.jpg",
         category: "action_adrenaline",
         genres: ["Action", "Sci-Fi", "Thriller"],
         mood: "intense",
@@ -1789,6 +2080,9 @@ const horrorSuspense = [
     {
         title: "A Quiet Place",
         year: 2018,
+        tmdbId: 447332,
+        posterPath: "/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
         category: "horror_suspense",
         genres: ["Thriller", "Horror"],
         mood: "tense",
@@ -1807,6 +2101,9 @@ const horrorSuspense = [
     {
         title: "Get Out",
         year: 2017,
+        tmdbId: 419430,
+        posterPath: "/mE24wUCfjK8AoBBjaMjho7Rczr7.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/mE24wUCfjK8AoBBjaMjho7Rczr7.jpg",
         category: "horror_suspense",
         genres: ["Horror", "Thriller", "Mystery"],
         mood: "unsettling",
@@ -1825,6 +2122,9 @@ const horrorSuspense = [
     {
         title: "Hereditary",
         year: 2018,
+        tmdbId: 493922,
+        posterPath: "/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/4GFPuL14eXi66V96xBWY73Y9PfR.jpg",
         category: "horror_suspense",
         genres: ["Horror", "Drama"],
         mood: "disturbing",
@@ -1843,6 +2143,9 @@ const horrorSuspense = [
     {
         title: "The Invisible Man",
         year: 2020,
+        tmdbId: 570670,
+        posterPath: "/5EufsDwXdY2CVttYOk2WtYhgKpa.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/5EufsDwXdY2CVttYOk2WtYhgKpa.jpg",
         category: "horror_suspense",
         genres: ["Thriller", "Sci-Fi", "Horror"],
         mood: "tense",
@@ -1861,6 +2164,9 @@ const horrorSuspense = [
     {
         title: "It Follows",
         year: 2014,
+        tmdbId: 270303,
+        posterPath: "/iwnQ1JH1wdWrGYkgWySptJ5284A.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/iwnQ1JH1wdWrGYkgWySptJ5284A.jpg",
         category: "horror_suspense",
         genres: ["Horror", "Mystery"],
         mood: "unsettling",
@@ -1879,6 +2185,9 @@ const horrorSuspense = [
     {
         title: "Barbarian",
         year: 2022,
+        tmdbId: 913290,
+        posterPath: "/idT5mnqPcJgSkvpDX7pJffBzdVH.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/idT5mnqPcJgSkvpDX7pJffBzdVH.jpg",
         category: "horror_suspense",
         genres: ["Horror", "Thriller"],
         mood: "wild",
@@ -1897,6 +2206,9 @@ const horrorSuspense = [
     {
         title: "Nope",
         year: 2022,
+        tmdbId: 762504,
+        posterPath: "/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg",
         category: "horror_suspense",
         genres: ["Horror", "Sci-Fi", "Mystery"],
         mood: "unsettling",
@@ -1915,6 +2227,9 @@ const horrorSuspense = [
     {
         title: "The Conjuring",
         year: 2013,
+        tmdbId: 138843,
+        posterPath: "/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
         category: "horror_suspense",
         genres: ["Horror", "Thriller"],
         mood: "tense",
@@ -1935,6 +2250,9 @@ const emotionalReflective = [
     {
         title: "Her",
         year: 2013,
+        tmdbId: 152601,
+        posterPath: "/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg",
         category: "emotional_reflective",
         genres: ["Drama", "Romance", "Sci-Fi"],
         mood: "emotional",
@@ -1953,6 +2271,9 @@ const emotionalReflective = [
     {
         title: "The Pursuit of Happyness",
         year: 2006,
+        tmdbId: 1402,
+        posterPath: "/lBYOKAMcxIvuk9s9hMuecB9dPBV.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/lBYOKAMcxIvuk9s9hMuecB9dPBV.jpg",
         category: "emotional_reflective",
         genres: ["Drama"],
         mood: "inspiring",
@@ -1971,6 +2292,9 @@ const emotionalReflective = [
     {
         title: "Good Will Hunting",
         year: 1997,
+        tmdbId: 489,
+        posterPath: "/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/z2FnLKpFi1HPO7BEJxdkv6hpJSU.jpg",
         category: "emotional_reflective",
         genres: ["Drama"],
         mood: "emotional",
@@ -1990,6 +2314,9 @@ const emotionalReflective = [
     {
         title: "Whiplash",
         year: 2014,
+        tmdbId: 244786,
+        posterPath: "/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
         category: "emotional_reflective",
         genres: ["Drama", "Music"],
         mood: "intense",
@@ -2008,6 +2335,9 @@ const emotionalReflective = [
     {
         title: "Eternal Sunshine of the Spotless Mind",
         year: 2004,
+        tmdbId: 38,
+        posterPath: "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg",
         category: "emotional_reflective",
         genres: ["Drama", "Romance", "Sci-Fi"],
         mood: "emotional",
@@ -2026,6 +2356,9 @@ const emotionalReflective = [
     {
         title: "Past Lives",
         year: 2023,
+        tmdbId: 666277,
+        posterPath: "/k3waqVXSnvCZWfJYNtdamTgTtTA.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/k3waqVXSnvCZWfJYNtdamTgTtTA.jpg",
         category: "emotional_reflective",
         genres: ["Drama", "Romance"],
         mood: "reflective",
@@ -2046,6 +2379,9 @@ const weirdCultExperimental = [
     {
         title: "The Jacket",
         year: 2005,
+        tmdbId: 9667,
+        posterPath: "/bt89UfRhjAvJDAO9CWJnRFXAN3p.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/bt89UfRhjAvJDAO9CWJnRFXAN3p.jpg",
         category: "weird_cult_experimental",
         genres: ["Sci-Fi", "Thriller", "Mystery"],
         mood: "unsettling",
@@ -2064,6 +2400,9 @@ const weirdCultExperimental = [
     {
         title: "Everything Everywhere All at Once",
         year: 2022,
+        tmdbId: 545611,
+        posterPath: "/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/u68AjlvlutfEIcpmbYpKcdi09ut.jpg",
         category: "weird_cult_experimental",
         genres: ["Sci-Fi", "Comedy", "Drama"],
         mood: "wild",
@@ -2082,6 +2421,9 @@ const weirdCultExperimental = [
     {
         title: "Donnie Darko",
         year: 2001,
+        tmdbId: 141,
+        posterPath: "/j2AtZFsflxiluaNtajMTI0Avm8C.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/j2AtZFsflxiluaNtajMTI0Avm8C.jpg",
         category: "weird_cult_experimental",
         genres: ["Sci-Fi", "Drama", "Mystery"],
         mood: "unsettling",
@@ -2101,6 +2443,9 @@ const weirdCultExperimental = [
     {
         title: "Scott Pilgrim vs. the World",
         year: 2010,
+        tmdbId: 22538,
+        posterPath: "/g5IoYeudx9XBEfwNL0fHvSckLBz.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/g5IoYeudx9XBEfwNL0fHvSckLBz.jpg",
         category: "weird_cult_experimental",
         genres: ["Action", "Comedy", "Romance"],
         mood: "fun",
@@ -2119,6 +2464,9 @@ const weirdCultExperimental = [
     {
         title: "Being John Malkovich",
         year: 1999,
+        tmdbId: 492,
+        posterPath: "/31FGQu3OnwdmS4COquENe0vMZc0.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/31FGQu3OnwdmS4COquENe0vMZc0.jpg",
         category: "weird_cult_experimental",
         genres: ["Comedy", "Drama", "Fantasy"],
         mood: "weird",
@@ -2137,6 +2485,9 @@ const weirdCultExperimental = [
     {
         title: "Sorry to Bother You",
         year: 2018,
+        tmdbId: 424781,
+        posterPath: "/peTl1V04E9ppvhgvNmSX0r2ALqO.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/peTl1V04E9ppvhgvNmSX0r2ALqO.jpg",
         category: "weird_cult_experimental",
         genres: ["Comedy", "Sci-Fi"],
         mood: "wild",
@@ -2155,6 +2506,9 @@ const weirdCultExperimental = [
     {
         title: "The Lobster",
         year: 2015,
+        tmdbId: 254320,
+        posterPath: "/7Y9ILV1unpW9mLpGcqyGQU72LUy.jpg",
+        posterUrl: "https://image.tmdb.org/t/p/w500/7Y9ILV1unpW9mLpGcqyGQU72LUy.jpg",
         category: "weird_cult_experimental",
         genres: ["Drama", "Comedy", "Sci-Fi"],
         mood: "deadpan",
@@ -2604,11 +2958,35 @@ function renderResults(ranked) {
         const scoreBtn = document.getElementById("listen-score-btn");
 
         if (trailerBtn) {
-            trailerBtn.onclick = () => openTrailerModal(winner.trailer);
+            trailerBtn.onclick = () => {
+                const winnerTrailerItem = {
+                    ...winner,
+                    youtubeKey: getYouTubeKeyFromUrl(winner.trailer),
+                    source: "🧙 Wizard Winner"
+                };
+
+                window.setTrailerPlaylist(
+                    [winnerTrailerItem],
+                    0,
+                    "🧙 Wizard Winner"
+                );
+
+                saveTrailerHistoryItem({
+                    ...winner,
+                    youtubeKey: getYouTubeKeyFromUrl(winner.trailer),
+                    source: "🧙 Wizard Winner"
+                });
+
+                renderTrailerHistory();
+
+                openTrailerModal(winner.trailer);
+            };
         }
 
         if (scoreBtn) {
-            scoreBtn.onclick = () => openScoreModal(winner.scorePlaylist);
+            scoreBtn.onclick = () => {
+                openScoreModal(winner.scorePlaylist);
+            };
         }
     } else {
         trailerContainer.innerHTML = "";
@@ -2669,6 +3047,16 @@ async function launchRandomTrailer() {
 
         renderTrailerHistory();
 
+        window.setTrailerPlaylist(
+            [{
+                ...movie,
+                youtubeKey: data.youtubeKey,
+                source: "🎲 Vibe right now"
+            }],
+            0,
+            "🎲 Vibe right now"
+        );
+
         openTrailerModal(`https://www.youtube.com/watch?v=${data.youtubeKey}`);
 
     } catch (error) {
@@ -2713,97 +3101,6 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
-const homePicksRow = document.getElementById("homePicksRow");
-
-async function renderHomePicks() {
-    if (!homePicksRow) return;
-
-    const response = await fetch("/data/movies-expanded-3.json");
-    const expandedMovies = await response.json();
-
-    const picks = shuffle(expandedMovies).slice(0, 6);
-
-    homePicksRow.innerHTML = picks.map(movie => {
-        const title = escapeHTML(movie.title || "Untitled");
-        const year = escapeHTML(String(movie.year || ""));
-        const poster = movie.poster || movie.posterUrl || movie.poster_path || movie.posterUrlFull || "";
-
-        return `
-      <article class="movie-card">
-        <button
-          class="movie-card-button"
-          type="button"
-          data-home-pick-title="${title}"
-          data-home-pick-year="${year}"
-          data-home-pick-poster="${escapeHTML(poster)}"
-          aria-label="Watch trailer for ${title}"
-        >
-          ${poster ? `<img src="${escapeHTML(poster)}" alt="${title} poster" loading="lazy">` : ""}
-          <div class="movie-card-body">
-            <h3>${title}</h3>
-            <p>${year}</p>
-          </div>
-        </button>
-      </article>
-    `;
-    }).join("");
-}
-
-document.addEventListener("click", async event => {
-    const button = event.target.closest("[data-home-pick-title]");
-    if (!button) return;
-
-    const title = button.dataset.homePickTitle;
-    const year = button.dataset.homePickYear;
-    const poster = button.dataset.homePickPoster;
-
-    try {
-        const response = await fetch("/.netlify/functions/get-trailer", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ title, year })
-        });
-
-        if (!response.ok) throw new Error("Trailer lookup failed");
-
-        const data = await response.json();
-
-        if (!data.youtubeKey) {
-            alert("No trailer available for this movie yet.");
-            return;
-        }
-
-        saveTrailerHistoryItem({
-            title,
-            year,
-            poster,
-            youtubeKey: data.youtubeKey,
-            source: "🍿 Tonight's picks"
-        });
-
-        renderTrailerHistory();
-
-        openTrailerModal(`https://www.youtube.com/watch?v=${data.youtubeKey}`);
-    } catch (error) {
-        console.error(error);
-        alert("Could not load a trailer right now.");
-    }
-});
-
-function escapeHTML(value) {
-    return String(value).replace(/[&<>"']/g, char => ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': "&quot;",
-        "'": "&#039;",
-    }[char]));
-}
-
-renderHomePicks();
-
 const trailerHistoryRow = document.getElementById("trailerHistoryRow");
 const clearTrailerHistoryBtn = document.getElementById("clearTrailerHistoryBtn");
 
@@ -2814,12 +3111,12 @@ function renderTrailerHistory() {
 
     if (!history.length) {
         trailerHistoryRow.innerHTML = `
-      <p class="empty-state">Trailers you watch will show up here.</p>
-    `;
+            <p class="empty-state">Trailers you watch will show up here.</p>
+        `;
         return;
     }
 
-    trailerHistoryRow.innerHTML = history.map(item => {
+    trailerHistoryRow.innerHTML = history.map((item, index) => {
         const title = escapeHTML(item.title || "Untitled");
         const year = escapeHTML(String(item.year || ""));
         const poster = item.poster || item.posterUrl || item.poster_path || item.posterUrlFull || "";
@@ -2828,25 +3125,24 @@ function renderTrailerHistory() {
             : "";
         const source = escapeHTML(item.source || "Trailer");
 
-
         return `
-      <article class="movie-card">
-        <button
-          class="movie-card-button"
-          type="button"
-          data-history-youtube-key="${escapeHTML(item.youtubeKey || "")}"
-          aria-label="Rewatch trailer for ${title}"
-        >
-          ${poster ? `<img src="${escapeHTML(poster)}" alt="${title} poster" loading="lazy">` : ""}
-          <div class="movie-card-body">
-            <h3>${title}</h3>
-            <p>${year}</p>
-            <p><small class="movie-card-source">${source}</small></p>
-            ${watchedAt ? `<small class="movie-card-timestamp">🎬 ${watchedAt}</small>` : ""}
-          </div>
-        </button>
-      </article>
-    `;
+            <article class="movie-card">
+                <button
+                    class="movie-card-button"
+                    type="button"
+                    data-history-trailer-index="${index}"
+                    aria-label="Rewatch trailer for ${title}"
+                >
+                    ${poster ? `<img src="${escapeHTML(poster)}" alt="${title} poster" loading="lazy">` : ""}
+                    <div class="movie-card-body">
+                        <h3>${title}</h3>
+                        <p>${year}</p>
+                        <p><small class="movie-card-source">${source}</small></p>
+                        ${watchedAt ? `<small class="movie-card-timestamp">🎬 ${watchedAt}</small>` : ""}
+                    </div>
+                </button>
+            </article>
+        `;
     }).join("");
 }
 
@@ -2863,10 +3159,12 @@ function formatWatchedDate(dateString) {
 }
 
 document.addEventListener("click", event => {
-    const button = event.target.closest("[data-history-youtube-key]");
+    const button = event.target.closest("[data-history-trailer-index]");
     if (!button) return;
 
-    openTrailerFromHistory(button.dataset.historyYoutubeKey);
+    openTrailerFromHistory(
+        Number(button.dataset.historyTrailerIndex)
+    );
 });
 
 clearTrailerHistoryBtn?.addEventListener("click", () => {

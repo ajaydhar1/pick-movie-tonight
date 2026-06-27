@@ -3,6 +3,22 @@ function getYouTubeEmbed(url) {
   return match ? `https://www.youtube.com/embed/${match[1]}` : `https://www.youtube.com/embed/${url}`;
 }
 
+function getYouTubeKeyFromUrl(url) {
+  if (!url) return "";
+
+  try {
+    const parsedUrl = new URL(url);
+
+    if (parsedUrl.hostname.includes("youtu.be")) {
+      return parsedUrl.pathname.replace("/", "");
+    }
+
+    return parsedUrl.searchParams.get("v") || "";
+  } catch {
+    return "";
+  }
+}
+
 function getYouTubePlaylistEmbed(url) {
   const listMatch = url.match(/[?&]list=([^&]+)/);
   const videoMatch = url.match(/[?&]v=([^&]+)/);
@@ -17,44 +33,41 @@ function getYouTubePlaylistEmbed(url) {
     : `https://www.youtube.com/embed/videoseries?list=${listId}`;
 }
 
-function openMediaModal(embedUrl, title = "Media", mediaType = "media") {
+function openMediaModal(embedUrl, title = "Media", type = "media") {
   const modal = document.getElementById("trailer-modal");
-  if (!modal || !embedUrl) return;
-
-  const dialog = modal.querySelector(".trailer-modal-dialog");
-  const body = modal.querySelector(".trailer-modal-body");
   const iframe = document.getElementById("trailer-modal-iframe");
   const titleText = document.getElementById("media-modal-title-text");
-  const eq = document.getElementById("media-eq");
 
-  if (!iframe) return;
+  if (!modal || !iframe) return;
 
-  iframe.src = embedUrl;
-  if (titleText) titleText.textContent = title;
+  if (embedUrl) {
+    iframe.src = embedUrl;
+  }
 
-  dialog?.classList.remove("is-score");
-  body?.classList.remove("is-score");
-
-  if (mediaType === "score") {
-    eq?.classList.add("is-active");
-    dialog?.classList.add("is-score");
-    body?.classList.add("is-score");
-  } else {
-    eq?.classList.remove("is-active");
+  if (titleText) {
+    titleText.textContent = title;
   }
 
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
-  document.body.classList.add("modal-open");
 }
 
-function openTrailerModal(trailerUrl) {
-  const embedUrl = getYouTubeEmbed(trailerUrl);
-  if (!embedUrl) return;
-  openMediaModal(`${embedUrl}?autoplay=1&rel=0`, "Trailer", "trailer");
+function openTrailerModal(trailerUrl = "") {
+  showTrailerNavButtons();
+
+  if (trailerUrl) {
+    const embedUrl = getYouTubeEmbed(trailerUrl);
+    if (!embedUrl) return;
+
+    openMediaModal(`${embedUrl}?autoplay=1&rel=0`, "Trailer", "trailer");
+    return;
+  }
+
+  openMediaModal(null, "Trailer", "trailer");
 }
 
 function openScoreModal(scorePlaylistUrl) {
+  hideTrailerNavButtons();
   const embedUrl = getYouTubePlaylistEmbed(scorePlaylistUrl);
   if (!embedUrl) return;
   openMediaModal(`${embedUrl}${embedUrl.includes("?") ? "&" : "?"}rel=0`, "Film Score", "score");
@@ -106,10 +119,15 @@ function clearTrailerHistory() {
   localStorage.removeItem(TRAILER_HISTORY_KEY);
 }
 
-function openTrailerFromHistory(youtubeKey) {
-  if (!youtubeKey) return;
+function openTrailerFromHistory(index) {
+  const history = getTrailerHistory();
 
-  openTrailerModal(`https://www.youtube.com/watch?v=${youtubeKey}`);
+  if (!history.length) return;
+
+  window.setTrailerPlaylist(history, index, "🕘 Trailer History");
+  window.playTrailerAt(index);
+
+  openTrailerModal();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -120,3 +138,73 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") closeTrailerModal();
   });
 });
+
+const homePicksRow = document.getElementById("homePicksRow");
+
+let homePicks = [];
+
+async function renderHomePicks() {
+    if (!homePicksRow) return;
+
+    const response = await fetch("/data/movies-expanded-3.json");
+    const expandedMovies = await response.json();
+
+    homePicks = shuffle(expandedMovies).slice(0, 6);
+
+    homePicksRow.innerHTML = homePicks.map((movie, index) => {
+        const title = escapeHTML(movie.title || "Untitled");
+        const year = escapeHTML(String(movie.year || ""));
+        const poster = movie.poster || movie.posterUrl || movie.poster_path || movie.posterUrlFull || "";
+
+        return `
+      <article class="movie-card">
+        <button
+          class="movie-card-button"
+          type="button"
+          data-home-pick-index="${index}"
+          data-home-pick-title="${title}"
+          data-home-pick-year="${year}"
+          data-home-pick-poster="${escapeHTML(poster)}"
+          aria-label="Watch trailer for ${title}"
+        >
+          ${poster ? `<img src="${escapeHTML(poster)}" alt="${title} poster" loading="lazy">` : ""}
+          <div class="movie-card-body">
+            <h3>${title}</h3>
+            <p>${year}</p>
+          </div>
+        </button>
+      </article>
+    `;
+    }).join("");
+}
+
+document.addEventListener("click", async event => {
+    const button = event.target.closest("[data-home-pick-title]");
+    if (!button) return;
+
+    const movieIndex = Number(button.dataset.homePickIndex);
+
+    window.setTrailerPlaylist(
+        homePicks.map(movie => ({
+            ...movie,
+            source: "🍿 Tonight's Picks"
+        })),
+        movieIndex,
+        "🍿 Tonight's Picks"
+    );
+
+    await window.playTrailerAt(movieIndex);
+    openTrailerModal();
+});
+
+function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+    }[char]));
+}
+
+renderHomePicks();

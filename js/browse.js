@@ -1,6 +1,8 @@
 const DATA_URL = "/data/movies-expanded-3.json";
 const POSTER_FALLBACK = "";
 
+let browsePlaylists = {};
+
 const rows = {
   tonightsPicks: document.getElementById("tonightsPicks"),
   movies2020s: document.getElementById("movies2020s"),
@@ -28,47 +30,24 @@ async function initBrowse() {
       const button = event.target.closest(".movie-card-button");
       if (!button) return;
 
-      const title = button.dataset.title;
-      const year = button.dataset.year;
-      const poster = button.dataset.poster;
+      const rowKey = button.dataset.rowKey;
+      const rowIndex = Number(button.dataset.rowIndex);
 
-      try {
-        const response = await fetch("/.netlify/functions/get-trailer", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            title,
-            year
-          })
-        });
+      const playlist = browsePlaylists[rowKey];
 
-        if (!response.ok) {
-          throw new Error("Trailer lookup failed");
-        }
+      if (!playlist) return;
 
-        const data = await response.json();
+      window.setTrailerPlaylist(
+        playlist.map(movie => ({
+          ...movie,
+          source: `🔎 Browse`
+        })),
+        rowIndex,
+        button.dataset.rowLabel
+      );
 
-        if (!data.youtubeKey) {
-          alert("No trailer available for this movie yet.");
-          return;
-        }
-
-        saveTrailerHistoryItem({
-          title,
-          year,
-          poster,
-          youtubeKey: data.youtubeKey,
-          source: "🔎 Browse"
-        });
-
-        openTrailerModal(`https://www.youtube.com/watch?v=${data.youtubeKey}`);
-
-      } catch (error) {
-        console.error(error);
-        alert("Could not load a trailer right now.");
-      }
+      await window.playTrailerAt(rowIndex);
+      openTrailerModal();
     });
 
   } catch (error) {
@@ -81,48 +60,49 @@ function renderBrowseRows(movies) {
 
   const shuffled = [...movies].sort(() => Math.random() - 0.5);
 
-  renderRow(rows.tonightsPicks, shuffled.slice(0, 12));
-  renderRow(rows.movies2020s, filterByYearRange(movies, 2020, 2026).slice(0, 18));
-  renderRow(rows.movies2010s, filterByYearRange(movies, 2010, 2019).slice(0, 18));
-  renderRow(rows.movies2000s, filterByYearRange(movies, 2000, 2009).slice(0, 18));
-  renderRow(rows.movies1990s, filterByYearRange(movies, 1990, 1999).slice(0, 18));
-  renderRow(rows.moviesBefore1990, movies.filter(movie => Number(movie.year) < 1990).slice(0, 18));
+  browsePlaylists = {
+    tonightsPicks: shuffled.slice(0, 12),
+    movies2020s: filterByYearRange(movies, 2020, 2026).slice(0, 18),
+    movies2010s: filterByYearRange(movies, 2010, 2019).slice(0, 18),
+    movies2000s: filterByYearRange(movies, 2000, 2009).slice(0, 18),
+    movies1990s: filterByYearRange(movies, 1990, 1999).slice(0, 18),
+    moviesBefore1990: movies.filter(movie => Number(movie.year) < 1990).slice(0, 18)
+  };
+
+  renderRow(rows.tonightsPicks, browsePlaylists.tonightsPicks, "tonightsPicks", "Tonight's Picks");
+  renderRow(rows.movies2020s, browsePlaylists.movies2020s, "movies2020s", "2020s Movies");
+  renderRow(rows.movies2010s, browsePlaylists.movies2010s, "movies2010s", "2010s Movies");
+  renderRow(rows.movies2000s, browsePlaylists.movies2000s, "movies2000s", "2000s Movies");
+  renderRow(rows.movies1990s, browsePlaylists.movies1990s, "movies1990s", "1990s Movies");
+  renderRow(rows.moviesBefore1990, browsePlaylists.moviesBefore1990, "moviesBefore1990", "Before 1990");
 }
 
-function renderRow(container, movies) {
+function renderRow(container, movies, rowKey, rowLabel) {
   if (!container) return;
 
-  container.innerHTML = movies.map(createMovieCard).join("");
+  container.innerHTML = movies
+    .map((movie, index) => createMovieCard(movie, rowKey, rowLabel, index))
+    .join("");
 }
 
-function createMovieCard(movie) {
+function createMovieCard(movie, rowKey, rowLabel, index) {
   const title = escapeHTML(movie.title || "Untitled");
   const year = escapeHTML(String(movie.year || ""));
   const poster = movie.poster || movie.posterUrl || movie.poster_path || "";
-  const trailer =
-    movie.trailer ||
-    movie.trailerUrl ||
-    movie.trailer_url ||
-    movie.youtube ||
-    movie.youtubeUrl ||
-    movie.youtube_url ||
-    movie.youtubeKey ||
-    movie.youtube_key ||
-    movie.trailers?.[0] ||
-    "";
-
-  //console.log(movie.title, movie);
 
   return `
     <article class="movie-card">
       <button
-        class="movie-card-button"
-        type="button"
-        data-title="${title}"
-        data-year="${year}"
-        data-poster="${escapeHTML(poster)}"
-        aria-label="Watch trailer for ${title}"
-        >
+          class="movie-card-button"
+          type="button"
+          data-row-key="${rowKey}"
+          data-row-label="${escapeHTML(rowLabel)}"
+          data-row-index="${index}"
+          data-title="${title}"
+          data-year="${year}"
+          data-poster="${escapeHTML(poster)}"
+          aria-label="Watch trailer for ${title}"
+      >
         ${poster ? `<img src="${escapeHTML(poster)}" alt="${title} poster" loading="lazy">` : ""}
         <div class="movie-card-body">
           <h3>${title}</h3>

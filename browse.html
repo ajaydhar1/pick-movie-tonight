@@ -57,8 +57,8 @@
     <link rel="preconnect" href="https://i.ytimg.com">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="styles/main.css?v=1.0.5">
-    <link rel="stylesheet" href="styles/browse.css?v=1.0.5">
+    <link rel="stylesheet" href="styles/main.css?v=1.0.7">
+    <link rel="stylesheet" href="styles/browse.css?v=1.0.7">
 </head>
 
 <body class="browse-page">
@@ -155,11 +155,7 @@
 
             <h3 id="media-modal-title" class="media-modal-title">
                 <span id="media-modal-title-text">Media</span>
-                <span id="media-eq" class="media-eq" aria-hidden="true">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
+                <span id="media-modal-context" class="media-modal-context">Navigating: Current list</span>
             </h3>
 
             <div class="trailer-modal-body">
@@ -168,11 +164,22 @@
                     allowfullscreen>
                 </iframe>
             </div>
+
+            <div class="trailer-modal-controls" aria-label="Trailer navigation">
+                <button id="trailer-prev-button" class="trailer-nav-button" type="button">
+                    ← Prev
+                </button>
+
+                <button id="trailer-next-button" class="trailer-nav-button trailer-nav-button-primary" type="button">
+                    Next →
+                </button>
+            </div>
         </div>
     </div>
 
-    <script src="js/app.js?v=1.0.5" defer></script>
-    <script src="js/browse.js?v=1.0.5" defer></script>
+    <script src="js/app.js?v=1.0.7" defer></script>
+    <script src="js/trailer-modal-nav.js?v=1.0.7" defer></script>
+    <script src="js/browse.js?v=1.0.7" defer></script>
 </body>
 
 </html>

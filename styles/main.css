@@ -989,23 +989,6 @@ small.movie-card-source {
     flex-wrap: wrap;
 }
 
-@media (max-width: 600px) {
-    .site-header {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .site-logo {
-        width: 100%;
-    }
-
-    .site-nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-}
-
 /* =========================
    Footer
 ========================= */
@@ -1261,3 +1244,83 @@ body.about-page {
     line-height: 1.7;
 }
 
+/* =========================
+   Trailer Modal
+========================= */
+
+.trailer-modal-dialog {
+  position: relative;
+}
+
+.trailer-modal-controls {
+  pointer-events: none;
+}
+
+.trailer-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  pointer-events: auto;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.85rem 1.15rem;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+#trailer-prev-button {
+  left: -4.5rem;
+}
+
+#trailer-next-button {
+  right: -4.5rem;
+}
+
+.trailer-nav-button:hover:not(:disabled) {
+  transform: translateY(-50%) scale(1.04);
+}
+
+.trailer-nav-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Tablet + mobile: put controls underneath */
+@media (max-width: 900px) {
+  .trailer-modal-controls {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .trailer-nav-button {
+    position: static;
+    transform: none;
+    flex: 1;
+    max-width: 11rem;
+  }
+
+  .trailer-nav-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+}
+
+.media-modal-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.media-modal-context {
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
