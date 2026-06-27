@@ -612,6 +612,49 @@ body.modal-open {
 }
 
 
+.media-modal-controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.media-modal-nav-btn {
+  flex: 1;
+  min-height: 56px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.media-modal-nav-btn:active {
+  transform: scale(0.98);
+}
+
+.media-modal-dialog {
+  max-height: 90vh;
+  /* overflow-y: auto; */
+  overscroll-behavior: contain;
+}
+
+.media-modal-body {
+  max-height: 55vh;
+}
+
+.media-modal-body iframe {
+  width: 100%;
+  /* height: min(55vh, 420px); */
+}
+
+.media-modal-controls {
+  position: sticky;
+  bottom: 0;
+  background: inherit;
+  padding-top: 1rem;
+}
+
+
 /* Trailer button */
 .trailer-btn {
     position: relative;

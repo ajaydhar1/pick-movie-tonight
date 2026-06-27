@@ -20,6 +20,7 @@ function initBrowse() {
   renderMusicHistory();
   setupMusicHistoryClear();
   setupMusicHistoryPlayback();
+  setupMediaModalNavigationButtons();
 
   document.addEventListener("click", event => {
     const button = event.target.closest(".item-card-button");

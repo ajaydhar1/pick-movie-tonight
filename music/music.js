@@ -195,3 +195,20 @@ document.addEventListener("keydown", event => {
     playPreviousHistorySong();
   }
 });
+
+function setupMediaModalNavigationButtons() {
+  const prevButton = document.getElementById("media-prev-btn");
+  const nextButton = document.getElementById("media-next-btn");
+
+  if (prevButton) {
+    prevButton.addEventListener("click", () => {
+      playPreviousHistorySong();
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      playNextHistoryOrRandomSong();
+    });
+  }
+}
