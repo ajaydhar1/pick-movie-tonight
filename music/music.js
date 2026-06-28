@@ -103,6 +103,54 @@ function setupMusicHistoryClear() {
 
 
 let musicHistoryCursor = null;
+let modalQueue = [];
+let modalQueueCursor = null;
+
+function setModalQueue(songs, currentYoutubeId) {
+  modalQueue = songs.filter(song => song.youtubeId || song.videoId || song.id);
+
+  modalQueueCursor = modalQueue.findIndex(song =>
+    String(song.youtubeId || song.videoId || song.id) === String(currentYoutubeId)
+  );
+
+  if (modalQueueCursor === -1) modalQueueCursor = null;
+}
+
+function playSongFromModalQueue(index) {
+  if (index < 0 || index >= modalQueue.length) return;
+
+  modalQueueCursor = index;
+  openMusicPlayer(modalQueue[index]);
+
+  saveMusicHistoryItem({
+    ...modalQueue[index],
+    source: modalQueue[index].source || "Browse"
+  });
+}
+
+function playPreviousModalSong() {
+  if (modalQueueCursor === null) {
+    playPreviousHistorySong();
+    return;
+  }
+
+  if (modalQueueCursor > 0) {
+    playSongFromModalQueue(modalQueueCursor - 1);
+  }
+}
+
+function playNextModalSong() {
+  if (modalQueueCursor === null) {
+    playNextHistoryOrRandomSong();
+    return;
+  }
+
+  if (modalQueueCursor < modalQueue.length - 1) {
+    playSongFromModalQueue(modalQueueCursor + 1);
+  } else {
+    playRandomVibeSong();
+  }
+}
 
 function playSongFromHistoryIndex(index) {
   const history = getMusicHistory();
@@ -187,12 +235,12 @@ document.addEventListener("keydown", event => {
 
   if (event.key === "ArrowRight" || event.key === "MediaTrackNext") {
     event.preventDefault();
-    playNextHistoryOrRandomSong();
+    playNextModalSong();
   }
 
   if (event.key === "ArrowLeft" || event.key === "MediaTrackPrevious") {
     event.preventDefault();
-    playPreviousHistorySong();
+    playPreviousModalSong();
   }
 });
 
@@ -201,14 +249,10 @@ function setupMediaModalNavigationButtons() {
   const nextButton = document.getElementById("media-next-btn");
 
   if (prevButton) {
-    prevButton.addEventListener("click", () => {
-      playPreviousHistorySong();
-    });
+    prevButton.addEventListener("click", playPreviousModalSong);
   }
 
   if (nextButton) {
-    nextButton.addEventListener("click", () => {
-      playNextHistoryOrRandomSong();
-    });
+    nextButton.addEventListener("click", playNextModalSong);
   }
 }

@@ -26,16 +26,28 @@ function initBrowse() {
     const button = event.target.closest(".item-card-button");
     if (!button) return;
 
+    const row = button.closest(".item-row");
     const youtubeId = button.dataset.youtubeId;
+
     const song = allSongs.find(item =>
       String(item.youtubeId || item.videoId || item.id) === String(youtubeId)
     );
 
     if (!song) return;
 
+    let queueSongs = [];
+
+    try {
+      queueSongs = JSON.parse(row?.dataset.playlistSongs || "[]");
+    } catch {
+      queueSongs = [];
+    }
+
+    setModalQueue(queueSongs.length ? queueSongs : allSongs, youtubeId);
+
     saveMusicHistoryItem({
       ...song,
-      source: "Browse"
+      source: song.playlistName || "Browse"
     });
 
     openMusicPlayer(song);
@@ -71,6 +83,8 @@ function renderRow(container, songs, shouldShuffle = true) {
 
   const source = shouldShuffle ? shuffleArray(songs) : songs;
   const sample = source.slice(0, SONGS_PER_GROUP);
+
+  container.dataset.playlistSongs = JSON.stringify(sample);
 
   container.innerHTML = sample.map(createSongCard).join("");
 }
