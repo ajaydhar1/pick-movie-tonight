@@ -141,6 +141,29 @@
         }
     }
 
+    document.addEventListener("keydown", event => {
+        const activeTag = document.activeElement?.tagName?.toLowerCase();
+
+        if (activeTag === "input" || activeTag === "textarea") return;
+
+        const modal = document.getElementById("trailer-modal");
+        const modalIsOpen =
+            modal?.classList.contains("is-open") ||
+            modal?.classList.contains("active");
+
+        if (!modalIsOpen) return;
+
+        if (event.key === "ArrowRight" || event.key === "MediaTrackNext") {
+            event.preventDefault();
+            playTrailerAt(currentTrailerIndex + 1);
+        }
+
+        if (event.key === "ArrowLeft" || event.key === "MediaTrackPrevious") {
+            event.preventDefault();
+            playTrailerAt(currentTrailerIndex - 1);
+        }
+    });
+
 })();
 
 function hideTrailerNavButtons() {

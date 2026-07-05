@@ -26,6 +26,8 @@ function initBrowse() {
     const button = event.target.closest(".item-card-button");
     if (!button) return;
 
+    if (button.closest("#songHistoryRow")) return;
+
     const row = button.closest(".item-row");
     const youtubeId = button.dataset.youtubeId;
 
@@ -43,7 +45,7 @@ function initBrowse() {
       queueSongs = [];
     }
 
-    setModalQueue(queueSongs.length ? queueSongs : allSongs, youtubeId);
+    setModalQueue(queueSongs.length ? queueSongs : allSongs, youtubeId, "Browse");
 
     saveMusicHistoryItem({
       ...song,

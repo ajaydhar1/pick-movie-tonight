@@ -70,6 +70,8 @@ function setupMusicHistoryPlayback() {
     const button = event.target.closest(".item-card-button");
     if (!button) return;
 
+    const history = getMusicHistory();
+
     const song = {
       title: button.dataset.title,
       artist: button.dataset.artist,
@@ -78,16 +80,10 @@ function setupMusicHistoryPlayback() {
       source: "Recently Played"
     };
 
-    // Remember which history item we're viewing
-    const history = getMusicHistory();
-    musicHistoryCursor = history.findIndex(
-      item => item.youtubeId === song.youtubeId
-    );
+    setModalQueue(history, song.youtubeId, "Recently Played");
+    musicHistoryCursor = null;
 
     openMusicPlayer(song);
-
-    // Optional: do not save it again if it's already in history
-    // saveMusicHistoryItem(song);
   });
 }
 
@@ -106,8 +102,9 @@ let musicHistoryCursor = null;
 let modalQueue = [];
 let modalQueueCursor = null;
 
-function setModalQueue(songs, currentYoutubeId) {
+function setModalQueue(songs, currentYoutubeId, source = "Browse") {
   modalQueue = songs.filter(song => song.youtubeId || song.videoId || song.id);
+  modalQueueSource = source;
 
   modalQueueCursor = modalQueue.findIndex(song =>
     String(song.youtubeId || song.videoId || song.id) === String(currentYoutubeId)
@@ -122,10 +119,12 @@ function playSongFromModalQueue(index) {
   modalQueueCursor = index;
   openMusicPlayer(modalQueue[index]);
 
-  saveMusicHistoryItem({
-    ...modalQueue[index],
-    source: modalQueue[index].source || "Browse"
-  });
+  if (modalQueueSource !== "Recently Played") {
+    saveMusicHistoryItem({
+      ...modalQueue[index],
+      source: modalQueue[index].source || "Browse"
+    });
+  }
 }
 
 function playPreviousModalSong() {
@@ -147,9 +146,9 @@ function playNextModalSong() {
 
   if (modalQueueCursor < modalQueue.length - 1) {
     playSongFromModalQueue(modalQueueCursor + 1);
-  } else {
-    playRandomVibeSong();
   }
+
+  // If we're already at the last song in the row, do nothing.
 }
 
 function playSongFromHistoryIndex(index) {

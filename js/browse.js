@@ -46,8 +46,8 @@ async function initBrowse() {
         button.dataset.rowLabel
       );
 
-      await window.playTrailerAt(rowIndex);
       openTrailerModal();
+      await window.playTrailerAt(rowIndex);
     });
 
   } catch (error) {
@@ -152,15 +152,21 @@ function setupSearch() {
 function renderBrowseSearchRows(movies) {
   clearRows();
 
-  renderRow(rows.tonightsPicks, movies.slice(0, 12));
-  renderRow(rows.movies2020s, filterByYearRange(movies, 2020, 2026));
-  renderRow(rows.movies2010s, filterByYearRange(movies, 2010, 2019));
-  renderRow(rows.movies2000s, filterByYearRange(movies, 2000, 2009));
-  renderRow(rows.movies1990s, filterByYearRange(movies, 1990, 1999));
-  renderRow(
-    rows.moviesBefore1990,
-    movies.filter(movie => Number(movie.year) < 1990)
-  );
+  browsePlaylists = {
+    searchAll: movies.slice(0, 12),
+    search2020s: filterByYearRange(movies, 2020, 2026),
+    search2010s: filterByYearRange(movies, 2010, 2019),
+    search2000s: filterByYearRange(movies, 2000, 2009),
+    search1990s: filterByYearRange(movies, 1990, 1999),
+    searchBefore1990: movies.filter(movie => Number(movie.year) < 1990)
+  };
+
+  renderRow(rows.tonightsPicks, browsePlaylists.searchAll, "searchAll", "Search Results");
+  renderRow(rows.movies2020s, browsePlaylists.search2020s, "search2020s", "Search: 2020s Movies");
+  renderRow(rows.movies2010s, browsePlaylists.search2010s, "search2010s", "Search: 2010s Movies");
+  renderRow(rows.movies2000s, browsePlaylists.search2000s, "search2000s", "Search: 2000s Movies");
+  renderRow(rows.movies1990s, browsePlaylists.search1990s, "search1990s", "Search: 1990s Movies");
+  renderRow(rows.moviesBefore1990, browsePlaylists.searchBefore1990, "searchBefore1990", "Search: Before 1990");
 }
 
 function clearRows() {
