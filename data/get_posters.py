@@ -8,7 +8,7 @@ import urllib.request
 INPUT_FILE = "movies-expanded-2.json"
 OUTPUT_FILE = "movies-expanded-3.json"
 
-TMDB_API_KEY = "70eddb086aad48b37792699f2b710505"
+TMDB_API_KEY = "YOUR_TMDB_API_KEY"
 TMDB_SEARCH_URL = "https://api.themoviedb.org/3/search/movie"
 POSTER_BASE_URL = "https://image.tmdb.org/t/p/w500"
 
