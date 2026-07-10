@@ -38,22 +38,19 @@
 
   // ----------------- Config -----------------
   const PLAYLISTS = [
-    { name: 'The Hit List', id: 'RDCLAK5uy_kmPRjHDECIcuVwnKsx2Ng7fyNgFKWNJFs' },
-    { name: 'Pop Certified', id: 'RDCLAK5uy_lBNUteBRencHzKelu5iDHwLF6mYqjL-JU' },
-    { name: 'Hip Hop Hits', id: 'RDCLAK5uy_lBGRuQnsG37Akr1CY4SxL0VWFbPrbO4gs' },
-    { name: '2000s Rock', id: 'PLn4GvABOzCQursVQ7qMU9CkNaKz4RgrVM' },
-    { name: 'Top Country 2026', id: 'PL3oW2tjiIxvRDymF6SFf7t4xfDbtRQxlt' },
-    { name: 'New RnB 2026', id: 'PLHg022HMFzFB7nKvmuvpyGTDPCV7-A8ux' },
-    { name: '500 Greatest Love Songs', id: 'PLwNv9Hhd8gZjNoQdpd2kBa3fwXNeJjzDX' },
-    { name: '1000 Greatest Hits', id: 'PLoaTDHRuxwgxk0WTXRJJJlXUYuHBSrbcF' },
-    { name: '600 Greatest Rap Songs', id: 'PLwNv9Hhd8gZjeee8SBwokNf2JhqBvYqeB' },
-    { name: 'Early 00s Throwbacks', id: 'PLDef6fout0FTkoIXW_DtGHGBtoL7F_JRK' },
-    { name: '2000s Rap Hits', id: 'PLdb5JT5rnjEF1axiEk2yNTsujV-EU9t1t' },
+    { name: 'The Best Trailers Ever Made', id: 'PL4s3asBCeP-OoBR9JGV8yCdZq97q9-1T_' },
+    { name: 'Movie Trailers 2000-2009', id: 'PLJcvZ5CBXDgw4QOqbnvlsO9IfS0fbzkIF' },
+    { name: 'Warner Bros. Trailers', id: 'PLVfin74Qx3tV8bgAhzbfDpnfPoGmJWAcn' },
+    { name: '90s/2000s Movie Trailers', id: 'PLzV9uSz6abqeutw8XqaZoiyEbndRc8V0K' },
+    { name: 'Disney/Pixar (1995-Present)', id: 'PLkeFPLkG3JEIbYJunfA_s31B81I6lBZoO' },
+    { name: 'Movie Trailers - 1980s', id: 'PLxARvl8pPDO8qW9OFu8o_n5oe5Y5KISNK' },
+    { name: 'Movie Trailers 2015', id: 'PLXKszDaz-rfWH-Hs9qBajniSPpVhdt-OT' },
+    { name: 'IMAX 2026 Trailers', id: 'PLf_S55hJSbGGfOqYjOt7IhT4AHH9t6JHF' },
   ];
   const START_COLLAPSED = false;
 
   // Storage: bump version if schema changes
-  const STORAGE_KEY = 'pr_hud_player_yt_v1';
+  const STORAGE_KEY = 'pr_hud_player_movies_yt_v1';
 
   // ----------------- Utilities -----------------
   const $ = (sel, ctx = document) => ctx.querySelector(sel);

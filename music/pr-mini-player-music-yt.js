@@ -41,11 +41,19 @@
     { name: 'The Hit List', id: 'RDCLAK5uy_kmPRjHDECIcuVwnKsx2Ng7fyNgFKWNJFs' },
     { name: 'Pop Certified', id: 'RDCLAK5uy_lBNUteBRencHzKelu5iDHwLF6mYqjL-JU' },
     { name: 'Hip Hop Hits', id: 'RDCLAK5uy_lBGRuQnsG37Akr1CY4SxL0VWFbPrbO4gs' },
+    { name: '2000s Rock', id: 'PLn4GvABOzCQursVQ7qMU9CkNaKz4RgrVM' },
+    { name: 'Top Country 2026', id: 'PL3oW2tjiIxvRDymF6SFf7t4xfDbtRQxlt' },
+    { name: 'New RnB 2026', id: 'PLHg022HMFzFB7nKvmuvpyGTDPCV7-A8ux' },
+    { name: '500 Greatest Love Songs', id: 'PLwNv9Hhd8gZjNoQdpd2kBa3fwXNeJjzDX' },
+    { name: '1000 Greatest Hits', id: 'PLoaTDHRuxwgxk0WTXRJJJlXUYuHBSrbcF' },
+    { name: '600 Greatest Rap Songs', id: 'PLwNv9Hhd8gZjeee8SBwokNf2JhqBvYqeB' },
+    { name: 'Early 00s Throwbacks', id: 'PLDef6fout0FTkoIXW_DtGHGBtoL7F_JRK' },
+    { name: '2000s Rap Hits', id: 'PLdb5JT5rnjEF1axiEk2yNTsujV-EU9t1t' },
   ];
   const START_COLLAPSED = false;
 
   // Storage: bump version if schema changes
-  const STORAGE_KEY = 'pr_hud_player_yt_v1';
+  const STORAGE_KEY = 'pr_hud_player_music_yt_v1';
 
   // ----------------- Utilities -----------------
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
