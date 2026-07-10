@@ -45,7 +45,11 @@ function initBrowse() {
       queueSongs = [];
     }
 
-    setModalQueue(queueSongs.length ? queueSongs : allSongs, youtubeId, "Browse");
+    setModalQueue(
+      queueSongs.length ? queueSongs : allSongs,
+      youtubeId,
+      song.playlistName || "Browse"
+    );
 
     saveMusicHistoryItem({
       ...song,
@@ -194,13 +198,30 @@ function openMusicPlayer(song) {
   const modal = document.getElementById("media-modal");
   const iframe = document.getElementById("media-modal-iframe");
   const titleText = document.getElementById("media-modal-title-text");
+  const sourceText = document.getElementById("media-modal-source");
 
   if (!modal || !iframe || !titleText) {
-    window.open(`https://www.youtube.com/watch?v=${youtubeId}`, "_blank", "noopener");
+    window.open(
+      `https://www.youtube.com/watch?v=${youtubeId}`,
+      "_blank",
+      "noopener"
+    );
     return;
   }
 
   titleText.textContent = song.title || "Song";
+
+  if (sourceText) {
+    const source =
+      song.playlistName ||
+      song.source ||
+      modalQueueSource ||
+      "Music";
+
+    sourceText.textContent = source;
+    sourceText.hidden = !source;
+  }
+
   iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
 
   modal.classList.add("is-open");

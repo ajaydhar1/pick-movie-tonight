@@ -101,6 +101,8 @@ function setupMusicHistoryClear() {
 let musicHistoryCursor = null;
 let modalQueue = [];
 let modalQueueCursor = null;
+let modalQueueSource = "Music";
+
 
 function setModalQueue(songs, currentYoutubeId, source = "Browse") {
   modalQueue = songs.filter(song => song.youtubeId || song.videoId || song.id);
@@ -117,13 +119,20 @@ function playSongFromModalQueue(index) {
   if (index < 0 || index >= modalQueue.length) return;
 
   modalQueueCursor = index;
-  openMusicPlayer(modalQueue[index]);
+
+  const song = {
+    ...modalQueue[index],
+    source:
+      modalQueue[index].playlistName ||
+      modalQueue[index].source ||
+      modalQueueSource ||
+      "Music"
+  };
+
+  openMusicPlayer(song);
 
   if (modalQueueSource !== "Recently Played") {
-    saveMusicHistoryItem({
-      ...modalQueue[index],
-      source: modalQueue[index].source || "Browse"
-    });
+    saveMusicHistoryItem(song);
   }
 }
 

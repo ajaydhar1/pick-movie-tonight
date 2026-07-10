@@ -613,45 +613,51 @@ body.modal-open {
 
 
 .media-modal-controls {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 1rem;
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
 }
 
 .media-modal-nav-btn {
-  flex: 1;
-  min-height: 56px;
-  border: 0;
-  border-radius: 999px;
-  font-size: 1.05rem;
-  font-weight: 800;
-  cursor: pointer;
+    flex: 1;
+    min-height: 56px;
+    border: 0;
+    border-radius: 999px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
 }
 
 .media-modal-nav-btn:active {
-  transform: scale(0.98);
+    transform: scale(0.98);
 }
 
 .media-modal-dialog {
-  max-height: 90vh;
-  /* overflow-y: auto; */
-  overscroll-behavior: contain;
+    max-height: 90vh;
+    /* overflow-y: auto; */
+    overscroll-behavior: contain;
 }
 
 .media-modal-body {
-  max-height: 55vh;
+    max-height: 55vh;
 }
 
 .media-modal-body iframe {
-  width: 100%;
-  /* height: min(55vh, 420px); */
+    width: 100%;
+    /* height: min(55vh, 420px); */
 }
 
 .media-modal-controls {
-  position: sticky;
-  bottom: 0;
-  background: inherit;
-  padding-top: 1rem;
+    position: sticky;
+    bottom: 0;
+    background: inherit;
+    padding-top: 1rem;
+}
+
+.media-modal-source {
+    margin: -0.35rem 0 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
 }
 
 
@@ -1303,4 +1309,3 @@ body.about-page {
 .legal-card p {
     line-height: 1.7;
 }
-
