@@ -49,6 +49,7 @@
     { name: '600 Greatest Rap Songs', id: 'PLwNv9Hhd8gZjeee8SBwokNf2JhqBvYqeB' },
     { name: 'Early 00s Throwbacks', id: 'PLDef6fout0FTkoIXW_DtGHGBtoL7F_JRK' },
     { name: '2000s Rap Hits', id: 'PLdb5JT5rnjEF1axiEk2yNTsujV-EU9t1t' },
+    { name: '2020s Rap', id: 'PLrodopuIME4AZUXubdEUTs2-cUgqjOSA9' },
   ];
   const START_COLLAPSED = false;
 
