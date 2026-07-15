@@ -42,6 +42,7 @@
     { name: 'Pop Certified', id: 'RDCLAK5uy_lBNUteBRencHzKelu5iDHwLF6mYqjL-JU' },
     { name: 'Hip Hop Hits', id: 'RDCLAK5uy_lBGRuQnsG37Akr1CY4SxL0VWFbPrbO4gs' },
     { name: '2000s Rock', id: 'PLn4GvABOzCQursVQ7qMU9CkNaKz4RgrVM' },
+    { name: '90s-00s Pop Rock', id: 'PLrodopuIME4D75Muk_ofYb1bfoyqCdlR_' },
     { name: 'Top Country 2026', id: 'PL3oW2tjiIxvRDymF6SFf7t4xfDbtRQxlt' },
     { name: 'New RnB 2026', id: 'PLHg022HMFzFB7nKvmuvpyGTDPCV7-A8ux' },
     { name: '500 Greatest Love Songs', id: 'PLwNv9Hhd8gZjNoQdpd2kBa3fwXNeJjzDX' },
